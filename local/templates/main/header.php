@@ -1,12 +1,12 @@
-<? if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true)
-    die(); ?>
+<? if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die(); ?>
 <? require_once($_SERVER["DOCUMENT_ROOT"] . "/settings.php"); // site settings?>
 <?
 IncludeTemplateLangFile(__FILE__);
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="<?=LANGUAGE_ID;?>">
 <head>
+
     <meta http-equiv="Content-Type" content="text/html; charset=<? echo LANG_CHARSET; ?>"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="viewport" content="width=device-width, minimum-scale=1.0"/>
@@ -227,273 +227,277 @@ IncludeTemplateLangFile(__FILE__);
         };
     </script>
 </head>
+<?$APPLICATION->ShowPanel();?>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N958G54"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<div id="panel"><? $APPLICATION->ShowPanel(); ?></div>
 
-<!-- Rating Mail.ru counter -->
-<script type="text/javascript">
-    var _tmr = window._tmr || (window._tmr = []);
-    _tmr.push({id: "3141754", type: "pageView", start: (new Date()).getTime(), pid: "USER_ID"});
-    (function (d, w, id) {
-        if (d.getElementById(id)) return;
-        var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
-        ts.src = "https://top-fwz1.mail.ru/js/code.js";
-        var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
-        if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
-    })(document, window, "topmailru-code");
-</script><noscript><div>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N958G54" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <!-- Rating Mail.ru counter -->
+    <script type="text/javascript">
+        var _tmr = window._tmr || (window._tmr = []);
+        _tmr.push({id: "3141754", type: "pageView", start: (new Date()).getTime(), pid: "USER_ID"});
+        (function (d, w, id) {
+            if (d.getElementById(id)) return;
+            var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true; ts.id = id;
+            ts.src = "https://top-fwz1.mail.ru/js/code.js";
+            var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+            if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+        })(document, window, "topmailru-code");
+    </script>
+    <noscript>
+    <div>
         <img src="https://top-fwz1.mail.ru/counter?id=3141754;js=na" style="border:0;position:absolute;left:-9999px;" alt="Top.Mail.Ru" />
-    </div></noscript>
-<!-- //Rating Mail.ru counter -->
-
-<!-- Rating@Mail.ru counter dynamic remarketing appendix -->
-<script type="text/javascript">
-    var _tmr = _tmr || [];
-    _tmr.push({
-        type: 'itemView',
-        productid: 'VALUE',
-        pagetype: 'VALUE',
-        list: 'VALUE',
-        totalvalue: 'VALUE'
-    });
-</script>
-<!-- // Rating@Mail.ru counter dynamic remarketing appendix -->
-
-<header>
-    <div class="wrapper">
-
-        <div class="header__block__h_001">
-            <div class="geo__position">
-                <ul class="geo_wrapper">
-
-                    <?$APPLICATION->IncludeComponent("dresscode:sale.geo.positiion", "", array(),
-                        false,
-                        array(
-                            "ACTIVE_COMPONENT" => "Y"
-                        )
-                    );?>
-                </ul>
-            </div>
-            <div class="top__menu">
-                <? $APPLICATION->IncludeComponent(
-                    "bitrix:menu",
-                    "top_right",
-                    array(
-                        "ALLOW_MULTI_SELECT" => "N",
-                        "CHILD_MENU_TYPE" => "",
-                        "DELAY" => "N",
-                        "MAX_LEVEL" => "1",
-                        "MENU_CACHE_GET_VARS" => array(),
-                        "MENU_CACHE_TIME" => "3600",
-                        "MENU_CACHE_TYPE" => "Y",
-                        "MENU_CACHE_USE_GROUPS" => "Y",
-                        "ROOT_MENU_TYPE" => "top_new",
-                        "USE_EXT" => "N",
-                        "COMPONENT_TEMPLATE" => "top_right"
-                    ),
-                    false
-                ); ?>
-            </div>
-            <div class="consult__header">
-                <a href="/installment/"  class="take__consult" data-id="6">Беспроцентная рассрочка</a>
-            </div>
-
-            <div class="header__personal">
-                <a href="/personal/" class="personal__link">Мой кабинет</a>
-            </div>
-        </div>
-
-        <div class="header__block__h_002">
-            <div class="logo__header">
-                <? if ($APPLICATION->GetCurPage(true) == '/index.php'): ?>
-                    <img src="<?= SITE_TEMPLATE_PATH ?>/images/svg/logo.svg"
-                         alt="Эксклюзивный дистрибьютор мировых производителей массажного оборудования"/>
-                <? else: ?>
-                    <a href="/" title="Эксклюзивный дистрибьютор мировых производителей массажного оборудования"><img
-                            src="<?= SITE_TEMPLATE_PATH ?>/images/svg/logo.svg" alt=""/></a>
-                <? endif; ?>
-            </div>
-            <div class="txt__header__001"><a href="https://www.relaxa.ru/about/">Эксклюзивный дистрибьютор<br> мировых производителей<br> массажного оборудования</a></div>
-            <div class="phones__header">
-                <div class="s__phone__header"><span class="phone__icon__header"><img src="/bitrix/templates/dresscodeV2_new/images/ND/phone__header__icon.svg"></span><a href="tel:88003330051" class="phone__link__header">8 (800) 333 00 51</a></div>
-                <div class="s__phone__header"><span class="phone__icon__header"><img src="/bitrix/templates/dresscodeV2_new/images/ND/phone__header__icon.svg"></span><a href="tel:84957899174" class="phone__link__header">8 (495) 789 91 74</a></div>
-                <div class="txt__phone__header">Бесплатный звонок по России</div>
-            </div>
-            <div class="favs__header">
-                <a class="compare white-listing" href="/compare/"><img src="/bitrix/templates/dresscodeV2/img/scales.svg" /></a>
-                <a href="/wishlist/"><img src="/bitrix/templates/dresscodeV2_new/images/ND/favs__header__icon.svg"></a>
-            </div>
-            <div class="basket__header">
-                <div id="flushTopCart">
-                    <? $APPLICATION->IncludeComponent(
-                        "bitrix:sale.basket.basket.line",
-                        "topCart5",
-                        array(
-                            "HIDE_ON_BASKET_PAGES" => "N",
-                            "PATH_TO_BASKET" => SITE_DIR . "personal/cart/",
-                            "PATH_TO_ORDER" => SITE_DIR . "personal/order/make/",
-                            "PATH_TO_PERSONAL" => SITE_DIR . "personal/",
-                            "PATH_TO_PROFILE" => SITE_DIR . "personal/",
-                            "PATH_TO_REGISTER" => SITE_DIR . "login/",
-                            "POSITION_FIXED" => "N",
-                            "SHOW_AUTHOR" => "N",
-                            "SHOW_EMPTY_VALUES" => "Y",
-                            "SHOW_NUM_PRODUCTS" => "Y",
-                            "SHOW_PERSONAL_LINK" => "N",
-                            "SHOW_PRODUCTS" => "Y",
-                            "SHOW_TOTAL_PRICE" => "Y",
-                            "COMPONENT_TEMPLATE" => "topCart5",
-                            "SHOW_DELAY" => "N",
-                            "SHOW_NOTAVAIL" => "N",
-                            "SHOW_SUBSCRIBE" => "N",
-                            "SHOW_IMAGE" => "Y",
-                            "SHOW_PRICE" => "Y",
-                            "SHOW_SUMMARY" => "Y"
-                        ),
-                        false
-                    ); ?>
-                </div>
-            </div>
-        </div>
     </div>
+    </noscript>
+    <!-- //Rating Mail.ru counter -->
+    <!-- Rating@Mail.ru counter dynamic remarketing appendix -->
+    <script type="text/javascript">
+        var _tmr = _tmr || [];
+        _tmr.push({
+            type: 'itemView',
+            productid: 'VALUE',
+            pagetype: 'VALUE',
+            list: 'VALUE',
+            totalvalue: 'VALUE'
+        });
+    </script>
+    <!-- // Rating@Mail.ru counter dynamic remarketing appendix -->
 
-
-
-
-    <?php
-    if (CModule::IncludeModule("sale")) {
-        $arBasketItems = array();
-        $dbBasketItems = CSaleBasket::GetList(
-            array("NAME" => "ASC", "ID" => "ASC"),
-            array("FUSER_ID" => CSaleBasket::GetBasketUserID(), "LID" => SITE_ID, "ORDER_ID" => "NULL"),
-            false,
-            false,
-            array("ID", "MODULE", "PRODUCT_ID", "QUANTITY", "CAN_BUY", "PRICE"));
-        while ($arItems = $dbBasketItems->Fetch()) {
-            $arItems = CSaleBasket::GetByID($arItems["ID"]);
-            $arBasketItems[] = $arItems;
-            $cart_num += $arItems['QUANTITY'];
-            $cart_sum += $arItems['PRICE'] * $arItems['QUANTITY'];
-        }
-        if (empty($cart_num))
-            $cart_num = "0";
-        if (empty($cart_sum))
-            $cart_sum = "0";
-        ?>
-        <!--В вашей корзине  <?= $cart_num ?> товаров.На сумму <?= $cart_sum ?> рублей -->
-        <?
-    }
-    ?>
-    <div class="adaptive__header">
+    <header>
         <div class="wrapper">
-            <div class="adaptive__menu">
-                <div class="menu__adaptive__icon">
-                    <span class="mai001"></span>
-                    <span class="mai002"></span>
-                    <span class="mai003"></span>
+
+            <div class="header__block__h_001">
+                <div class="geo__position">
+                    <ul class="geo_wrapper">
+
+                        <?/*$APPLICATION->IncludeComponent("dresscode:sale.geo.positiion", "", array(),
+                            false,
+                            array(
+                                "ACTIVE_COMPONENT" => "Y"
+                            )
+                        );*/?>
+                    </ul>
                 </div>
-                <div class="menu__adaptive__menu">
-                    <? $APPLICATION->IncludeComponent("bitrix:menu", "relaxa-middle", array(
-                        "ALLOW_MULTI_SELECT" => "N",
-                        "CHILD_MENU_TYPE" => "left",
-                        "COMPONENT_TEMPLATE" => "relaxa-middle",
-                        "DELAY" => "N",
-                        "MAX_LEVEL" => "2",
-                        "MENU_CACHE_GET_VARS" => array(),
-                        "MENU_CACHE_TIME" => "3600",
-                        "MENU_CACHE_TYPE" => "A",
-                        "MENU_CACHE_USE_GROUPS" => "Y",
-                        "ROOT_MENU_TYPE" => "middle_new",
-                        "USE_EXT" => "Y",
-                        "MENU_THEME" => "site"
-                    ),
-                        false
-                    ); ?>
-                </div>
-            </div>
-
-            <div class="logo__adaptive">
-                <? if ($APPLICATION->GetCurPage(true) == '/index.php'): ?>
-                    <img src="<?= SITE_TEMPLATE_PATH ?>/images/logo.png"
-                         alt="Интернет-магазин массажных кресел и массажеров в Москве - Relaxa"/>
-                <? else: ?>
-                    <a href="/" title="Интернет-магазин массажных кресел и массажеров в Москве - Relaxa"><img
-                            src="<?= SITE_TEMPLATE_PATH ?>/images/logo.png" alt=""/></a>
-                <? endif; ?>
-            </div>
-
-            <div class="favs__adaptive">
-                <a href="/index.php/"><img src="/bitrix/templates/dresscodeV2_new/images/ND/home.svg"></a>
-            </div>
-
-            <div class="basket__adaptive">
-                <div id="flushTopCart">
+                <div class="top__menu">
                     <? $APPLICATION->IncludeComponent(
-                        "bitrix:sale.basket.basket.line",
-                        "topCart5",
+                        "bitrix:menu",
+                        "top_right",
                         array(
-                            "HIDE_ON_BASKET_PAGES" => "N",
-                            "PATH_TO_BASKET" => SITE_DIR . "personal/cart/",
-                            "PATH_TO_ORDER" => SITE_DIR . "personal/order/make/",
-                            "PATH_TO_PERSONAL" => SITE_DIR . "personal/",
-                            "PATH_TO_PROFILE" => SITE_DIR . "personal/",
-                            "PATH_TO_REGISTER" => SITE_DIR . "login/",
-                            "POSITION_FIXED" => "N",
-                            "SHOW_AUTHOR" => "N",
-                            "SHOW_EMPTY_VALUES" => "Y",
-                            "SHOW_NUM_PRODUCTS" => "Y",
-                            "SHOW_PERSONAL_LINK" => "N",
-                            "SHOW_PRODUCTS" => "Y",
-                            "SHOW_TOTAL_PRICE" => "Y",
-                            "COMPONENT_TEMPLATE" => "topCart",
-                            "SHOW_DELAY" => "N",
-                            "SHOW_NOTAVAIL" => "N",
-                            "SHOW_SUBSCRIBE" => "N",
-                            "SHOW_IMAGE" => "Y",
-                            "SHOW_PRICE" => "Y",
-                            "SHOW_SUMMARY" => "Y"
+                            "ALLOW_MULTI_SELECT" => "N",
+                            "CHILD_MENU_TYPE" => "",
+                            "DELAY" => "N",
+                            "MAX_LEVEL" => "1",
+                            "MENU_CACHE_GET_VARS" => array(),
+                            "MENU_CACHE_TIME" => "3600",
+                            "MENU_CACHE_TYPE" => "Y",
+                            "MENU_CACHE_USE_GROUPS" => "Y",
+                            "ROOT_MENU_TYPE" => "top_new",
+                            "USE_EXT" => "N",
+                            "COMPONENT_TEMPLATE" => "top_right"
                         ),
                         false
                     ); ?>
                 </div>
+                <div class="consult__header">
+                    <a href="/installment/"  class="take__consult" data-id="6">Беспроцентная рассрочка</a>
+                </div>
+
+                <div class="header__personal">
+                    <a href="/personal/" class="personal__link">Мой кабинет</a>
+                </div>
             </div>
 
-            <div class="search-adaptive-button">
-                <img src="/bitrix/templates/dresscodeV2_new/images/ND/search.svg" alt="">
-            </div>
-
-            <div class="search-container">
-                <form id="search-form-mobile" action="/search/" method="GET">
-                    <input type="text" name="q" class="search-input" placeholder="Поиск по каталогу">
-                    <div class="search-button-mobile">
-                        <img src="/bitrix/templates/dresscodeV2_new/images/ND/search.svg" alt="">
+            <div class="header__block__h_002">
+                <div class="logo__header">
+                    <? if ($APPLICATION->GetCurPage(true) == '/index.php'): ?>
+                        <img src="<?=SITE_TEMPLATE_PATH;?>/img/logo.svg" alt="Эксклюзивный дистрибьютор мировых производителей массажного оборудования"/>
+                    <? else: ?>
+                        <a href="<?=SITE_DIR;?>" title="Эксклюзивный дистрибьютор мировых производителей массажного оборудования">
+                            <img src="<?=SITE_TEMPLATE_PATH;?>/img/logo.svg" alt=""/>
+                        </a>
+                    <? endif; ?>
+                </div>
+                <div class="txt__header__001"><a href="https://www.relaxa.ru/about/">Эксклюзивный дистрибьютор<br> мировых производителей<br> массажного оборудования</a></div>
+                <div class="phones__header">
+                    <div class="s__phone__header">
+                        <span class="phone__icon__header"><img src="/bitrix/templates/dresscodeV2_new/images/ND/phone__header__icon.svg"></span><a href="tel:88003330051" class="phone__link__header">8 (800) 333 00 51</a></div>
+                    <div class="s__phone__header"><span class="phone__icon__header"><img src="/bitrix/templates/dresscodeV2_new/images/ND/phone__header__icon.svg"></span><a href="tel:84957899174" class="phone__link__header">8 (495) 789 91 74</a></div>
+                    <div class="txt__phone__header">Бесплатный звонок по России</div>
+                </div>
+                <div class="favs__header">
+                    <a class="compare white-listing" href="/compare/"><img src="/bitrix/templates/dresscodeV2/img/scales.svg" /></a>
+                    <a href="/wishlist/"><img src="/bitrix/templates/dresscodeV2_new/images/ND/favs__header__icon.svg"></a>
+                </div>
+                <div class="basket__header">
+                    <div id="flushTopCart">
+                        <? $APPLICATION->IncludeComponent(
+                            "bitrix:sale.basket.basket.line",
+                            "topCart5",
+                            array(
+                                "HIDE_ON_BASKET_PAGES" => "N",
+                                "PATH_TO_BASKET" => SITE_DIR . "personal/cart/",
+                                "PATH_TO_ORDER" => SITE_DIR . "personal/order/make/",
+                                "PATH_TO_PERSONAL" => SITE_DIR . "personal/",
+                                "PATH_TO_PROFILE" => SITE_DIR . "personal/",
+                                "PATH_TO_REGISTER" => SITE_DIR . "login/",
+                                "POSITION_FIXED" => "N",
+                                "SHOW_AUTHOR" => "N",
+                                "SHOW_EMPTY_VALUES" => "Y",
+                                "SHOW_NUM_PRODUCTS" => "Y",
+                                "SHOW_PERSONAL_LINK" => "N",
+                                "SHOW_PRODUCTS" => "Y",
+                                "SHOW_TOTAL_PRICE" => "Y",
+                                "COMPONENT_TEMPLATE" => "topCart5",
+                                "SHOW_DELAY" => "N",
+                                "SHOW_NOTAVAIL" => "N",
+                                "SHOW_SUBSCRIBE" => "N",
+                                "SHOW_IMAGE" => "Y",
+                                "SHOW_PRICE" => "Y",
+                                "SHOW_SUMMARY" => "Y"
+                            ),
+                            false
+                        ); ?>
                     </div>
-                </form>
+                </div>
             </div>
-
-            <script>
-                $(function(){
-                    $('.search-adaptive-button').click(function(){
-                        $('.search-container').slideToggle();
-                    });
-                    $('.search-button-mobile').click(function(){
-                        $(this).parent('form').submit();
-                    });
-                });
-            </script>
-
-
-            <div class="login__adaptive">
-                <a href="/personal/"><img src="/bitrix/templates/dresscodeV2_new/images/ND/login.svg" alt=""></a>
-            </div>
-
         </div>
 
-</header>
+
+
+
+        <?php
+        if (CModule::IncludeModule("sale")) {
+            $arBasketItems = array();
+            $dbBasketItems = CSaleBasket::GetList(
+                array("NAME" => "ASC", "ID" => "ASC"),
+                array("FUSER_ID" => CSaleBasket::GetBasketUserID(), "LID" => SITE_ID, "ORDER_ID" => "NULL"),
+                false,
+                false,
+                array("ID", "MODULE", "PRODUCT_ID", "QUANTITY", "CAN_BUY", "PRICE"));
+            while ($arItems = $dbBasketItems->Fetch()) {
+                $arItems = CSaleBasket::GetByID($arItems["ID"]);
+                $arBasketItems[] = $arItems;
+                $cart_num += $arItems['QUANTITY'];
+                $cart_sum += $arItems['PRICE'] * $arItems['QUANTITY'];
+            }
+            if (empty($cart_num))
+                $cart_num = "0";
+            if (empty($cart_sum))
+                $cart_sum = "0";
+            ?>
+            <!--В вашей корзине  <?= $cart_num ?> товаров.На сумму <?= $cart_sum ?> рублей -->
+            <?
+        }
+        ?>
+        <div class="adaptive__header">
+            <div class="wrapper">
+                <div class="adaptive__menu">
+                    <div class="menu__adaptive__icon">
+                        <span class="mai001"></span>
+                        <span class="mai002"></span>
+                        <span class="mai003"></span>
+                    </div>
+                    <div class="menu__adaptive__menu">
+                        <? $APPLICATION->IncludeComponent("bitrix:menu", "relaxa-middle", array(
+                            "ALLOW_MULTI_SELECT" => "N",
+                            "CHILD_MENU_TYPE" => "left",
+                            "COMPONENT_TEMPLATE" => "relaxa-middle",
+                            "DELAY" => "N",
+                            "MAX_LEVEL" => "2",
+                            "MENU_CACHE_GET_VARS" => array(),
+                            "MENU_CACHE_TIME" => "3600",
+                            "MENU_CACHE_TYPE" => "A",
+                            "MENU_CACHE_USE_GROUPS" => "Y",
+                            "ROOT_MENU_TYPE" => "middle_new",
+                            "USE_EXT" => "Y",
+                            "MENU_THEME" => "site"
+                        ),
+                            false
+                        ); ?>
+                    </div>
+                </div>
+
+                <div class="logo__adaptive">
+                    <? if ($APPLICATION->GetCurPage(true) == '/index.php'): ?>
+                        <img src="<?= SITE_TEMPLATE_PATH ?>/images/logo.png"
+                             alt="Интернет-магазин массажных кресел и массажеров в Москве - Relaxa"/>
+                    <? else: ?>
+                        <a href="/" title="Интернет-магазин массажных кресел и массажеров в Москве - Relaxa"><img
+                                src="<?= SITE_TEMPLATE_PATH ?>/images/logo.png" alt=""/></a>
+                    <? endif; ?>
+                </div>
+
+                <div class="favs__adaptive">
+                    <a href="/index.php/"><img src="/bitrix/templates/dresscodeV2_new/images/ND/home.svg"></a>
+                </div>
+
+                <div class="basket__adaptive">
+                    <div id="flushTopCart">
+                        <? $APPLICATION->IncludeComponent(
+                            "bitrix:sale.basket.basket.line",
+                            "topCart5",
+                            array(
+                                "HIDE_ON_BASKET_PAGES" => "N",
+                                "PATH_TO_BASKET" => SITE_DIR . "personal/cart/",
+                                "PATH_TO_ORDER" => SITE_DIR . "personal/order/make/",
+                                "PATH_TO_PERSONAL" => SITE_DIR . "personal/",
+                                "PATH_TO_PROFILE" => SITE_DIR . "personal/",
+                                "PATH_TO_REGISTER" => SITE_DIR . "login/",
+                                "POSITION_FIXED" => "N",
+                                "SHOW_AUTHOR" => "N",
+                                "SHOW_EMPTY_VALUES" => "Y",
+                                "SHOW_NUM_PRODUCTS" => "Y",
+                                "SHOW_PERSONAL_LINK" => "N",
+                                "SHOW_PRODUCTS" => "Y",
+                                "SHOW_TOTAL_PRICE" => "Y",
+                                "COMPONENT_TEMPLATE" => "topCart",
+                                "SHOW_DELAY" => "N",
+                                "SHOW_NOTAVAIL" => "N",
+                                "SHOW_SUBSCRIBE" => "N",
+                                "SHOW_IMAGE" => "Y",
+                                "SHOW_PRICE" => "Y",
+                                "SHOW_SUMMARY" => "Y"
+                            ),
+                            false
+                        ); ?>
+                    </div>
+                </div>
+
+                <div class="search-adaptive-button">
+                    <img src="/bitrix/templates/dresscodeV2_new/images/ND/search.svg" alt="">
+                </div>
+
+                <div class="search-container">
+                    <form id="search-form-mobile" action="/search/" method="GET">
+                        <input type="text" name="q" class="search-input" placeholder="Поиск по каталогу">
+                        <div class="search-button-mobile">
+                            <img src="/bitrix/templates/dresscodeV2_new/images/ND/search.svg" alt="">
+                        </div>
+                    </form>
+                </div>
+
+                <script>
+                    $(function(){
+                        $('.search-adaptive-button').click(function(){
+                            $('.search-container').slideToggle();
+                        });
+                        $('.search-button-mobile').click(function(){
+                            $(this).parent('form').submit();
+                        });
+                    });
+                </script>
+
+
+                <div class="login__adaptive">
+                    <a href="/personal/"><img src="/bitrix/templates/dresscodeV2_new/images/ND/login.svg" alt=""></a>
+                </div>
+
+            </div>
+
+    </header>
 
 <div class="catmob-header">
     <ul class="catmob__list">
