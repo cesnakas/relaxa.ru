@@ -1,0 +1,19 @@
+.roulette-modal__container {
+    background: url('../images/love/background.png') #fff;
+}
+.roulette__wheel {
+    background: url('../images/love/wheel.png') no-repeat;
+}
+.roulette__pizza {
+    background: url('../images/love/pizza.png') no-repeat;
+    top: calc(50% - 31px);
+}
+.roulette__snow {
+    background: url('../images/love/heart.png') no-repeat;
+    margin: 2px;
+    box-sizing: border-box;
+    width: 96px;
+    height: 96px;
+    top: 201px;
+    left: 194px;
+}
