@@ -401,20 +401,23 @@ IncludeTemplateLangFile(__FILE__);
                         <span class="mai003"></span>
                     </div>
                     <div class="menu__adaptive__menu">
-                        <? $APPLICATION->IncludeComponent("bitrix:menu", "relaxa-middle", array(
-                            "ALLOW_MULTI_SELECT" => "N",
-                            "CHILD_MENU_TYPE" => "left",
-                            "COMPONENT_TEMPLATE" => "relaxa-middle",
-                            "DELAY" => "N",
-                            "MAX_LEVEL" => "2",
-                            "MENU_CACHE_GET_VARS" => array(),
-                            "MENU_CACHE_TIME" => "3600",
-                            "MENU_CACHE_TYPE" => "A",
-                            "MENU_CACHE_USE_GROUPS" => "Y",
-                            "ROOT_MENU_TYPE" => "middle_new",
-                            "USE_EXT" => "Y",
-                            "MENU_THEME" => "site"
-                        ),
+                        <? $APPLICATION->IncludeComponent(
+                            "bitrix:menu",
+                            "relaxa-middle",
+                            array(
+                                "ALLOW_MULTI_SELECT" => "N",
+                                "CHILD_MENU_TYPE" => "left",
+                                "COMPONENT_TEMPLATE" => "relaxa-middle",
+                                "DELAY" => "N",
+                                "MAX_LEVEL" => "2",
+                                "MENU_CACHE_GET_VARS" => array(),
+                                "MENU_CACHE_TIME" => "3600",
+                                "MENU_CACHE_TYPE" => "A",
+                                "MENU_CACHE_USE_GROUPS" => "Y",
+                                "ROOT_MENU_TYPE" => "middle_new",
+                                "USE_EXT" => "Y",
+                                "MENU_THEME" => "site"
+                            ),
                             false
                         ); ?>
                     </div>
@@ -425,8 +428,8 @@ IncludeTemplateLangFile(__FILE__);
                         <img src="<?= SITE_TEMPLATE_PATH ?>/images/logo.png"
                              alt="Интернет-магазин массажных кресел и массажеров в Москве - Relaxa"/>
                     <? else: ?>
-                        <a href="/" title="Интернет-магазин массажных кресел и массажеров в Москве - Relaxa"><img
-                                src="<?= SITE_TEMPLATE_PATH ?>/images/logo.png" alt=""/></a>
+                        <a href="<?=SITE_DIR;?>" title="Интернет-магазин массажных кресел и массажеров в Москве - Relaxa"><img
+                                src="<?=SITE_TEMPLATE_PATH;?>/images/logo.png" alt=""/></a>
                     <? endif; ?>
                 </div>
 
@@ -510,20 +513,23 @@ IncludeTemplateLangFile(__FILE__);
                 </svg>
             </a>
             <div class="menu__adaptive__menu" style="display: none;">
-                <? $APPLICATION->IncludeComponent("bitrix:menu", "relaxa-middle", array(
-                    "ALLOW_MULTI_SELECT" => "N",
-                    "CHILD_MENU_TYPE" => "left",
-                    "COMPONENT_TEMPLATE" => "relaxa-middle",
-                    "DELAY" => "N",
-                    "MAX_LEVEL" => "2",
-                    "MENU_CACHE_GET_VARS" => array(),
-                    "MENU_CACHE_TIME" => "3600",
-                    "MENU_CACHE_TYPE" => "A",
-                    "MENU_CACHE_USE_GROUPS" => "Y",
-                    "ROOT_MENU_TYPE" => "middle_new",
-                    "USE_EXT" => "Y",
-                    "MENU_THEME" => "site"
-                ),
+                <? $APPLICATION->IncludeComponent(
+                    "bitrix:menu",
+                    "relaxa-middle",
+                    array(
+                        "ALLOW_MULTI_SELECT" => "N",
+                        "CHILD_MENU_TYPE" => "left",
+                        "COMPONENT_TEMPLATE" => "relaxa-middle",
+                        "DELAY" => "N",
+                        "MAX_LEVEL" => "2",
+                        "MENU_CACHE_GET_VARS" => array(),
+                        "MENU_CACHE_TIME" => "3600",
+                        "MENU_CACHE_TYPE" => "A",
+                        "MENU_CACHE_USE_GROUPS" => "Y",
+                        "ROOT_MENU_TYPE" => "middle_new",
+                        "USE_EXT" => "Y",
+                        "MENU_THEME" => "site"
+                    ),
                     false
                 ); ?>
             </div>
@@ -585,20 +591,23 @@ IncludeTemplateLangFile(__FILE__);
 <div class="new__catalog__menu">
     <div class="wrapper">
         <div class="new__cat__menu">
-            <? $APPLICATION->IncludeComponent("bitrix:menu", "relaxa-middle", array(
-                "ALLOW_MULTI_SELECT" => "N",
-                "CHILD_MENU_TYPE" => "left",
-                "COMPONENT_TEMPLATE" => "relaxa-middle",
-                "DELAY" => "N",
-                "MAX_LEVEL" => "2",
-                "MENU_CACHE_GET_VARS" => array(),
-                "MENU_CACHE_TIME" => "3600",
-                "MENU_CACHE_TYPE" => "A",
-                "MENU_CACHE_USE_GROUPS" => "Y",
-                "ROOT_MENU_TYPE" => "middle_new",
-                "USE_EXT" => "Y",
-                "MENU_THEME" => "site"
-            ),
+            <? $APPLICATION->IncludeComponent(
+                "bitrix:menu",
+                "relaxa-middle",
+                array(
+                    "ALLOW_MULTI_SELECT" => "N",
+                    "CHILD_MENU_TYPE" => "left",
+                    "COMPONENT_TEMPLATE" => "relaxa-middle",
+                    "DELAY" => "N",
+                    "MAX_LEVEL" => "2",
+                    "MENU_CACHE_GET_VARS" => array(),
+                    "MENU_CACHE_TIME" => "3600",
+                    "MENU_CACHE_TYPE" => "A",
+                    "MENU_CACHE_USE_GROUPS" => "Y",
+                    "ROOT_MENU_TYPE" => "middle_new",
+                    "USE_EXT" => "Y",
+                    "MENU_THEME" => "site"
+                ),
                 false
             ); ?>
         </div>
