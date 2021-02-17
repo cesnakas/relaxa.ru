@@ -14,21 +14,23 @@
             <div class="footer__block__002">
                 <div class="footer__block__heading">Информация</div>
                 <div class="footer__menu">
-                    <?$APPLICATION->IncludeComponent("bitrix:menu", "relaxa-bottom",  array(
-                        "ROOT_MENU_TYPE" => "info",
-                        "MENU_CACHE_TYPE" => "A",
-                        "MENU_CACHE_TIME" => "36000000",
-                        "MENU_CACHE_USE_GROUPS" => "Y",
-                        "MENU_CACHE_GET_VARS" => array(
+                    <?$APPLICATION->IncludeComponent(
+                        "bitrix:menu",
+                        "relaxa-bottom",
+                        array(
+                            "ROOT_MENU_TYPE" => "info",
+                            "MENU_CACHE_TYPE" => "A",
+                            "MENU_CACHE_TIME" => "36000000",
+                            "MENU_CACHE_USE_GROUPS" => "Y",
+                            "MENU_CACHE_GET_VARS" => array(),
+                            "CACHE_SELECTED_ITEMS" => "N",
+                            "MAX_LEVEL" => "1",
+                            "USE_EXT" => "N",
+                            "DELAY" => "N",
+                            "ALLOW_MULTI_SELECT" => "N",
+                            "COMPONENT_TEMPLATE" => "relaxa-bottom",
+                            "CHILD_MENU_TYPE" => ""
                         ),
-                        "CACHE_SELECTED_ITEMS" => "N",
-                        "MAX_LEVEL" => "1",
-                        "USE_EXT" => "N",
-                        "DELAY" => "N",
-                        "ALLOW_MULTI_SELECT" => "N",
-                        "COMPONENT_TEMPLATE" => "relaxa-bottom",
-                        "CHILD_MENU_TYPE" => ""
-                    ),
                         false
                     );?>
                 </div>
@@ -37,21 +39,23 @@
             <div class="footer__block__003">
                 <div class="footer__block__heading">Покупателям</div>
                 <div class="footer__menu">
-                    <?$APPLICATION->IncludeComponent("bitrix:menu", "relaxa-bottom",  array(
-                        "ROOT_MENU_TYPE" => "bayers",
-                        "MENU_CACHE_TYPE" => "A",
-                        "MENU_CACHE_TIME" => "36000000",
-                        "MENU_CACHE_USE_GROUPS" => "Y",
-                        "MENU_CACHE_GET_VARS" => array(
+                    <?$APPLICATION->IncludeComponent(
+                        "bitrix:menu",
+                        "relaxa-bottom",
+                        array(
+                            "ROOT_MENU_TYPE" => "bayers",
+                            "MENU_CACHE_TYPE" => "A",
+                            "MENU_CACHE_TIME" => "36000000",
+                            "MENU_CACHE_USE_GROUPS" => "Y",
+                            "MENU_CACHE_GET_VARS" => array(),
+                            "CACHE_SELECTED_ITEMS" => "N",
+                            "MAX_LEVEL" => "1",
+                            "USE_EXT" => "N",
+                            "DELAY" => "N",
+                            "ALLOW_MULTI_SELECT" => "N",
+                            "COMPONENT_TEMPLATE" => "relaxa-bottom",
+                            "CHILD_MENU_TYPE" => ""
                         ),
-                        "CACHE_SELECTED_ITEMS" => "N",
-                        "MAX_LEVEL" => "1",
-                        "USE_EXT" => "N",
-                        "DELAY" => "N",
-                        "ALLOW_MULTI_SELECT" => "N",
-                        "COMPONENT_TEMPLATE" => "relaxa-bottom",
-                        "CHILD_MENU_TYPE" => ""
-                    ),
                         false
                     );?>
                 </div>
@@ -60,21 +64,23 @@
             <div class="footer__block__004">
                 <div class="footer__block__heading">Дополнительно</div>
                 <div class="footer__menu">
-                    <?$APPLICATION->IncludeComponent("bitrix:menu", "relaxa-bottom",  array(
-                        "ROOT_MENU_TYPE" => "additional",
-                        "MENU_CACHE_TYPE" => "A",
-                        "MENU_CACHE_TIME" => "36000000",
-                        "MENU_CACHE_USE_GROUPS" => "Y",
-                        "MENU_CACHE_GET_VARS" => array(
+                    <?$APPLICATION->IncludeComponent(
+                        "bitrix:menu",
+                        "relaxa-bottom",
+                        array(
+                            "ROOT_MENU_TYPE" => "additional",
+                            "MENU_CACHE_TYPE" => "A",
+                            "MENU_CACHE_TIME" => "36000000",
+                            "MENU_CACHE_USE_GROUPS" => "Y",
+                            "MENU_CACHE_GET_VARS" => array(),
+                            "CACHE_SELECTED_ITEMS" => "N",
+                            "MAX_LEVEL" => "1",
+                            "USE_EXT" => "N",
+                            "DELAY" => "N",
+                            "ALLOW_MULTI_SELECT" => "N",
+                            "COMPONENT_TEMPLATE" => "relaxa-bottom",
+                            "CHILD_MENU_TYPE" => ""
                         ),
-                        "CACHE_SELECTED_ITEMS" => "N",
-                        "MAX_LEVEL" => "1",
-                        "USE_EXT" => "N",
-                        "DELAY" => "N",
-                        "ALLOW_MULTI_SELECT" => "N",
-                        "COMPONENT_TEMPLATE" => "relaxa-bottom",
-                        "CHILD_MENU_TYPE" => ""
-                    ),
                         false
                     );?>
                 </div>
@@ -283,24 +289,27 @@ if(preg_match("#PAGEN_\d=(\d*)#", $_SERVER['REQUEST_URI'], $matches)){
 );?>
 
 
-<?$APPLICATION->IncludeComponent("bitrix:form.result.new", "consult", array(
-    "CACHE_TIME" => "3600",
-    "CACHE_TYPE" => "A",
-    "CHAIN_ITEM_LINK" => "",
-    "CHAIN_ITEM_TEXT" => "",
-    "COMPONENT_TEMPLATE" => ".default",
-    "EDIT_URL" => "",
-    "IGNORE_CUSTOM_TEMPLATE" => "N",
-    "LIST_URL" => "",
-    "SEF_MODE" => "N",
-    "SUCCESS_URL" => "",
-    "USE_EXTENDED_ERRORS" => "Y",
-    "VARIABLE_ALIASES" => array(
-        "WEB_FORM_ID" => "WEB_FORM_ID",
-        "RESULT_ID" => "RESULT_ID",
+<?$APPLICATION->IncludeComponent(
+    "bitrix:form.result.new",
+    "consult",
+    array(
+        "CACHE_TIME" => "3600",
+        "CACHE_TYPE" => "A",
+        "CHAIN_ITEM_LINK" => "",
+        "CHAIN_ITEM_TEXT" => "",
+        "COMPONENT_TEMPLATE" => ".default",
+        "EDIT_URL" => "",
+        "IGNORE_CUSTOM_TEMPLATE" => "N",
+        "LIST_URL" => "",
+        "SEF_MODE" => "N",
+        "SUCCESS_URL" => "",
+        "USE_EXTENDED_ERRORS" => "Y",
+        "VARIABLE_ALIASES" => array(
+            "WEB_FORM_ID" => "WEB_FORM_ID",
+            "RESULT_ID" => "RESULT_ID",
+        ),
+        "WEB_FORM_ID" => "6"
     ),
-    "WEB_FORM_ID" => "6"
-),
     false,
     array(
         "ACTIVE_COMPONENT" => "N"
