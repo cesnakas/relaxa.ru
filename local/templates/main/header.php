@@ -7,6 +7,32 @@ IncludeTemplateLangFile(__FILE__);
 <html lang="<?=LANGUAGE_ID;?>">
 <head>
 
+    <?
+    $APPLICATION->ShowHead();
+    // Bitrix
+    use Bitrix\Main\Page\Asset;
+    // Meta
+    Asset::getInstance()->addString('<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover, user-scalable=0">');
+    // CSS
+    Asset::getInstance()->addCss('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+    Asset::getInstance()->addCss('/bitrix/templates/dresscodeV2_new/fonts/myriadpro/style.css');
+    Asset::getInstance()->addCss('/bitrix/templates/dresscodeV2_new/fonts/ice/ice_kingdom.css');
+    Asset::getInstance()->addCss('/bitrix/templates/dresscodeV2_new/stylesND.css');
+    Asset::getInstance()->addCss('/bitrix/templates/dresscodeV2_new/adaptive.css');
+    Asset::getInstance()->addCss('/bitrix/templates/dresscodeV2_new/custom.css');
+    Asset::getInstance()->addCss('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
+    Asset::getInstance()->addCss('https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;subset=cyrillic');
+    Asset::getInstance()->addCss('/bitrix/templates/dresscodeV2_new/css/custom-styles/styles.css');
+    // JS
+    Asset::getInstance()->addJs('https://unpkg.com/imask');
+    Asset::getInstance()->addJs('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.2.3/jquery.min.js');
+    Asset::getInstance()->addJs('https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit');
+
+    ?>
+
+    <meta name="title" content="<?$APPLICATION->ShowTitle();?>"/>
+
+<?/*
     <meta http-equiv="Content-Type" content="text/html; charset=<? echo LANG_CHARSET; ?>"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="viewport" content="width=device-width, minimum-scale=1.0"/>
@@ -130,9 +156,13 @@ IncludeTemplateLangFile(__FILE__);
     <? $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/themes/" . $TEMPLATE_THEME_NAME . "/style.css"); ?>
     <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/jquery-1.11.0.min.js"); ?>
     <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/jquery.easing.1.3.js"); ?>
-    <?/* $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/rangeSlider.js"); */?>
+    <?
+    // $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/rangeSlider.js");
+    ?>
 
-    <?/* $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/system-new.js"); */?>
+    <?
+    // $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/system-new.js");
+    ?>
     <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/topMenu.js"); ?>
     <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/topSearch.js"); ?>
     <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/dwCarousel.js"); ?>
@@ -226,6 +256,7 @@ IncludeTemplateLangFile(__FILE__);
             }
         };
     </script>
+*/?>
 </head>
 <?$APPLICATION->ShowPanel();?>
 <body>

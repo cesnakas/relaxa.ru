@@ -4,7 +4,11 @@ $APPLICATION->SetPageProperty("description", "Купить массажное к
 $APPLICATION->SetTitle("«RELAXA STAR» - Массажные кресла, массажеры, массажные подушки, массажные накидки, беговые дорожки, тренажеры для фитнеса купить с бесплатной доставкой");
 ?>
 
-
+<? if (true):?>
+    <? require_once($_SERVER["DOCUMENT_ROOT"] . "/inc/mainpageND.php"); ?>
+<? else: ?>
+    <? require_once($_SERVER["DOCUMENT_ROOT"] . "/inc/mainpage.php"); ?>
+<? endif; ?>
 
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
