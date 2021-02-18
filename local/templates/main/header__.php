@@ -27,9 +27,38 @@ IncludeTemplateLangFile(__FILE__);
     Asset::getInstance()->addJs('https://unpkg.com/imask');
     Asset::getInstance()->addJs('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.2.3/jquery.min.js');
     Asset::getInstance()->addJs('https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit');
-    // Asset::getInstance()->addJs('');
+
     ?>
 
+    <meta name="title" content="<?$APPLICATION->ShowTitle();?>"/>
+
+<?/*
+    <meta http-equiv="Content-Type" content="text/html; charset=<? echo LANG_CHARSET; ?>"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0"/>
+    <meta name="title" content="<? $APPLICATION->ShowTitle() ?>"/>
+    <meta name="google-site-verification" content="G_xceoRt5jBf57eMCLA-y-oXx1O16ntd91Nl1O_7ukA" />
+    <meta name="verify-admitad" content="214d5a6c15"/>
+    <meta name="yandex-verification" content="3033d92eeb622c11" />
+    <link rel="icon" href="<?= SITE_TEMPLATE_PATH ?>/images/favicon.ico" type="image/x-icon"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" rel="stylesheet">
+    <link href="/bitrix/templates/dresscodeV2_new/fonts/myriadpro/style.css" type="text/css" rel="stylesheet">
+    <link href="/bitrix/templates/dresscodeV2_new/fonts/ice/ice_kingdom.css" type="text/css" rel="stylesheet">
+    <!-- <link href="/bitrix/templates/dresscodeV2/template_styles-relax.css" type="text/css" rel="stylesheet"> -->
+    <!-- <link href="/bitrix/templates/dresscodeV2_new/template_styles-relax_old.css" type="text/css" rel="stylesheet"> -->
+    <link href="/bitrix/templates/dresscodeV2_new/stylesND.css" type="text/css" rel="stylesheet">
+    <link href="/bitrix/templates/dresscodeV2_new/adaptive.css" type="text/css" rel="stylesheet">
+    <link href="/bitrix/templates/dresscodeV2_new/custom.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;subset=cyrillic" rel="stylesheet">
+
+    <link rel="stylesheet" href="/bitrix/templates/dresscodeV2_new/css/custom-styles/styles.css">
+    <script src="https://unpkg.com/imask"></script>
+
+    <? $APPLICATION->ShowProperty("linkPrev"); ?>
+    <? $APPLICATION->ShowProperty("linkNext"); ?>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.2.3/jquery.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit" async defer></script>
     <script>
         $('.roistat_form_call_submit').click(function () {
             var name = $('#roistat_form_call_name').val();
@@ -108,25 +137,6 @@ IncludeTemplateLangFile(__FILE__);
             });
         });
     </script>
-
-    <meta name="title" content="<?$APPLICATION->ShowTitle();?>"/>
-
-    <link rel="icon" href="/bitrix/templates/dresscodeV2_new/images/favicon.ico" type="image/x-icon"/>
-
-    <? $APPLICATION->ShowProperty("linkPrev"); ?>
-    <? $APPLICATION->ShowProperty("linkNext"); ?>
-
-<?/*
-    <meta http-equiv="Content-Type" content="text/html; charset=<? echo LANG_CHARSET; ?>"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0"/>
-
-    <meta name="google-site-verification" content="G_xceoRt5jBf57eMCLA-y-oXx1O16ntd91Nl1O_7ukA" />
-    <meta name="verify-admitad" content="214d5a6c15"/>
-    <meta name="yandex-verification" content="3033d92eeb622c11" />
-
-    <!-- <link href="/bitrix/templates/dresscodeV2/template_styles-relax.css" type="text/css" rel="stylesheet"> -->
-    <!-- <link href="/bitrix/templates/dresscodeV2_new/template_styles-relax_old.css" type="text/css" rel="stylesheet"> -->
 
     <?
     $APPLICATION->ShowHead();
