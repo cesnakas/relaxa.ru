@@ -23,11 +23,20 @@ IncludeTemplateLangFile(__FILE__);
     Asset::getInstance()->addCss('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
     Asset::getInstance()->addCss('https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;subset=cyrillic');
     Asset::getInstance()->addCss('/bitrix/templates/dresscodeV2_new/css/custom-styles/styles.css');
+    Asset::getInstance()->addCss('/bitrix/templates/dresscodeV2_new/css/jquery-ui.min.css');
     // JS
     Asset::getInstance()->addJs('https://unpkg.com/imask');
     Asset::getInstance()->addJs('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.2.3/jquery.min.js');
     Asset::getInstance()->addJs('https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit');
+    Asset::getInstance()->addJs('/bitrix/templates/dresscodeV2_new/js/jquery.js');
+    Asset::getInstance()->addJs("/bitrix/templates/dresscodeV2_new/js/jquery.nice-select.min.js");
+    Asset::getInstance()->addJs("/bitrix/templates/dresscodeV2_new/js/popper.js");
+    Asset::getInstance()->addJs("/bitrix/templates/dresscodeV2_new/js/bootstrap.min.js");
+    Asset::getInstance()->addJs("/bitrix/templates/dresscodeV2_new/js/jquery-ui.min.js");
+    Asset::getInstance()->addJs("/bitrix/templates/dresscodeV2_new/js/slick.min.js");
+    Asset::getInstance()->addJs("/bitrix/templates/dresscodeV2_new/js/main.js");
     // Asset::getInstance()->addJs('');
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/main.js');
     ?>
 
     <script>
@@ -116,6 +125,8 @@ IncludeTemplateLangFile(__FILE__);
     <? $APPLICATION->ShowProperty("linkPrev"); ?>
     <? $APPLICATION->ShowProperty("linkNext"); ?>
 
+    <title><?$APPLICATION->ShowTitle();?></title>
+
 <?/*
     <meta http-equiv="Content-Type" content="text/html; charset=<? echo LANG_CHARSET; ?>"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
@@ -131,14 +142,6 @@ IncludeTemplateLangFile(__FILE__);
     <?
     $APPLICATION->ShowHead();
     //$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/media.css");
-    $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/jquery-ui.min.css");
-    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/jquery.js");
-    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/jquery.nice-select.min.js");
-    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/popper.js");
-    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/bootstrap.min.js");
-    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/jquery-ui.min.js");
-    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/slick.min.js");
-    $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/main.js");
 
     ?>
 
@@ -164,7 +167,6 @@ IncludeTemplateLangFile(__FILE__);
     <script src="/bitrix/templates/dresscodeV2_new/js/new/script.js"></script>
     <script src="/bitrix/templates/dresscodeV2_new/js/new/sku.js"></script>
 
-    <title><? $APPLICATION->ShowTitle() ?></title>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
         (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
