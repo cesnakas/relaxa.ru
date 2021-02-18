@@ -1,5 +1,5 @@
 <? if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die(); ?>
-<? require_once($_SERVER["DOCUMENT_ROOT"] . "/settings.php"); // site settings?>
+<? require_once($_SERVER["DOCUMENT_ROOT"]."/settings.php"); // site settings?>
 <?
 IncludeTemplateLangFile(__FILE__);
 ?>
@@ -621,7 +621,7 @@ IncludeTemplateLangFile(__FILE__);
 </div>
 
 <div class="page home<?if(CSite::InDir('/massazhnoe-oborudovanie/') || CSite::InDir('/zdorovie-krasota/') || CSite::InDir('/fitnes/') || CSite::InDir('/terapiya/') || CSite::InDir('/dom-dacha/') || CSite::InDir('/rasprodazha/') || CSite::InDir('/sale/')) {?> wp-catalog<?}?>">
-    <? if ($APPLICATION->GetCurPage(true) == '/index.php'): ?>
+    <? if ($APPLICATION->GetCurPage(true) == '/index.php' || '/local/test/index.php'): ?>
         <div class="home_top_slider test">
             <div class="container">
                 <? $APPLICATION->IncludeComponent(
