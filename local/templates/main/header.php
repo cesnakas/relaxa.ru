@@ -24,6 +24,9 @@ IncludeTemplateLangFile(__FILE__);
     Asset::getInstance()->addCss('https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;subset=cyrillic');
     Asset::getInstance()->addCss('/bitrix/templates/dresscodeV2_new/css/custom-styles/styles.css');
     Asset::getInstance()->addCss('/bitrix/templates/dresscodeV2_new/css/jquery-ui.min.css');
+    Asset::getInstance()->addCss('/bitrix/templates/dresscodeV2_new/fonts/roboto/roboto.css');
+    Asset::getInstance()->addCss('/bitrix/templates/dresscodeV2_new'.'/themes/'.$TEMPLATE_THEME_NAME.'/style.css');
+
     // JS
     Asset::getInstance()->addJs('https://unpkg.com/imask');
     Asset::getInstance()->addJs('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.2.3/jquery.min.js');
@@ -35,6 +38,8 @@ IncludeTemplateLangFile(__FILE__);
     Asset::getInstance()->addJs("/bitrix/templates/dresscodeV2_new/js/jquery-ui.min.js");
     Asset::getInstance()->addJs("/bitrix/templates/dresscodeV2_new/js/slick.min.js");
     Asset::getInstance()->addJs("/bitrix/templates/dresscodeV2_new/js/main.js");
+    Asset::getInstance()->addJs("/bitrix/templates/dresscodeV2_new/js/jquery-1.11.0.min.js");
+    Asset::getInstance()->addJs("/bitrix/templates/dresscodeV2_new/js/jquery.easing.1.3.js");
     // Asset::getInstance()->addJs('');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/main.js');
     ?>
@@ -145,8 +150,6 @@ IncludeTemplateLangFile(__FILE__);
 
     ?>
 
-    <? $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/fonts/roboto/roboto.css"); ?>
-    <? $APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/themes/" . $TEMPLATE_THEME_NAME . "/style.css"); ?>
     <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/jquery-1.11.0.min.js"); ?>
     <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/jquery.easing.1.3.js"); ?>
     <?
