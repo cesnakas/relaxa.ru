@@ -360,4 +360,8 @@ display: none;
 	array(
 		"ACTIVE_COMPONENT" => "Y"
 	)
-);?> <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?>
+
+<?
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
+?>

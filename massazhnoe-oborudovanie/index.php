@@ -6,6 +6,7 @@ $APPLICATION->SetPageProperty("keywords", "купить, заказать, це�
 $APPLICATION->SetPageProperty("title", "Купить массажное оборудование недорого | Интернет-магазин «RELAXA STAR»");
 $APPLICATION->SetTitle("Массажное оборудование");
 ?>
+
 <?if($APPLICATION->GetCurPage(true)==SITE_DIR."massazhnoe-oborudovanie/index.php"):?> 
 <style>
 #catalogSection .sectionItems {
@@ -506,36 +507,36 @@ $APPLICATION->IncludeComponent(
 	false
 );?>
 
-<?
-if($template!='catalog-tov'):
-    if($APPLICATION->GetCurPage(true)==SITE_DIR."massazhnoe-oborudovanie/index.php"):?> <?$APPLICATION->IncludeComponent(
-        "dresscode:cast.smart.filter",
-        ".default",
-        Array(
-            "CACHE_GROUPS" => "Y",
-            "CACHE_TIME" => "36000000",
-            "CACHE_TYPE" => "A",
-            "COMPONENT_TEMPLATE" => ".default",
-            "CONVERT_CURRENCY" => "Y",
-            "CURRENCY_ID" => "RUB",
-            "FILTER_NAME" => "arrFilter",
-            "HIDE_NOT_AVAILABLE" => "N",
-            "IBLOCK_ID" => "1",
-            "IBLOCK_TYPE" => "catalog",
-            "PAGER_PARAMS_NAME" => "arrPager",
-            "PAGER_TEMPLATE" => "round",
-            "PRICE_CODE" => array(0=>"Розничная",),
-            "SAVE_IN_SESSION" => "N",
-            "SECTION_CODE" => "",
-            "SECTION_DESCRIPTION" => "-",
-            "SECTION_ID" => $_REQUEST["SECTION_ID"],
-            "SECTION_TITLE" => "-",
-            "SEF_MODE" => "N",
-            "XML_EXPORT" => "N"
-        )
-    );?>
-<br>
+<?if($template!='catalog-tov'):
+    if($APPLICATION->GetCurPage(true)==SITE_DIR."massazhnoe-oborudovanie/index.php"):?>
 
+        <?$APPLICATION->IncludeComponent(
+            "dresscode:cast.smart.filter",
+            ".default",
+            Array(
+                "CACHE_GROUPS" => "Y",
+                "CACHE_TIME" => "36000000",
+                "CACHE_TYPE" => "A",
+                "COMPONENT_TEMPLATE" => ".default",
+                "CONVERT_CURRENCY" => "Y",
+                "CURRENCY_ID" => "RUB",
+                "FILTER_NAME" => "arrFilter",
+                "HIDE_NOT_AVAILABLE" => "N",
+                "IBLOCK_ID" => "1",
+                "IBLOCK_TYPE" => "catalog",
+                "PAGER_PARAMS_NAME" => "arrPager",
+                "PAGER_TEMPLATE" => "round",
+                "PRICE_CODE" => array(0=>"Розничная",),
+                "SAVE_IN_SESSION" => "N",
+                "SECTION_CODE" => "",
+                "SECTION_DESCRIPTION" => "-",
+                "SECTION_ID" => $_REQUEST["SECTION_ID"],
+                "SECTION_TITLE" => "-",
+                "SEF_MODE" => "N",
+                "XML_EXPORT" => "N"
+            )
+        );?>
+<br>
         <?$APPLICATION->IncludeComponent(
             "bitrix:catalog.section",
             "squares",
@@ -652,7 +653,11 @@ if($template!='catalog-tov'):
                 "USE_PRICE_COUNT" => "N",
                 "USE_PRODUCT_QUANTITY" => "N"
             )
-        );?> 
+        );?>
+
+    <?endif;?>
 <?endif;?>
-<?endif;?>
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+
+<?
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
+?>

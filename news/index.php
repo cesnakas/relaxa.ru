@@ -6,10 +6,12 @@ $APPLICATION->SetPageProperty("tags", "Массажеры, массажные, �
 $APPLICATION->SetPageProperty("keywords", "Массажеры, массажные, кресла, офисные, качалки, аппараты, терапия, фитнес, тренажеры, интернет-магазин, новость, информация, инфа, новинки, события, актуальное, свежее, новое, читать, онлайн, online");
 $APPLICATION->SetTitle("Новости");
 ?>
+
 <?
 $tag = '%'.$_GET["TAGS"].'%';
 $GLOBALS['arrTags'] = array('ACTIVE' => 'Y', "TAGS" => $tag);
 ?>
+
 <?
 $APPLICATION->IncludeComponent(
 	"bitrix:news", 
@@ -123,4 +125,7 @@ $APPLICATION->IncludeComponent(
 	),
 	false
 );?>
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+
+<?
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
+?>

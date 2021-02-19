@@ -6,6 +6,7 @@ $APPLICATION->SetPageProperty("keywords", "Дом, дача, кресла, ка�
 $APPLICATION->SetPageProperty("title", "Купить товары для дома и дачи недорого | Интернет-магазин «RELAXA STAR»");
 $APPLICATION->SetTitle("Товары для дома и дачи");
 ?>
+
 <?$APPLICATION->IncludeComponent(
 	"bitrix:catalog",
 	'catalog-tov',
@@ -296,5 +297,6 @@ $APPLICATION->SetTitle("Товары для дома и дачи");
 	false
 );?>
 
-
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+<?
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
+?>

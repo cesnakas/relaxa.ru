@@ -5,13 +5,16 @@ $APPLICATION->SetPageProperty("title", "Сравнение товаров | Ин
 $APPLICATION->SetPageProperty("description", "Сравнить товары перед покупкой в интернет-магазине «RELAXA STAR». ☎ Телефон: 8 (800) 333 00 51 ← Звоните прямо сейчас!");
 $APPLICATION->SetPageProperty("tags", "купить, заказать, цена, интернет-магазин, доставка, стоимость, большой, выбор, товары, известные, производители, массаж, кресла, массажеры, тренажеры, фитнес, сравнить, сопоставить, узнать, разницу, отличия, различия, сходства, выгода");
 $APPLICATION->SetPageProperty("keywords", "купить, заказать, цена, интернет-магазин, доставка, стоимость, большой, выбор, товары, известные, производители, массаж, кресла, массажеры, тренажеры, фитнес, сравнить, сопоставить, узнать, разницу, отличия, различия, сходства, выгода");
-?><style>
-ul>li>ul {
-    display: block;
-}
-</style>
+?>
+
+    <style>
+        ul>li>ul {
+            display: block;
+        }
+    </style>
+
 <h1>Список сравнения</h1>
- <?$APPLICATION->IncludeComponent(
+<?$APPLICATION->IncludeComponent(
 	"dresscode:catalog.compare", 
 	"template2", 
 	array(
@@ -60,4 +63,7 @@ ul>li>ul {
 	),
 	false
 );?>
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+
+<?
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
+?>
