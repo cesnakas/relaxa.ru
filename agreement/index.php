@@ -4,7 +4,9 @@ $APPLICATION->SetPageProperty("tags", "Массажеры, массажные, �
 $APPLICATION->SetPageProperty("keywords", "Публичная, оферта, дистанционное, продажа, товар, интернет-магазин");
 $APPLICATION->SetTitle("Пользовательское соглашение | Интернет-магазин «RELAXA STAR»");
 $APPLICATION->SetPageProperty("description", "Публичная оферта на дистанционную продажу товаров в интернет-магазине «RELAXA STAR»");
-?><div class="static_relaxa_page">
+?>
+
+    <div class="static_relaxa_page">
 	<h1>
 	Пользовательское соглашение </h1>
 	<p>
@@ -220,4 +222,8 @@ $APPLICATION->SetPageProperty("description", "Публичная оферта н
 		 Телефон/факс: (495) 789-91-74
 	</p>
 </div>
-<br><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+<br>
+
+<?
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
+?>

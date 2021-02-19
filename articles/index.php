@@ -5,10 +5,13 @@ $APPLICATION->SetPageProperty("description" , "Видео и статьи инт
 $APPLICATION->SetPageProperty("tags", "Массажеры, массажные, кресла, офисные, качалки, аппараты, терапия, фитнес, тренажеры, интернет-магазин, статья, видео, как, выбрать, использовать, информация, инфа, инструкция, по, применению, читать, смотреть, онлайн, online");
 $APPLICATION->SetPageProperty("keywords", "Массажеры, массажные, кресла, офисные, качалки, аппараты, терапия, фитнес, тренажеры, интернет-магазин, статья, видео, как, выбрать, использовать, информация, инфа, инструкция, по, применению, читать, смотреть, онлайн, online");
 $APPLICATION->SetTitle("Видео и статьи");
-?><?
+?>
+
+<?
 $tag = '%'.$_GET["TAGS"].'%';
 $GLOBALS['arrTags'] = array('ACTIVE' => 'Y', "TAGS" => $tag);
 ?>
+
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news",
 	"articles",
@@ -89,4 +92,8 @@ $GLOBALS['arrTags'] = array('ACTIVE' => 'Y', "TAGS" => $tag);
 		"USE_SEARCH" => "N",
 		"USE_SHARE" => "N"
 	)
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?>
+
+<?
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
+?>

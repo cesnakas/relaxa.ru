@@ -1,4 +1,5 @@
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
+<?
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetPageProperty("keywords", "Массажеры, массажные, кресла, офисные, качалки, аппараты, терапия, фитнес, тренажеры, интернет-магазин, купить, известный, производитель, товары, продукция, бренд, фирменный, качество");
 $APPLICATION->SetTitle("Производители");
 $APPLICATION->SetPageProperty('title', 'Производители | Интернет-магазин «RELAXA STAR»');
@@ -10,6 +11,7 @@ $arDirProperties = Array(
 );
 
 ?>
+
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news", 
 	"brands", 
@@ -269,8 +271,13 @@ $arDirProperties = Array(
 		)
 	),
 	false
-);?><?$APPLICATION->IncludeComponent("dresscode:slider", ".default", array(
-	"CACHE_TIME" => "3600000",
+);?>
+
+<?$APPLICATION->IncludeComponent(
+	"dresscode:slider",
+	".default",
+	array(
+		"CACHE_TIME" => "3600000",
 		"CACHE_TYPE" => "Y",
 		"COMPONENT_TEMPLATE" => ".default",
 		"IBLOCK_ID" => "4",
@@ -285,6 +292,7 @@ $arDirProperties = Array(
 	"ACTIVE_COMPONENT" => "N"
 	)
 );?>
+
 <?php 
 	$current_uri = parse_url($_SERVER['REQUEST_URI']);
 	if ($current_uri['path'] == '/brands/') {
@@ -293,4 +301,7 @@ $arDirProperties = Array(
 		$APPLICATION->SetPageProperty("description", "Товары различных брендов в интернет-магазине RELAXA STAR. Предлагаем купить оборудование по выгодным ценам в Москве. Гарантия качества, широкий ассортимент, индивидуальный подход. Наш телефон: +7 (495) 789-91-74");
 	}
 ?>
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+
+<?
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
+?>

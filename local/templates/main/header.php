@@ -290,12 +290,12 @@ IncludeTemplateLangFile(__FILE__);
                 <div class="geo__position">
                     <ul class="geo_wrapper">
 
-                        <?/*$APPLICATION->IncludeComponent("dresscode:sale.geo.positiion", "", array(),
+                        <?$APPLICATION->IncludeComponent("dresscode:sale.geo.positiion", "", array(),
                             false,
                             array(
                                 "ACTIVE_COMPONENT" => "Y"
                             )
-                        );*/?>
+                        );?>
 
                     </ul>
                 </div>
@@ -731,7 +731,6 @@ IncludeTemplateLangFile(__FILE__);
         <?}?>
 
         <? //require_once($_SERVER["DOCUMENT_ROOT"] . "/" . SITE_TEMPLATE_PATH . "/headers/" . $TEMPLATE_HEADER . "/template.php"); ?>
-
 
         <?$APPLICATION->IncludeComponent(
             "bitrix:breadcrumb",
