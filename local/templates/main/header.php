@@ -645,7 +645,7 @@ IncludeTemplateLangFile(__FILE__);
 </div>
 
 <div class="page home<?if(CSite::InDir('/massazhnoe-oborudovanie/') || CSite::InDir('/zdorovie-krasota/') || CSite::InDir('/fitnes/') || CSite::InDir('/terapiya/') || CSite::InDir('/dom-dacha/') || CSite::InDir('/rasprodazha/') || CSite::InDir('/sale/')) {?> wp-catalog<?}?>">
-    <? if ($APPLICATION->GetCurPage(true) == '/index.php' || '/local/test/index.php'): ?>
+    <? if ($APPLICATION->GetCurPage(true) == '/index.php' || '/local/development/'): ?>
         <div class="home_top_slider test">
             <div class="<?/*container*/?>">
                 <? $APPLICATION->IncludeComponent(
@@ -733,10 +733,7 @@ IncludeTemplateLangFile(__FILE__);
         <? //require_once($_SERVER["DOCUMENT_ROOT"] . "/" . SITE_TEMPLATE_PATH . "/headers/" . $TEMPLATE_HEADER . "/template.php"); ?>
 
 
-        <?
-
-
-        $APPLICATION->IncludeComponent(
+        <?$APPLICATION->IncludeComponent(
             "bitrix:breadcrumb",
             "new_llisting",
             array(
@@ -748,4 +745,4 @@ IncludeTemplateLangFile(__FILE__);
                 "COMPOSITE_FRAME_TYPE" => "AUTO"
             ),
             false
-        ); ?>
+        );?>
