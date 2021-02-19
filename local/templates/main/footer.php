@@ -7,7 +7,9 @@
         <div class="wrapper">
 
             <div class="footer__block__001">
-                <div class="footer__logo"><a href="https://www.relaxa.ru/about/"><img src="<?=SITE_TEMPLATE_PATH?>/images/svg/logo.svg"></a></div>
+                <div class="footer__logo">
+                    <a href="https://www.relaxa.ru/about/"><img src="<?=SITE_TEMPLATE_PATH;?>/img/logo.svg"></a>
+                </div>
                 <div class="footer__sub__logo"><a href="https://www.relaxa.ru/about/">Эксклюзивный дистрибьютор<br>мировых производителей<br>массажного оборудования</a></div>
             </div>
 
@@ -594,5 +596,6 @@ if(preg_match("#PAGEN_\d=(\d*)#", $_SERVER['REQUEST_URI'], $matches)){
             });
         });
     </script>
-    </body>
-    </html>
+
+</body>
+</html>

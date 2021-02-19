@@ -13,6 +13,7 @@ IncludeTemplateLangFile(__FILE__);
     use Bitrix\Main\Page\Asset;
     // Meta
     Asset::getInstance()->addString('<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover, user-scalable=0">');
+
     // CSS
     Asset::getInstance()->addCss('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
     Asset::getInstance()->addCss('/bitrix/templates/dresscodeV2_new/fonts/myriadpro/style.css');
@@ -23,9 +24,12 @@ IncludeTemplateLangFile(__FILE__);
     Asset::getInstance()->addCss('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
     Asset::getInstance()->addCss('https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;subset=cyrillic');
     Asset::getInstance()->addCss('/bitrix/templates/dresscodeV2_new/css/custom-styles/styles.css');
+    // Asset::getInstance()->addCss("/bitrix/templates/dresscodeV2_new/css/media.css");
     Asset::getInstance()->addCss('/bitrix/templates/dresscodeV2_new/css/jquery-ui.min.css');
     Asset::getInstance()->addCss('/bitrix/templates/dresscodeV2_new/fonts/roboto/roboto.css');
     Asset::getInstance()->addCss('/bitrix/templates/dresscodeV2_new'.'/themes/'.$TEMPLATE_THEME_NAME.'/style.css');
+    // Asset::getInstance()->addCss('');
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/main.css');
 
     // JS
     Asset::getInstance()->addJs('https://unpkg.com/imask');
@@ -40,6 +44,16 @@ IncludeTemplateLangFile(__FILE__);
     Asset::getInstance()->addJs("/bitrix/templates/dresscodeV2_new/js/main.js");
     Asset::getInstance()->addJs("/bitrix/templates/dresscodeV2_new/js/jquery-1.11.0.min.js");
     Asset::getInstance()->addJs("/bitrix/templates/dresscodeV2_new/js/jquery.easing.1.3.js");
+    // Asset::getInstance()->addJs("/bitrix/templates/dresscodeV2_new/js/rangeSlider.js");
+    // Asset::getInstance()->addJs("/bitrix/templates/dresscodeV2_new/js/system-new.js");
+    Asset::getInstance()->addJs("/bitrix/templates/dresscodeV2_new/js/topMenu.js");
+    Asset::getInstance()->addJs("/bitrix/templates/dresscodeV2_new/js/topSearch.js");
+    Asset::getInstance()->addJs("/bitrix/templates/dresscodeV2_new/js/dwCarousel.js");
+    Asset::getInstance()->addJs("/bitrix/templates/dresscodeV2_new/js/dwSlider.js");
+    Asset::getInstance()->addJs("/bitrix/templates/dresscodeV2_new/js/colorSwitcher.js");
+    Asset::getInstance()->addJs("/bitrix/templates/dresscodeV2_new/js/dwZoomer.js");
+    Asset::getInstance()->addJs('/bitrix/templates/dresscodeV2_new/js/new/script.js');
+    Asset::getInstance()->addJs('/bitrix/templates/dresscodeV2_new/js/new/sku.js');
     // Asset::getInstance()->addJs('');
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/main.js');
     ?>
@@ -132,7 +146,8 @@ IncludeTemplateLangFile(__FILE__);
 
     <title><?$APPLICATION->ShowTitle();?></title>
 
-<?/*
+    <!--//-->
+
     <meta http-equiv="Content-Type" content="text/html; charset=<? echo LANG_CHARSET; ?>"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
     <meta name="viewport" content="width=device-width, minimum-scale=1.0"/>
@@ -143,32 +158,6 @@ IncludeTemplateLangFile(__FILE__);
 
     <!-- <link href="/bitrix/templates/dresscodeV2/template_styles-relax.css" type="text/css" rel="stylesheet"> -->
     <!-- <link href="/bitrix/templates/dresscodeV2_new/template_styles-relax_old.css" type="text/css" rel="stylesheet"> -->
-
-    <?
-    $APPLICATION->ShowHead();
-    //$APPLICATION->SetAdditionalCSS(SITE_TEMPLATE_PATH . "/css/media.css");
-
-    ?>
-
-    <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/jquery-1.11.0.min.js"); ?>
-    <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/jquery.easing.1.3.js"); ?>
-    <?
-    // $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/rangeSlider.js");
-    ?>
-
-    <?
-    // $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/system-new.js");
-    ?>
-    <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/topMenu.js"); ?>
-    <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/topSearch.js"); ?>
-    <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/dwCarousel.js"); ?>
-    <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/dwSlider.js"); ?>
-    <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/colorSwitcher.js"); ?>
-    <? $APPLICATION->AddHeadScript(SITE_TEMPLATE_PATH . "/js/dwZoomer.js"); ?>
-
-
-    <script src="/bitrix/templates/dresscodeV2_new/js/new/script.js"></script>
-    <script src="/bitrix/templates/dresscodeV2_new/js/new/sku.js"></script>
 
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
@@ -186,6 +175,7 @@ IncludeTemplateLangFile(__FILE__);
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/13260706" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-148618645-1"></script>
     <script>
@@ -229,6 +219,7 @@ IncludeTemplateLangFile(__FILE__);
             }
         }
     </script>
+
     <script data-skip-moving="true">
         var isMobile = {
             Android: function() {
@@ -251,7 +242,7 @@ IncludeTemplateLangFile(__FILE__);
             }
         };
     </script>
-*/?>
+
 </head>
 <?$APPLICATION->ShowPanel();?>
 <body>
@@ -305,6 +296,7 @@ IncludeTemplateLangFile(__FILE__);
                                 "ACTIVE_COMPONENT" => "Y"
                             )
                         );*/?>
+
                     </ul>
                 </div>
                 <div class="top__menu">
@@ -451,11 +443,17 @@ IncludeTemplateLangFile(__FILE__);
 
                 <div class="logo__adaptive">
                     <? if ($APPLICATION->GetCurPage(true) == '/index.php'): ?>
-                        <img src="<?= SITE_TEMPLATE_PATH ?>/images/logo.png"
-                             alt="Интернет-магазин массажных кресел и массажеров в Москве - Relaxa"/>
+                        <img
+                            src="<?=SITE_TEMPLATE_PATH;?>/images/logo.png"
+                            alt="Интернет-магазин массажных кресел и массажеров в Москве - Relaxa"
+                        />
                     <? else: ?>
-                        <a href="<?=SITE_DIR;?>" title="Интернет-магазин массажных кресел и массажеров в Москве - Relaxa"><img
-                                src="<?=SITE_TEMPLATE_PATH;?>/images/logo.png" alt=""/></a>
+                        <a href="<?=SITE_DIR;?>" title="Интернет-магазин массажных кресел и массажеров в Москве - Relaxa">
+                            <img
+                                src="<?=SITE_TEMPLATE_PATH;?>/images/logo.png"
+                                alt="Интернет-магазин массажных кресел и массажеров в Москве - Relaxa"
+                            />
+                        </a>
                     <? endif; ?>
                 </div>
 
@@ -649,7 +647,7 @@ IncludeTemplateLangFile(__FILE__);
 <div class="page home<?if(CSite::InDir('/massazhnoe-oborudovanie/') || CSite::InDir('/zdorovie-krasota/') || CSite::InDir('/fitnes/') || CSite::InDir('/terapiya/') || CSite::InDir('/dom-dacha/') || CSite::InDir('/rasprodazha/') || CSite::InDir('/sale/')) {?> wp-catalog<?}?>">
     <? if ($APPLICATION->GetCurPage(true) == '/index.php' || '/local/test/index.php'): ?>
         <div class="home_top_slider test">
-            <div class="container">
+            <div class="<?/*container*/?>">
                 <? $APPLICATION->IncludeComponent(
                     "bitrix:news.list",
                     "slider_new",
