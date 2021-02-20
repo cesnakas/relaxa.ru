@@ -29,7 +29,7 @@ IncludeTemplateLangFile(__FILE__);
     Asset::getInstance()->addCss('/bitrix/templates/dresscodeV2_new/fonts/roboto/roboto.css');
     Asset::getInstance()->addCss('/bitrix/templates/dresscodeV2_new'.'/themes/'.$TEMPLATE_THEME_NAME.'/style.css');
     // Asset::getInstance()->addCss('');
-    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/main.css');
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/build/css/main.css');
 
     // JS
     Asset::getInstance()->addJs('https://unpkg.com/imask');
@@ -55,7 +55,7 @@ IncludeTemplateLangFile(__FILE__);
     Asset::getInstance()->addJs('/bitrix/templates/dresscodeV2_new/js/new/script.js');
     Asset::getInstance()->addJs('/bitrix/templates/dresscodeV2_new/js/new/sku.js');
     // Asset::getInstance()->addJs('');
-    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/main.js');
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/build/js/main.js');
     ?>
 
     <script>
@@ -645,7 +645,7 @@ IncludeTemplateLangFile(__FILE__);
 </div>
 
 <div class="page home<?if(CSite::InDir('/massazhnoe-oborudovanie/') || CSite::InDir('/zdorovie-krasota/') || CSite::InDir('/fitnes/') || CSite::InDir('/terapiya/') || CSite::InDir('/dom-dacha/') || CSite::InDir('/rasprodazha/') || CSite::InDir('/sale/')) {?> wp-catalog<?}?>">
-    <? if ($APPLICATION->GetCurPage(true) == '/index.php' || '/local/development/'): ?>
+    <? if ($APPLICATION->GetCurPage(true) == '/index.php'): ?>
         <div class="home_top_slider test">
             <div class="<?/*container*/?>">
                 <? $APPLICATION->IncludeComponent(

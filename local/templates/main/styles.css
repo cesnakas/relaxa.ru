@@ -1,0 +1,302 @@
+ul {
+    list-style: disc inside;
+}
+
+/*.product .markerContainer {
+    left: 2px;
+    right: inherit !important;
+}
+*/
+
+.img_block ul.icons {
+    margin-left: 42px;
+}
+
+.img_block.no_adaptive {
+    width: 750px;
+}
+
+.mob_cart_header ul.icons {
+    position: absolute;
+    left: 50%;
+    top: 28px;
+}
+
+.mob_cart_header ul.icons li {
+    display: inline-block;
+}
+
+ul.icons li a {
+    color: #707070;
+    line-height: 30px;
+    display: block;
+    vertical-align: top;
+    padding-left: 30px;
+    position: relative;
+    height: 29px;
+    font-size: 16px;
+}
+
+ul.icons li a img {
+    position: absolute;
+    left: 0;
+    top: 2px;
+    filter: grayscale(100%);
+}
+
+ul.icons li a:hover {
+    color: #8f2828;
+
+}
+
+ul.icons li a:hover img {
+    filter: grayscale(0%);
+
+}
+
+ul.icons li {
+    display: inline-block;
+}
+
+ul.icons li a img {
+    height: 25px;
+}
+
+ul.icons {
+    margin-left: 44px;
+}
+
+.img_block > ul.icons > li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.call_block img {
+    margin-bottom: -2px;
+}
+
+.call_block {
+    margin-top: 14px;
+}
+
+.tabloid .rating {
+    position: relative !important;
+    float: right !important;
+    width: 80px !important;
+    margin-top: 0;
+}
+
+.product .picture {
+    line-height: 170px !important;
+    height: auto !important;
+}
+
+.product .picture img {
+    max-height: 200px !important;
+}
+
+#reviews .rating .icon {
+    display: inline-block;
+    font-size: 28px;
+    color: #e85222;
+}
+
+a.link {
+    position: absolute;
+    text-align: center;
+    display: block;
+    width: 100%;
+    color: #8f2928;
+    text-decoration: underline;
+}
+
+#reviews .rating {
+    width: 100%;
+    right: 0;
+    height: 45px;
+}
+
+.rating {
+    display: inline-block;
+    position: relative;
+    height: 50px;
+    line-height: 50px;
+    font-size: 50px;
+}
+
+.rating label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    cursor: pointer;
+}
+
+.rating label:last-child {
+    position: static;
+}
+
+.rating label:nth-child(1) {
+    z-index: 5;
+}
+
+.rating label:nth-child(2) {
+    z-index: 4;
+}
+
+.rating label:nth-child(3) {
+    z-index: 3;
+}
+
+.rating label:nth-child(4) {
+    z-index: 2;
+}
+
+.rating label:nth-child(5) {
+    z-index: 1;
+}
+
+.rating {
+    position: absolute;
+    right: 41px;
+    margin-top: -70px;
+}
+
+.rating label input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.rating label .icon {
+    float: left;
+    color: transparent;
+}
+
+.rating label:last-child .icon {
+    color: #000;
+}
+
+.rating:not(:hover) label input:checked ~ .icon,
+.rating:hover label:hover input ~ .icon {
+    color: #09f;
+}
+
+.rating label input:focus:not(:checked) ~ .icon:last-child {
+    color: #000;
+    text-shadow: 0 0 5px #09f;
+}
+
+p.error {
+    text-align: center;
+    color: #ce0d0d;
+}
+
+p.success {
+    text-align: center;
+    color: #1f9003;
+}
+
+.reviews ul {
+    padding: 20px 50px;
+}
+
+.reviews ul li {
+    list-style: none;
+    border-bottom: 1px solid #aaa;
+    padding: 10px 5px;
+}
+
+.reviews ul li .text span {
+    display: block;
+    font-weight: bold;
+}
+
+.reviews ul li .text {
+    padding: 10px;
+}
+
+.reviews ul li .meta {
+    font-style: italic;
+    padding-bottom: 10px;
+}
+
+.reviews ul li .meta span {
+    display: block;
+}
+
+.reviews h4 {
+    font-size: 1.2em;
+}
+
+.center {
+    text-align: center;
+}
+
+.btn {
+    cursor: pointer;
+    text-transform: uppercase;
+    text-align: center;
+    width: 222px;
+    height: 29px;
+    margin-right: 21px;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    background-color: #8f2828;
+    cursor: pointer;
+    z-index: 9;
+    position: relative;
+    padding: 4px 5px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.ittems_int img {
+    max-width: 100%;
+}
+
+.ittems_int a {
+    text-align: center;
+    display: block;
+}
+
+.ttext-ccolor h1, .ttext-ccolor h2, .ttext-ccolor h3, .ttext-ccolor h4, .ttext-ccolor h5, .ttext-ccolor h6 {
+    font-size: 16pt;
+    color: #9d0a0f;
+    cursor: default;
+    font-weight: bold;
+    padding: 24px 0px 12px 0;
+}
+
+#similar::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+#catalogColumn .items.productList{
+    float: none;
+}
+#similar .items.productList {
+    max-width: 100%;
+}
+.item.product.sku{
+    width: 295px;
+}
+#reviews {
+    margin-top: 36px;
+}
+.pager{
+    width: 100%;
+}
+.h1 {
+    font-family: "roboto_ltregular";
+    line-height: 36px;
+    font-weight: 400;
+    text-align: left;
+    margin: 0 0 24px;
+    font-size: 24px;
+    color: #000000;
+    display: block;
+}
