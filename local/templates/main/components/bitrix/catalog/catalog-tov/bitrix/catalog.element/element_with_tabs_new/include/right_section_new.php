@@ -12,12 +12,6 @@ border: none;
 }
 </style>
 
-
-
-
-
-
-
 <?
 $url = (!$arResult['CATALOG_QUANTITY'] and $arResult['PROPERTIES']['URL_NEW']['VALUE']) ? $arResult['PROPERTIES']['URL_NEW']['VALUE'] : '';
 ?>
@@ -112,12 +106,13 @@ $url = (!$arResult['CATALOG_QUANTITY'] and $arResult['PROPERTIES']['URL_NEW']['V
   <? endif; ?>
 </div>
 
+
 <div class="p-carddes__deswp">
   <a href="#nasl-desh" class="p-carddes__des fb-modal">
       Нашли дешевле? Снизим цену
   </a>
             <div class="c-modal" id="nasl-desh" style="display: none;">
-            <form class="c-modal__wrapper">
+            <form class="c-modal__wrapper" method="post" action="/ajax/nashli_deshevle.php">
                 <input type="hidden" name="ID" value="<?=$arResult['ID']?>">
                 <input type="hidden" name="IBLOCK_ID" value="<?=$arResult['IBLOCK_ID']?>">
 				
@@ -130,6 +125,11 @@ $url = (!$arResult['CATALOG_QUANTITY'] and $arResult['PROPERTIES']['URL_NEW']['V
                 <div class="form__text">
                     Если у конкурента цена ниже - вернем разницу!
                     Промокод отправим на телефон или e-mail.
+                </div>
+				<div class="c-modal__wplink">
+					<a href="https://relaxa.ru/usloviya-aktsii/" class="c-modal__link" target="_blank">
+						Условия акции
+					</a>
                 </div>
                 <div class="form-pokaza__item">
                     <label>Ваше имя<span>*</span></label>
@@ -147,24 +147,23 @@ $url = (!$arResult['CATALOG_QUANTITY'] and $arResult['PROPERTIES']['URL_NEW']['V
                     <input type="checkbox" name="SOGL" id="form-check2" checked required>
                     <label for="form-check">Согласие на обработку персональных данных</label>
                 </div> 
-				<div class="g-recaptcha" data-sitekey="6Lcdw-MUAAAAANewuNvmQb0ikgc-2OKf9AfjMYW_"></div>
-                <button name="submit" type="submit" class="c-modal__btn">Отправить</button>
+				<?/*<div id="recaptcha2"></div>*/?>
+                <button class="c-modal__btn">Отправить</button>
             </form>
         </div>
-<script src='https://www.google.com/recaptcha/api.js'></script>		
+		
         <script>
             $(document).ready(function() {
                 $('.c-modal__wrapper').submit(function() {
-                    var key = grecaptcha.getResponse();
-                    if(key == '') {
-                        alert('Вы не прошли проверку "Я не робот"');
-                    } else {
-                        var form = $(this).serialize();
                         $.ajax({
                             type: 'POST', // метод
                             url: '/ajax/nashli_deshevle.php', // ссылка на обработчик
-                            data: form, // нашы переменные из name
-                            success: function(data){
+                            data: {
+								action: "to_send_form",
+								name: $("Нашли дешевле").val(),
+								recaptcha_token: window.recaptcha.getToken(),
+								},
+                            onsuccess: function(data){
                                 console.log(data);
                                 $.fancybox.close();
                                 setTimeout(function() {
@@ -181,14 +180,15 @@ $url = (!$arResult['CATALOG_QUANTITY'] and $arResult['PROPERTIES']['URL_NEW']['V
                                 }, 500);
                             }
                         });
-                    }
+                    
                     return false;
                 });
-            });		
-        </script>  
-    
-  
+            });	
+        </script>   
 </div>
+
+
+
 <?if(!empty($arResult['PROPERTIES']['CASHBACK']['VALUE'])) {?>
 <div class="p-carddes__cashbackwp">
   <div class="p-carddes__cashback">
@@ -323,7 +323,7 @@ $ar_resTov = CCatalogProduct::GetByID($arResult["ID"]);
     } elseif(!empty($arResult['PROPERTIES']['BE_AVAILABLE_DATE']['VALUE'])) {
         ?>
 
-        <a style="background: #EB7100;" href="#" class=" p-carddes__addbasket p-carddes__addbasket-pred fullbtn fastBack label changeID"
+        <a style="background: #EB7100; line-height: 42px;" href="#" class=" p-carddes__addbasket p-carddes__addbasket-pred fullbtn fastBack label changeID"
            data-id="<?= $arResult["ID"] ?>">Предзаказ</a>
         <?
         $res = CIBlockElement::GetByID($arResult['PROPERTIES']['ANALOG_LINK']['VALUE']);
@@ -337,7 +337,7 @@ $ar_resTov = CCatalogProduct::GetByID($arResult["ID"]);
                 Посмотреть аналог
             </a>
             <?
-        } else {
+        } /*else {
             ?>
             <?if($url):?>
                 <a href="<?=$url;?>" class="p-carddes__buyoneclick-pred fullbtn fastBack label changeID">
@@ -359,7 +359,7 @@ $ar_resTov = CCatalogProduct::GetByID($arResult["ID"]);
 
             <? endif; ?>
             <?
-        }
+        }*/
     } else {/*
     ?>
     <a href="javascript:void(0);" class="p-carddes__addbasket-no"
@@ -415,24 +415,25 @@ $ar_resTov = CCatalogProduct::GetByID($arResult["ID"]);
               </div>
 			  
 
-                <div class="g-recaptcha" data-sitekey="6Lcdw-MUAAAAANewuNvmQb0ikgc-2OKf9AfjMYW_"></div>
+                <div id="recaptcha3"></div>
                 <button class="form-pokaza__submite">Отправить</button>
             </form>
         </div>
+		
         <script>
             $(document).ready(function() {
                 $('.form-pokaza__wrap').submit(function() {
-                    var key = grecaptcha.getResponse();
-                    if(key == '') {
+                    let key3 = grecaptcha.getResponse();
+                    if(key3 == '') {
                         alert('Вы не прошли проверку "Я не робот"');
                     } else {
-                        var form = $(this).serialize();
+                        let form3 = $(this).serialize();
                         $.ajax({
                             type: 'POST', // метод
                             url: '/ajax/form-pokaza.php', // ссылка на обработчик
-                            data: form, // нашы переменные из name
-                            success: function(data){
-                                console.log(data);
+                            data: form3, // нашы переменные из name
+                            success: function(data3){
+                                console.log(data3);
                                 $.fancybox.close();
                                 setTimeout(function() {
                                     $.fancybox.open("<div class='modal-ok' id='modalloll-ok' style='display: none;'><a href='#' class='p-izgotov__close'></a><div class='p-izgotov__title'>Спасибо за заявку!</div><div class='p-izgotov__subtitle'>Наши менеджеры свяжутся с Вами в ближайшее время.</div></div>");
@@ -451,7 +452,7 @@ $ar_resTov = CCatalogProduct::GetByID($arResult["ID"]);
                     }
                     return false;
                 });
-            });
+            });			
         </script>
     <?}?>
 
@@ -479,34 +480,14 @@ $ar_resTov = CCatalogProduct::GetByID($arResult["ID"]);
               </defs>
           </svg>
       </i>
-      <a href="/contacts">Самовывоз</a> сегодня, бесплатно
+      <a href="/contacts">Самовывоз</a> бесплатно
       из нашего магазина
   </li>
     <?}?>
     <?if($arResult['PROPERTIES']['DOSTAVKA']['VALUE'] == 'Да') {?>
   <li class="p-carddes__item">
-    <?if($arResult['PROPERTIES']['FREE_DELIVERY']['VALUE'] == 'Да'):?>
-      <i class="p-carddes__subicon">
-          <svg width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#clip0)">
-                  <path d="M21.424 9.94989L21.4297 9.9725L21.4527 9.976C22.3066 10.106 22.963 10.8453 22.963 11.7348V15.4091C22.963 15.5801 22.8244 15.7186 22.6535 15.7186H21.5276H21.4922L21.4926 15.754L21.493 15.7663L21.4932 15.7766C21.4932 16.9602 20.5302 17.9232 19.3466 17.9232C18.163 17.9232 17.2 16.9602 17.2 15.7766L17.2002 15.7664L17.2006 15.754L17.201 15.7186H17.1656H9.40243H9.36704L9.36744 15.754L9.36779 15.7663L9.36804 15.7766C9.36804 16.9602 8.40501 17.9232 7.22143 17.9232C6.03785 17.9232 5.07482 16.9602 5.07482 15.7766L5.07506 15.7663L5.07542 15.754L5.07581 15.7186H5.04042H3.1797C2.80647 15.7186 2.50279 15.4149 2.50279 15.0417V14.2839V14.2489H2.46779H1.34253C1.17159 14.2489 1.03305 14.1103 1.03305 13.9394C1.03305 13.7685 1.17163 13.6299 1.34253 13.6299H4.6494C4.82034 13.6299 4.95888 13.7685 4.95888 13.9394C4.95888 14.1103 4.8203 14.2489 4.6494 14.2489H3.15671H3.12171V14.2839V15.0417C3.12171 15.0737 3.14765 15.0997 3.17966 15.0997H5.1597H5.18462L5.19277 15.0761C5.4839 14.2354 6.28316 13.6299 7.22143 13.6299C8.15969 13.6299 8.95891 14.2354 9.25008 15.0761L9.25823 15.0997H9.28315H16.4301H16.4651V15.0647V12.4697C16.4651 12.2988 16.6036 12.1602 16.7745 12.1602C16.9455 12.1602 17.084 12.2988 17.084 12.4697V15.0647V15.0997H17.119H17.2849H17.3098L17.318 15.0762C17.6091 14.2354 18.4083 13.63 19.3466 13.63C20.2849 13.63 21.0841 14.2354 21.3753 15.0762L21.3834 15.0997H21.4083H22.309H22.344V15.0647V13.5491V13.5141H22.309H21.9186C21.3428 13.5141 20.8743 13.0456 20.8743 12.4698V11.7349C20.8743 11.564 21.0129 11.4254 21.1838 11.4254H22.2549H22.303L22.2882 11.3797C22.1379 10.9135 21.7002 10.575 21.1845 10.5747L21.1835 10.5747L21.1826 10.5746H17.1191H17.0841V10.6096V11.0001C17.0841 11.171 16.9455 11.3096 16.7746 11.3096C16.6037 11.3096 16.4651 11.171 16.4651 11.0001V4.75365C16.4651 4.72165 16.4392 4.69571 16.4072 4.69571H3.17966C3.14765 4.69571 3.12171 4.72165 3.12171 4.75365V11C3.12171 11.171 2.98313 11.3095 2.81223 11.3095C2.6413 11.3095 2.50275 11.1709 2.50275 11V4.75365C2.50275 4.38042 2.80642 4.07675 3.17966 4.07675H16.4072C16.7805 4.07675 17.0841 4.38042 17.0841 4.75365V5.51154V5.54654H17.1191H19.7141C20.4925 5.54654 21.1259 6.17987 21.1259 6.9583V7.32572C21.1259 7.47439 21.0209 7.59859 20.881 7.62832L20.8455 7.63585L20.8543 7.67104L21.424 9.94989ZM17.1191 6.16546H17.0841V6.20046V6.98124V7.01624H17.1191H20.472H20.507V6.98124V6.9583C20.507 6.52109 20.1513 6.16546 19.7141 6.16546H17.1191ZM17.0841 9.92069V9.95569H17.1191H20.7427H20.7875L20.7766 9.9122L20.214 7.66167L20.2074 7.63516H20.18H17.1191H17.0841V7.67016V9.92069ZM21.5283 12.0443H21.4933V12.0793V12.4697C21.4933 12.7043 21.6841 12.8951 21.9187 12.8951H22.2741H22.3091H22.3091V12.8601H22.3441V12.0793V12.0443H22.3091H21.5283ZM5.69373 15.7766C5.69373 16.6191 6.37903 17.3043 7.22143 17.3043C8.06382 17.3043 8.74912 16.6191 8.74912 15.7766C8.74912 14.9342 8.06382 14.249 7.22143 14.249C6.37903 14.249 5.69373 14.9342 5.69373 15.7766ZM17.819 15.7766C17.819 16.6191 18.5043 17.3043 19.3467 17.3043C20.1891 17.3043 20.8744 16.6191 20.8744 15.7766C20.8744 14.9342 20.1891 14.249 19.3467 14.249C18.5043 14.249 17.819 14.9342 17.819 15.7766Z" fill="#0A5A77" stroke="white" stroke-width="0.07"/>
-                  <path d="M6.54452 15.7764C6.54452 15.4032 6.8482 15.0995 7.22143 15.0995C7.59466 15.0995 7.89833 15.4032 7.89833 15.7764C7.89833 16.1497 7.59466 16.4533 7.22143 16.4533C6.8482 16.4533 6.54452 16.1497 6.54452 15.7764Z" fill="#0A5A77" stroke="white" stroke-width="0.07"/>
-                  <path d="M18.6698 15.7764C18.6698 15.4032 18.9734 15.0995 19.3467 15.0995C19.7199 15.0995 20.0236 15.4032 20.0236 15.7764C20.0236 16.1497 19.7199 16.4533 19.3467 16.4533C18.9734 16.4533 18.6698 16.1497 18.6698 15.7764Z" fill="#0A5A77" stroke="white" stroke-width="0.07"/>
-                  <path d="M10.1609 13.63H15.3049C15.4758 13.63 15.6144 13.7685 15.6144 13.9395C15.6144 14.1104 15.4758 14.2489 15.3049 14.2489H10.1609C9.98992 14.2489 9.85138 14.1104 9.85138 13.9395C9.85138 13.7685 9.98996 13.63 10.1609 13.63Z" fill="#0A5A77" stroke="white" stroke-width="0.07"/>
-                  <path d="M2.07739 12.1602H6.48658C6.65748 12.1602 6.79606 12.2988 6.79606 12.4697C6.79606 12.6407 6.65748 12.7792 6.48658 12.7792H2.07739C1.90645 12.7792 1.76791 12.6407 1.76791 12.4697C1.76791 12.2988 1.9065 12.1602 2.07739 12.1602Z" fill="#0A5A77" stroke="white" stroke-width="0.07"/>
-                  <path d="M12.5141 7.47441L12.5141 7.47441L9.45079 10.5377L9.42604 10.5624L9.40129 10.5377L7.8077 8.94411C7.68684 8.82324 7.49089 8.82325 7.37007 8.94411L7.37007 8.94411C7.2492 9.06498 7.2492 9.26088 7.37007 9.38175L9.20724 11.2189L9.20725 11.2189C9.26766 11.2794 9.3468 11.3096 9.42604 11.3096C9.50528 11.3096 9.58446 11.2794 9.64482 11.2189L9.64484 11.2189L12.9517 7.91205C12.9517 7.91205 12.9517 7.91205 12.9517 7.91205L12.5141 7.47441ZM12.5141 7.47441C12.6349 7.35354 12.8309 7.35354 12.9518 7.47437L12.5141 7.47441Z" fill="#0A5A77" stroke="white" stroke-width="0.07"/>
-              </g>
-              <defs>
-                  <clipPath id="clip0">
-                      <rect x="0.998047" width="22" height="22" fill="white"/>
-                  </clipPath>
-              </defs>
-          </svg>
-      </i>
-      <a href="/delivery">Бесплатная доставка</a> завтра
-    <?else:?>
-        <i class="p-carddes__subicon">
-            <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" width="7.76mm" height="7.76mm" viewBox="0 0 22 22">
+	    <i class="p-carddes__subicon">
+          <svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" width="7.76mm" height="7.76mm" viewBox="0 0 22 22">
                 <defs>
                     <style>
                         .cls-1 {
@@ -522,7 +503,7 @@ $ar_resTov = CCatalogProduct::GetByID($arResult["ID"]);
                         }
                     </style>
                 </defs>
-                <title>dostacka</title>
+                <title>dostavka</title>
                 <g>
                     <circle class="cls-1" cx="6.31" cy="15.69" r="2.15"/>
                     <circle class="cls-1" cx="18.22" cy="15.72" r="2.15"/>
@@ -540,9 +521,11 @@ $ar_resTov = CCatalogProduct::GetByID($arResult["ID"]);
                     <path class="cls-1" d="M12.55,6.19h0L8.37,10.36h0L6.13,8.19a.42.42,0,0,0-.59,0h0a.42.42,0,0,0,0,.59h0L8,11.29H8a.42.42,0,0,0,.59,0h0l4.56-4.5h0Zm0,0a.43.43,0,1,1,.61.6Z"/>
                 </g>
             </svg>
-
-        </i>
-        <a href="/delivery">Доставка</a> завтра от <strong>400р</strong>.
+		</i>
+    <?if($arResult['PROPERTIES']['FREE_DELIVERY']['VALUE'] == 'Да'):?>
+      <a href="/delivery">Бесплатная доставка</a>
+    <?else:?>
+      <a href="/delivery">Доставка</a> от <strong>400р</strong>.
     <?endif?>
   </li>
     <?}?>
@@ -592,9 +575,8 @@ $ar_resTov = CCatalogProduct::GetByID($arResult["ID"]);
               <path d="M11.0731 1.14617H11.1143V0.330731C11.1143 0.208917 11.0493 0.0979498 10.9469 0.0437494C10.8446 -0.0104006 10.7223 0.00125917 10.6306 0.0740673M11.0731 1.14617L10.6306 0.0740673M11.0731 1.14617L11.1224 1.15598M11.0731 1.14617L11.1224 1.15598M10.6306 0.0740673L10.6306 0.0740689M10.6306 0.0740673L10.6306 0.0740689M11.1224 1.15598C14.6998 1.86879 17.4408 4.93308 17.9172 8.75396C18.3936 12.5749 16.4976 16.2871 13.2171 17.958C13.1763 17.9788 13.1317 17.9897 13.0864 17.99C12.9836 17.99 12.8876 17.9348 12.8318 17.843L11.8071 16.1564C11.759 16.0773 11.7461 15.9796 11.7719 15.8895C11.7977 15.7994 11.8596 15.7259 11.9408 15.6885L11.9408 15.6885C14.2534 14.6213 15.6778 12.1259 15.4949 9.46333C15.3119 6.80061 13.5614 4.54943 11.1271 3.84771L11.1143 3.84403V3.85732V4.29911C11.1143 4.42092 11.0493 4.53189 10.9469 4.58609C10.8446 4.64024 10.7223 4.62858 10.6306 4.55577L8.13116 2.57158L8.13116 2.57158C8.05508 2.51123 8.01 2.41615 8.01 2.31492C8.01 2.21369 8.05508 2.11861 8.13116 2.05826L8.13116 2.05826M11.1224 1.15598L8.13116 2.05826M8.13116 2.05826L10.6306 0.0740689M8.13116 2.05826L10.6306 0.0740689M13.1888 17.2455L12.9992 17.3607L13.2022 17.249C15.7836 15.8288 17.3973 12.9998 17.3829 9.92094C17.3631 5.84961 14.5647 2.38975 10.7661 1.74217L10.766 1.74215C10.6189 1.7183 10.5096 1.58397 10.5094 1.42535V0.992127V0.97142L10.4932 0.984296L8.82703 2.30709L8.81717 2.31492L8.82703 2.32275L10.4932 3.64555L10.5094 3.65842V3.63771V3.43926C10.5094 3.34275 10.5504 3.25157 10.6209 3.19074L10.6209 3.19072C10.6912 3.12976 10.7835 3.10578 10.8723 3.12496C13.6062 3.71467 15.6878 6.07273 16.0577 9.00087C16.4277 11.929 15.0045 14.7835 12.5127 16.1128L12.5034 16.1177L12.5089 16.1268L13.1888 17.2455ZM10.6244 0.0662368L10.6244 0.0662402L10.6244 0.0662368Z" fill="#0A5A77" stroke="white" stroke-width="0.02"/>
           </svg>
       </i>
-      <a href="#trade-in" class="fancy-form">Трейд-ин</a> сдай старое - получи новое
-	  
-<script src='https://www.google.com/recaptcha/api.js'></script>	
+      <a href="https://relaxa.ru/trade-in/">Трейд-ин</a> сдай старое - получи новое
+<?/*	  
 <div class="trade-in" id="trade-in">
             <form class="trade-in__wrap">
                 <input type="hidden" name="ID" value="<?=$arResult['ID']?>">
@@ -606,6 +588,11 @@ $ar_resTov = CCatalogProduct::GetByID($arResult["ID"]);
                 <div class="form__title">Trade In</div>
                 <div class="form__text">
                     Поменяйте свое старое оборудование на новое.<br />Пожалуйста, заполните форму заявки, мы Вам перезвоним для уточнения деталей.
+                </div>
+				<div class="c-modal__wplink">
+					<a href="https://relaxa.ru/trade-in/" class="c-modal__link" target="_blank">
+						Условия акции
+					</a>
                 </div>
                 <div class="form-pokaza__item">
                     <label>Ваше имя<span>*</span></label>
@@ -621,24 +608,25 @@ $ar_resTov = CCatalogProduct::GetByID($arResult["ID"]);
                     <label for="form-check__trade-in">Согласие на обработку персональных данных</label>
                 </div>
 				
-                <div class="g-recaptcha" data-sitekey="6Lcdw-MUAAAAANewuNvmQb0ikgc-2OKf9AfjMYW_"></div>
+                <div id="recaptcha4"></div>
                 <button class="trade-in__submite">Отправить</button>
             </form>
         </div>
+		
         <script>
             $(document).ready(function() {
                 $('.trade-in__wrap').submit(function() {
-                    var key = grecaptcha.getResponse();
-                    if(key == '') {
+                    let key4 = grecaptcha.getResponse();
+                    if(key4 == '') {
                         alert('Вы не прошли проверку "Я не робот"');
                     } else {
-                        var form = $(this).serialize();
+                        let form4 = $(this).serialize();
                         $.ajax({
                             type: 'POST', // метод
                             url: '/ajax/trade-in.php', // ссылка на обработчик
-                            data: form, // нашы переменные из name
-                            success: function(data){
-                                console.log(data);
+                            data: form4, // нашы переменные из name
+                            success: function(data4){
+                                console.log(data4);
                                 $.fancybox.close();
                                 setTimeout(function() {
                                     $.fancybox.open("<div class='modal-ok' id='modalloll-ok' style='display: none;'><a href='#' class='p-izgotov__close'></a><div class='p-izgotov__title'>Спасибо за заявку!</div><div class='p-izgotov__subtitle'>Наши менеджеры свяжутся с Вами в ближайшее время.</div></div>");
@@ -657,9 +645,9 @@ $ar_resTov = CCatalogProduct::GetByID($arResult["ID"]);
                     }
                     return false;
                 });
-            });
+            });		
         </script>
-
+*/?>
 	
 	  
 	  

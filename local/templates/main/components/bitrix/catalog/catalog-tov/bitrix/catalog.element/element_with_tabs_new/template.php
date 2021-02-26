@@ -115,7 +115,7 @@ $this->AddDeleteAction($arResult["ID"], $arResult["DELETE_LINK"], CIBlock::GetAr
         $('.p-sort__active').on('click', function() {
             $(this).toggleClass('active');
             $(this).parent('.p-sort').children('.p-sort__toggle').slideToggle(200);
-        });
+        }); 	
 
         $('.p-raitingbox__count').on('click', function() {
             $('.p-tabs__item-rev').trigger('click');
@@ -141,6 +141,12 @@ $this->AddDeleteAction($arResult["ID"], $arResult["DELETE_LINK"], CIBlock::GetAr
             } else if($(this).hasClass('p-tabs__item-pod')) {
                 $('.p-tabs__content > div').hide();
                 $('.p-tabs__pod').show();
+			}else if($(this).hasClass('p-tabs__item-podrobno')) {
+                $('.p-tabs__content > div').hide();
+                $('.p-tabs_podrobno').show();	
+			} else if($(this).hasClass('p-tabs__item-vid')) {
+                $('.p-tabs__content > div').hide();
+                $('.p-tabs__vid').show();				
             } else if($(this).hasClass('p-tabs__item-har')) {
                 $('.p-tabs__content > div').hide();
                 $('.p-tabs__har').show();
@@ -612,7 +618,15 @@ foreach($arPthFilter as $act) {
 												<?} elseif($marker == "НА ЗАКАЗ") {?>
                                                     <span class="p-cardslider__new" style="background-color: #780707;"><?= $marker ?></span>
 												<?} elseif($marker == "ZEN") {?>
-                                                    <span class="p-cardslider__new" style="background-color: transparent; color: transparent; background-image: url(https://relaxa.ru//img/svg/zen_gm-03.svg); background-size: 70%; background-repeat: no-repeat; margin-left: 100px; margin-top: 100px; height: 200px !important; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg);"><?= $marker ?></span>
+                                                    <span class="p-cardslider__new" id="label-flag-zen" style="background-color: transparent; color: transparent; background-image: url(https://relaxa.ru//img/svg/zen_gm-03.svg); background-size: 70%; background-repeat: no-repeat; margin-left: 100px; margin-top: 100px; height: 200px !important; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg);"><?= $marker ?></span>
+												<?} elseif($marker == "NOVEMBER") {?>
+                                                    <span class="p-cardslider__new" id="label-flag-nov" style="background-color: transparent; color: transparent; background-image: url(https://relaxa.ru//img/svg/generous_nov.svg); background-size: 70%; background-repeat: no-repeat; margin-left: 100px; margin-top: 100px; height: 200px !important; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg);"><?= $marker ?></span>	
+												<?} elseif($marker == "NY") {?>
+                                                    <span class="p-cardslider__new" id="label-flag-ny" style="background-color: transparent; color: transparent; background-image: url(https://relaxa.ru//img/svg/ny30.svg); background-size: 70%; background-repeat: no-repeat; margin-left: 100px; margin-top: 100px; height: 200px !important; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg);"><?= $marker ?></span>
+												<?} elseif($marker == "NY GIFT") {?>
+                                                    <span class="p-cardslider__new" id="label-flag-ny_gift" style="background-color: transparent; color: transparent; background-image: url(https://relaxa.ru//img/svg/ny_gift.svg); background-size: 70%; background-repeat: no-repeat; margin-left: 100px; margin-top: 100px; height: 200px !important; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg);"><?= $marker ?></span>
+												<?} elseif($marker == "FROZEN") {?>
+                                                    <span class="p-cardslider__new" id="label-flag-frozen" style="background-color: transparent; color: transparent; background-image: url(https://relaxa.ru//img/svg/frozen.svg); background-size: 70%; background-repeat: no-repeat; margin-left: 100px; margin-top: 100px; height: 200px !important; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg);"><?= $marker ?></span>		
                                                 <?} else {?>
 
                                                     <span class="p-cardslider__new marker-<?= strstr($arResult["PROPERTIES"]["OFFERS"]["VALUE_XML_ID"][$ifv], "#") ? substr($arResult["PROPERTIES"]["OFFERS"]["VALUE_XML_ID"][$ifv], 1) : "424242" ?>"
@@ -651,7 +665,15 @@ foreach($arPthFilter as $act) {
 										<?} elseif($arResult["PROPERTIES"]["OFFERS"]["VALUE"] == "НА ЗАКАЗ") {?>
                                             <span class="p-cardslider__new" style="background-color: #780707;"><?= $arResult["PROPERTIES"]["OFFERS"]["VALUE"] ?></span>
 										<?} elseif($arResult["PROPERTIES"]["OFFERS"]["VALUE"] == "ZEN") {?>
-                                            <span class="p-cardslider__new" style="background-color: transparent; color: transparent; background-image: url(https://relaxa.ru//img/svg/zen_gm-03.svg); background-size: 70%; background-repeat: no-repeat; margin-left: 100px; margin-top: 100px; height: 200px !important; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg);"><?= $arResult["PROPERTIES"]["OFFERS"]["VALUE"] ?></span>
+                                            <span class="p-cardslider__new" id="label-flag-zen" style="background-color: transparent; color: transparent; background-image: url(https://relaxa.ru//img/svg/zen_gm-03.svg); background-size: 70%; background-repeat: no-repeat; margin-left: 100px; margin-top: 100px; height: 200px !important; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg);"><?= $arResult["PROPERTIES"]["OFFERS"]["VALUE"] ?></span>
+										<?} elseif($arResult["PROPERTIES"]["OFFERS"]["VALUE"] == "NOVEMBER") {?>
+                                            <span class="p-cardslider__new" id="label-flag-nov" style="background-color: transparent; color: transparent; background-image: url(https://relaxa.ru//img/svg/generous_nov.svg); background-size: 70%; background-repeat: no-repeat; margin-left: 100px; margin-top: 100px; height: 200px !important; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg);"><?= $arResult["PROPERTIES"]["OFFERS"]["VALUE"] ?></span>
+										<?} elseif($arResult["PROPERTIES"]["OFFERS"]["VALUE"] == "NY") {?>
+                                            <span class="p-cardslider__new" id="label-flag-ny" style="background-color: transparent; color: transparent; background-image: url(https://relaxa.ru//img/svg/ny30.svg); background-size: 70%; background-repeat: no-repeat; margin-left: 100px; margin-top: 100px; height: 200px !important; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg);"><?= $arResult["PROPERTIES"]["OFFERS"]["VALUE"] ?></span>
+										<?} elseif($arResult["PROPERTIES"]["OFFERS"]["VALUE"] == "NY GIFT") {?>
+                                            <span class="p-cardslider__new" id="label-flag-ny_gift" style="background-color: transparent; color: transparent; background-image: url(https://relaxa.ru//img/svg/ny_gift.svg); background-size: 70%; background-repeat: no-repeat; margin-left: 100px; margin-top: 100px; height: 200px !important; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg);"><?= $arResult["PROPERTIES"]["OFFERS"]["VALUE"] ?></span>	
+										<?} elseif($arResult["PROPERTIES"]["OFFERS"]["VALUE"] == "FROZEN") {?>
+                                            <span class="p-cardslider__new" id="label-flag-frozen" style="background-color: transparent; color: transparent; background-image: url(https://relaxa.ru//img/svg/frozen.svg); background-size: 70%; background-repeat: no-repeat; margin-left: 100px; margin-top: 100px; height: 200px !important; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg);"><?= $arResult["PROPERTIES"]["OFFERS"]["VALUE"] ?></span>	
                                         <?} else {?>
 
                                             <span class="p-cardslider__new marker-<?= strstr($arResult["PROPERTIES"]["OFFERS"]["VALUE_XML_ID"][$ifv], "#") ? substr($arResult["PROPERTIES"]["OFFERS"]["VALUE_XML_ID"][$ifv], 1) : "424242" ?>"
@@ -753,6 +775,23 @@ foreach($arPthFilter as $act) {
                                                 Подробнее
                                             </a>
                                     <?endif;?>
+									
+									<?if(!empty($arResult['PROPERTIES']['PODROBNO']['VALUE'])):?>
+									<li class="p-tabs__item p-tabs__item-podrobno">
+                                        Детально
+									</li>									
+                                    <?endif;?>
+									
+                                    <?if(!empty($arResult['PROPERTIES']['VIDEO_CONTENT']['VALUE'])):?>
+									<li class="p-tabs__item p-tabs__item-vid">
+                                        <p></p>&nbsp;&nbsp;Видео (<?=count($arResult['PROPERTIES']['VIDEO_CONTENT']['VALUE'])?>)
+									</li>									
+                                    <?endif;?>
+									<?if(!empty($arResult['PROPERTIES']['GIFT_LINK']['VALUE'])):?>
+                                            <a href="<?=$arResult['PROPERTIES']['GIFT_LINK']['VALUE']?>" class="p-tabs__item-gift-link" target="_blank">
+                                               <p></p>&nbsp;&nbsp;Подарок
+                                            </a>
+                                    <?endif;?>									
                                     <li class="p-tabs__item p-tabs__item-har">
                                         Характеристики
                                     </li>
@@ -773,13 +812,25 @@ foreach($arPthFilter as $act) {
                                         <div class="changeDescription"
                                             data-first-value='<?= str_replace("'", "", $arResult["~DETAIL_TEXT"]) ?>'><?= $arResult["~DETAIL_TEXT"] ?></div>
                                     </div>
-                                    <? endif; ?>
+                                    <? endif;?>
                                 </div>
-                                <!-- <div class="p-tabs__pod" style="display: none;">
-                                    <p>
-                                        Наверно какой то текст
-                                    </p>
-                                </div> -->
+								
+								<div class="p-tabs_podrobno" style="display: none;">
+                                <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/templates/dresscodeV2/components/bitrix/catalog/catalog-tov/bitrix/catalog.element/element_with_tabs_new/ajax/landing.php");?>                                
+                                </div>
+								
+                                <div class="p-tabs__vid" style="display: none;">
+									<div style="text-align: center;">
+									<? foreach ($arResult['PROPERTIES']['VIDEO_CONTENT']['VALUE'] as $vid => $arVideoLinks): ?>
+									<figure class="card_video">										
+										<a data-fancybox="video" data-caption="Relaxa Star" href="https://youtu.be/<?= $arVideoLinks ?>">
+										<div class="play_button"></div>
+										<img src="//img.youtube.com/vi/<?= $arVideoLinks ?>/maxresdefault.jpg" width="100%">
+										</a>
+									 </figure>
+									<? endforeach; ?> 
+									</div>
+                                </div>
                                 <div class="p-tabs__har" style="display: none;">
                                     <?
                                     global $arPropEl;
@@ -843,12 +894,12 @@ foreach($arPthFilter as $act) {
                                                 <div class="p-sort__toggle">
                                                     <ul class="p-sort__list">
                                                         <li class="p-sort__item">
-                                                            <a href="<?=$APPLICATION->GetCurPageParam('sort=active_from', array("sort"))?>" class="p-sort__link" name="data">
+                                                            <a href="<?=$APPLICATION->GetCurPageParam('sort=active_from', array("sort"))?>#goToSection" class="p-sort__link" name="data">
                                                                 По дате
                                                             </a>
                                                         </li>
                                                         <li class="p-sort__item">
-                                                            <a href="<?=$APPLICATION->GetCurPageParam('sort=PROPERTY_RATE', array("sort"))?>"class="p-sort__link" name="prop2">
+                                                            <a href="<?=$APPLICATION->GetCurPageParam('sort=PROPERTY_RATE', array("sort"))?>#goToSection" class="p-sort__link" name="prop2">
                                                                 По рейтигну
                                                             </a>
                                                         </li>
@@ -856,14 +907,14 @@ foreach($arPthFilter as $act) {
                                                 </div>
                                             </div>
                                         </div>
-<? if ( in_array(9, $arGroups)) : ?>
+<?/* if ( in_array(9, $arGroups)) : ?>
                                         <a href="#addReview" class="fancy-form">
 										<button class="new_button_reviews"> 
                                         Написать отзыв
 										</button>
                                         </a>
                                         
-<? endif; ?>
+<? endif; */?>
                                         <ul>
                                             <?
                                             $iblockReview = 18;
@@ -886,7 +937,7 @@ foreach($arPthFilter as $act) {
                                                     <?endif; ?>
                                                     <div class="meta">
                                                         <span style="display: block;color: #0A5A77;text-align: left;font-weight: bold;font-size: 15pt;" class="author"><?= $arFields['PROP']['NAME']['VALUE']; ?></span>
-                                                        <span class="date"><?= ConvertDateTime($arFields['DATE_ACTIVE_FROM'], "DD.MM, HH:MI", "s1"); ?></span>
+                                                        <span class="date"><?= ConvertDateTime($arFields['DATE_ACTIVE_FROM'], "DD.MM.YYYY, HH:MI", "s1"); ?></span>
                                                     </div>
 
                                                     <div class="rating">
@@ -2580,7 +2631,7 @@ foreach($arPthFilter as $act) {
                                         "HIDE_MEASURES" => "N",
                                         "HIDE_NOT_AVAILABLE" => "L",
                                         "HIDE_NOT_AVAILABLE_OFFERS" => "N",
-                                        "IBLOCK_ID" => "21",
+                                        "IBLOCK_ID" => "52",
                                         "IBLOCK_TYPE" => "catalog",
                                         "INCLUDE_SUBSECTIONS" => "Y",
                                         "LAZY_LOAD" => "N",
@@ -3101,7 +3152,7 @@ foreach($arPthFilter as $act) {
                         "ADDITIONAL_PICT_PROP_13" => "-",
                         "ADDITIONAL_PICT_PROP_14" => "-",
                         "ADDITIONAL_PICT_PROP_15" => "-",
-                        "ADDITIONAL_PICT_PROP_21" => "-",
+                        "ADDITIONAL_PICT_PROP_52" => "-",
                         "ADDITIONAL_PICT_PROP_5" => "-",
                         "ADD_PROPERTIES_TO_BASKET" => "Y",
                         "ADD_TO_BASKET_ACTION" => "ADD",
@@ -3114,7 +3165,7 @@ foreach($arPthFilter as $act) {
                         "CART_PROPERTIES_13" => array("",""),
                         "CART_PROPERTIES_14" => array("",""),
                         "CART_PROPERTIES_15" => array("",""),
-                        "CART_PROPERTIES_21" => array("",""),
+                        "CART_PROPERTIES_52" => array("",""),
                         "CART_PROPERTIES_5" => array("",""),
                         "COMPOSITE_FRAME_MODE" => "A",
                         "COMPOSITE_FRAME_TYPE" => "AUTO",
@@ -3132,7 +3183,7 @@ foreach($arPthFilter as $act) {
                         "LABEL_PROP_13" => array(),
                         "LABEL_PROP_14" => array(),
                         "LABEL_PROP_15" => array(),
-                        "LABEL_PROP_21" => array(),
+                        "LABEL_PROP_52" => array(),
                         "LABEL_PROP_MOBILE_1" => array(),
                         "LABEL_PROP_MOBILE_12" => array(),
                         "LABEL_PROP_MOBILE_13" => array(),
@@ -3160,8 +3211,6 @@ foreach($arPthFilter as $act) {
                         "PROPERTY_CODE_13" => array("",""),
                         "PROPERTY_CODE_14" => array("",""),
                         "PROPERTY_CODE_15" => array("",""),
-                        "PROPERTY_CODE_21" => array("",""),
-                        "PROPERTY_CODE_5" => array("",""),
                         "PROPERTY_CODE_52" => array("",""),						
                         "PROPERTY_CODE_MOBILE_1" => array(),
                         "PROPERTY_CODE_MOBILE_12" => array(),
@@ -3185,7 +3234,6 @@ foreach($arPthFilter as $act) {
                         "SHOW_PRODUCTS_13" => "Y",
                         "SHOW_PRODUCTS_14" => "Y",
                         "SHOW_PRODUCTS_15" => "Y",
-                        "SHOW_PRODUCTS_21" => "Y",
                         "SHOW_PRODUCTS_52" => "Y",						
                         "SHOW_SLIDER" => "Y",
                         "SLIDER_INTERVAL" => "3000",
@@ -3283,7 +3331,7 @@ foreach($arPthFilter as $act) {
                 ); ?>
             </div>
 
-<? if ( in_array(9, $arGroups)) : ?>
+<?/* if ( in_array(9, $arGroups)) : ?>
             <div class="modal" id="addReview">
                 <div class="closs_th_modal_b"></div>
 				<div class="form-pokaza__close " data-fancybox-close>
@@ -3293,7 +3341,7 @@ foreach($arPthFilter as $act) {
                 <div class="title_modal">
                     <div class="h2">Написать отзыв</div>
                 </div>
-                <form action="/ajax/addReview.php" class="js-ajax">
+                <form enctype="multipart/form-data" method="POST" action="/ajax/addReview.php" class="js-ajax">
                     <input type="hidden" name="PRODUCT" id="" value="<?= $arResult['ID'] ?>">
                     <div class="rating_form_review">
 					<div class="rating">
@@ -3334,6 +3382,10 @@ foreach($arPthFilter as $act) {
                     <textarea name="COMMENT" id="" cols="30" rows="2" placeholder="Комментарий" required></textarea>					
                     <textarea name="ADVANTAGE" id="" cols="30" rows="2" placeholder="Преимущества"></textarea>
                     <textarea name="DISADVANTAGE" id="" cols="30" rows="2" placeholder="Недостатки"></textarea>
+					<?if($USER->isAdmin()) {?>   
+					<br />
+					<input type="file" name="file[]" multiple>
+					<?}?>					
                     <div class="form-group">
                         <div class="g-recaptcha" data-sitekey="6Lcdw-MUAAAAANewuNvmQb0ikgc-2OKf9AfjMYW_"></div>
                     </div>
@@ -3360,9 +3412,9 @@ foreach($arPthFilter as $act) {
                 });
             });
         </script>			
-<? endif; ?>	
+<? endif; */?>	
 		
-		<?/*<script src='https://www.google.com/recaptcha/api.js'></script>
+		<?/*
 
              Сдай старое получи новое 
                 <div class="c-modal" id="sdai-star-pol-nov" style="display: none;">
@@ -3755,7 +3807,7 @@ foreach($arPthFilter as $act) {
                             <div class="changeDescription"
                                  data-first-value='<?= str_replace("'", "", $arResult["~DETAIL_TEXT"]) ?>'><?= $arResult["~DETAIL_TEXT"] ?></div>
                         </div>
-                    <? endif; ?>
+                    <? endif;?>
                 </div>
 
                 <div id="params" class="tabcontent">
@@ -3882,11 +3934,11 @@ foreach($arPthFilter as $act) {
                         }
                         ?>
                     </ul>
-<? if ( in_array(9, $arGroups)) : ?>
+<? /*if ( in_array(9, $arGroups)) : ?>
                     <div class="center">
                         <a href="#addReview" class="fancy-form">Добавить отзыв</a>
                     </div>
-<? endif; ?>
+<? endif; */?>
                 </div>
                 <script>
                     function openTab(evt, cityName) {
@@ -4078,7 +4130,7 @@ foreach($arPthFilter as $act) {
                     ); ?>
                 </div>
 				
-<? if ( in_array(9, $arGroups)) : ?>
+<? /*if ( in_array(9, $arGroups)) : ?>
             <div class="modal" id="addReview">
                 <div class="closs_th_modal_b"></div>
 				<div class="form-pokaza__close " data-fancybox-close>
@@ -4088,7 +4140,7 @@ foreach($arPthFilter as $act) {
                 <div class="title_modal">
                     <div class="h2">Написать отзыв</div>
                 </div>
-                <form action="/ajax/addReview.php" class="js-ajax">
+                <form enctype="multipart/form-data" method="POST" action="/ajax/addReview.php" class="js-ajax">
                     <input type="hidden" name="PRODUCT" id="" value="<?= $arResult['ID'] ?>">
                     <div class="rating_form_review">
 					<div class="rating">
@@ -4129,6 +4181,10 @@ foreach($arPthFilter as $act) {
                     <textarea name="COMMENT" id="" cols="30" rows="2" placeholder="Комментарий" required></textarea>					
                     <textarea name="ADVANTAGE" id="" cols="30" rows="2" placeholder="Преимущества"></textarea>
                     <textarea name="DISADVANTAGE" id="" cols="30" rows="2" placeholder="Недостатки"></textarea>
+					<?if($USER->isAdmin()) {?>   
+					<br />
+					<input type="file" name="file[]" multiple>
+					<?}?>
                     <div class="form-group">
                         <div class="g-recaptcha" data-sitekey="6Lcdw-MUAAAAANewuNvmQb0ikgc-2OKf9AfjMYW_"></div>
                     </div>
@@ -4155,7 +4211,7 @@ foreach($arPthFilter as $act) {
                 });
             });
         </script>			
-<? endif; ?>
+<? endif; */?>
 
             </div>
         </div>
@@ -4477,7 +4533,7 @@ foreach($arPthFilter as $act) {
                                 "squares",
                                 array(
                                     "IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
-                                    "IBLOCK_ID" => [1,12,13,14,15,21],
+                                    "IBLOCK_ID" => [1,12,13,14,15,52],
                                     "CONVERT_CURRENCY" => $arParams["CONVERT_CURRENCY"],
                                     "CURRENCY_ID" => $arParams["CURRENCY_ID"],
                                     "ADD_SECTIONS_CHAIN" => "N",
@@ -4657,6 +4713,12 @@ foreach($arPthFilter as $act) {
 </script>
 <style>
     @media(max-width: 767px) {
+		span#label-flag-zen, span#label-flag-nov, span#label-flag-ny, span#label-flag-ny_gift, span#label-flag-frozen {
+			left: -160px;
+			top: -90px;
+			position: absolute;
+			background-size: 100% !important;
+		}
         body .p-izgotov__label {
             font-size: 16px !important;
             width: 100% !important;

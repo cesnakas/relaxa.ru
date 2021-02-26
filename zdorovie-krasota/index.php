@@ -6,32 +6,27 @@ $APPLICATION->SetPageProperty("keywords", "Массажеры, массажны�
 $APPLICATION->SetPageProperty("title", "Купить товары для здоровья и красоты недорого | Интернет-магазин «RELAXA STAR»");
 $APPLICATION->SetTitle("Товары для здоровья и красоты");
 ?>
-<?if($APPLICATION->GetCurPage(true)==SITE_DIR."zdorovie-krasota/index.php"):?>
-    <style>
-        #catalogSection .sectionItems {
-            display: none;
-        }
 
-
+<? if($APPLICATION->GetCurPage(true)==SITE_DIR."zdorovie-krasota/index.php"): ?>
+<style>
+#catalogSection .sectionItems {
+    display: none;
+}
 #catalogSection {
     display: none;
-margin-top: 0px;
+    margin-top: 0px;
 }
-
 .container.page {
     padding-top: 0px;
 }
-
 </style>
-<?endif?>
+<? endif; ?>
 
 <style>
-#smartFilter{
+#smartFilter {
     width: 300px;
     float: left;
 }
-
-
 </style> 
 
 <?$APPLICATION->IncludeComponent(
@@ -363,4 +358,6 @@ margin-top: 0px;
 );?>
 
 
-<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+<?
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
+?>

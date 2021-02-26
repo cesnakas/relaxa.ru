@@ -5,7 +5,7 @@ $this->setFrameMode(true);?>
 	$this->SetViewTarget("hiddenZoneClass");?>hiddenZone<?$this->EndViewTarget();
 ?>
 
-<?
+<?/*
 	$cacheId = "cpElement".$arResult["VARIABLES"]["ELEMENT_CODE"]."v2";
 	$obCache = new CPHPCache();
 	
@@ -27,7 +27,7 @@ $this->setFrameMode(true);?>
 		$obCache->EndDataCache($arResult["IPROPERTY_VALUES"]);
 	}
 
-?>
+*/?>
 
 
 <span class="changeName rg_hidden"><?=isset($arResult["IPROPERTY_VALUES"]["ELEMENT_PAGE_TITLE"]) && $arResult["IPROPERTY_VALUES"]["ELEMENT_PAGE_TITLE"] != ''
@@ -38,7 +38,7 @@ $this->setFrameMode(true);?>
 </div></div></div></div></div></div><?if($_SESSION["SESS_INCLUDE_AREAS"]):?></div><?endif;?>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:catalog.element",
-	"",
+	"element_with_tabs_new",
 	array(
 		"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
 		"IBLOCK_ID" => $arParams["IBLOCK_ID"],
@@ -52,7 +52,7 @@ $this->setFrameMode(true);?>
 		"SECTION_ID_VARIABLE" => $arParams["SECTION_ID_VARIABLE"],
 		"PRODUCT_QUANTITY_VARIABLE" => $arParams["PRODUCT_QUANTITY_VARIABLE"],
 		"PRODUCT_PROPS_VARIABLE" => $arParams["PRODUCT_PROPS_VARIABLE"],
-		"CACHE_TYPE" => "Y",
+		"CACHE_TYPE" => "N",
 		"CACHE_TIME" => $arParams["CACHE_TIME"],
 		"CACHE_GROUPS" => $arParams["CACHE_GROUPS"],
 		"SET_TITLE" => $arParams["SET_TITLE"],

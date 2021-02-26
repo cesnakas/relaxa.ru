@@ -216,7 +216,6 @@ foreach($path as $pt) {
         "FILTER_NAME" => "arrFilter",
         "HIDE_NOT_AVAILABLE" => "Y",
         "IBLOCK_ID" => $arParams["IBLOCK_ID"],
-        "IBLOCK_TYPE" => "catalog",
         "PAGER_PARAMS_NAME" => "arrPager",
         "PAGER_TEMPLATE" => "round",
         "PRICE_CODE" => array(

@@ -5,19 +5,6 @@
 <?$rg_title = $APPLICATION->ShowMeta("title", $arParams["LIST_BROWSER_TITLE"])?>
 <?$APPLICATION->AddHeadString($rg_title, false);*/?>
 
-<script type="text/javascript" src="https://relaxa.ru/bitrix/templates/dresscodeV2_new/js/jquery.js"></script>
-<link rel="stylesheet" href="https://relaxa.ru/bitrix/templates/dresscodeV2_new/js/fancybox/jquery.fancybox.css">
-<link rel="stylesheet" href="https://relaxa.ru/bitrix/templates/dresscodeV2_new/js/fancybox/jquery.fancybox.min.css">
-<script type="text/javascript" src="https://relaxa.ru/bitrix/templates/dresscodeV2_new/js/fancybox/jquery.fancybox.min.js"></script>
-
-<link rel="stylesheet" href="https://relaxa.ru/assets/js/fancybox/jquery.fancybox.min.css">
-<link rel="stylesheet" href="https://relaxa.ru/assets/js/fancybox/jquery.fancybox.min.css">
-<script type="text/javascript" src="https://relaxa.ru/assets/js/fancybox/jquery.fancybox.min.js"></script>
-
-<link rel="stylesheet" href="https://relaxa.ru/bitrix/templates/dresscodeV2/css/prefix-new/main.css">
-<link rel="stylesheet" href="https://relaxa.ru/assets/css/style.css">
-
-
 <?
 global $titleNew;
 $res = CIBlockSection::GetByID($arResult['VARIABLES']['SECTION_ID']);
@@ -355,42 +342,8 @@ foreach($path as $pt) {
         $secFilter['IBLOCK_ID'] = $arParams["IBLOCK_ID"];
         $secFilter['SECTION_ID'] = $arResult["VARIABLES"]["SECTION_ID"];
         ?>
-
-        <?$APPLICATION->IncludeComponent(
-            "dresscode:cast.smart.filter",
-            "new-parent",
-            array(
-                "IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
-                "IBLOCK_ID" => $arParams["IBLOCK_ID"],
-                "SECTION_ID" => $arCurSection["ID"],
-                "FILTER_NAME" => $arParams["FILTER_NAME"],
-                "PRICE_CODE" => array(
-                    0 => "Розничная",
-                ),
-                "CACHE_TYPE" => "N",
-                "CACHE_TIME" => $arParams["CACHE_TIME"],
-                "CACHE_GROUPS" => "N",
-                "SAVE_IN_SESSION" => "N",
-                "FILTER_VIEW_MODE" => $arParams["FILTER_VIEW_MODE"],
-                "XML_EXPORT" => "Y",
-                "SECTION_TITLE" => "NAME",
-                "SECTION_DESCRIPTION" => "DESCRIPTION",
-                "HIDE_NOT_AVAILABLE" => "N",
-                "TEMPLATE_THEME" => $arParams["TEMPLATE_THEME"],
-                "CONVERT_CURRENCY" => "N",
-                "CURRENCY_ID" => $arParams["CURRENCY_ID"],
-                "SEF_MODE" => "Y",
-                "SEF_RULE" => $arResult["FOLDER"].$arResult["URL_TEMPLATES"]["smart_filter"],
-                "SMART_FILTER_PATH" => $arResult["VARIABLES"]["SMART_FILTER_PATH"],
-                "PAGER_PARAMS_NAME" => $arParams["PAGER_PARAMS_NAME"],
-                "COMPONENT_TEMPLATE" => ".default",
-                "SECTION_CODE" => $arResult["VARIABLES"]["SECTION_CODE"],
-                "SECTION_CODE_PATH" => ""
-            ),
-            false
-        );?>
-
-<?/*$APPLICATION->IncludeComponent(
+		
+<?$APPLICATION->IncludeComponent(
 	"safrasoft:catalog.smart.filter",
 	"filt-fu",
 	array(
@@ -422,7 +375,7 @@ foreach($path as $pt) {
 		"SECTION_CODE_PATH" => ""
 	),
 	$component
-);*/?>
+);?>
 
 	</div>
 
@@ -1050,12 +1003,7 @@ foreach($path as $pt) {
     </div>
 </div>
 
-
-
-
 <style>
-
-
     .wp-catalog {
         padding-left: 380px;
         padding-right: 380px;
