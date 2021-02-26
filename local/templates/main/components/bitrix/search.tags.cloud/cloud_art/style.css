@@ -1,0 +1,36 @@
+.b-tag-weight h3 {
+	color: #0A5A77 !important;
+	margin-bottom: 20px;
+}
+
+.b-tag-weight{
+	padding: 10px;
+}
+.list5b {
+    list-style: none;
+	padding: 0;
+    text-align: left;
+}    
+.list5b li {
+	display: inline-block;
+    position: relative;
+    padding: 8px 10px;
+	border: 1px solid #0A5A77;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    text-align:center;
+    background-size: 100% 100%;
+    z-index: 1;
+	box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+    font-size: 12pt;
+    margin-bottom: 12px;
+    margin-right: 12px;;
+}
+.list5b li:hover {
+    border: 1px solid #0A5A77;
+	box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.50);
+}
+
+.list5b a {
+	color: #0A5A77;
+}
