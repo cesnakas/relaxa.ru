@@ -388,7 +388,8 @@ $ar_resTov = CCatalogProduct::GetByID($arResult["ID"]);
             </i>
             <a href="#form-pokaza" style="color: #1EA427;" class="fancy-form">Онлайн показ</a> по видеосвязи
         </li>
-        <div class="form-pokaza" id="form-pokaza">
+
+        <div class="form-pokaza" id="form-pokaza" style="display: none; margin-bottom: 6px;">
             <form class="form-pokaza__wrap">
                 <input type="hidden" name="ID" value="<?=$arResult['ID']?>">
                 <input type="hidden" name="IBLOCK_ID" value="<?=$arResult['IBLOCK_ID']?>">
