@@ -1,0 +1,32 @@
+2021-03-02 16:01:21 - Host: new.relaxa.ru - LOW_PRIORITY_ERROR - [ErrorException] E_WARNING
+Use of undefined constant N - assumed 'N' (this will throw an Error in a future version of PHP) (0)
+/home/r/relaxastar/new.relaxa.ru/public_html/bitrix/templates/dresscodeV2_new/components/bitrix/catalog.top/.default/result_modifier.php:84
+#0: include(string)
+	/home/r/relaxastar/new.relaxa.ru/public_html/bitrix/modules/main/classes/general/component_template.php:946
+#1: CBitrixComponentTemplate->__IncludeMutatorFile(array, array)
+	/home/r/relaxastar/new.relaxa.ru/public_html/bitrix/modules/main/classes/general/component_template.php:853
+#2: CBitrixComponentTemplate->IncludeTemplate(array)
+	/home/r/relaxastar/new.relaxa.ru/public_html/bitrix/modules/main/classes/general/component.php:764
+#3: CBitrixComponent->showComponentTemplate()
+	/home/r/relaxastar/new.relaxa.ru/public_html/bitrix/modules/main/classes/general/component.php:712
+#4: CBitrixComponent->includeComponentTemplate()
+	/home/r/relaxastar/new.relaxa.ru/public_html/bitrix/modules/iblock/lib/component/base.php:4572
+#5: Bitrix\Iblock\Component\Base->loadData()
+	/home/r/relaxastar/new.relaxa.ru/public_html/bitrix/modules/iblock/lib/component/elementlist.php:1236
+#6: Bitrix\Iblock\Component\ElementList->loadData()
+	/home/r/relaxastar/new.relaxa.ru/public_html/bitrix/modules/iblock/lib/component/base.php:4551
+#7: Bitrix\Iblock\Component\Base->initialLoadAction()
+	
+#8: call_user_func(array)
+	/home/r/relaxastar/new.relaxa.ru/public_html/bitrix/modules/iblock/lib/component/base.php:4736
+#9: Bitrix\Iblock\Component\Base->doAction()
+	/home/r/relaxastar/new.relaxa.ru/public_html/bitrix/modules/iblock/lib/component/base.php:4754
+#10: Bitrix\Iblock\Component\Base->executeComponent()
+	/home/r/relaxastar/new.relaxa.ru/public_html/bitrix/modules/main/classes/general/component.php:656
+#11: CBitrixComponent->includeComponent(string, array, boolean, boolean)
+	/home/r/relaxastar/new.relaxa.ru/public_html/bitrix/modules/main/classes/general/main.php:1063
+#12: CAllMain->IncludeComponent(string, string, array, boolean)
+	/home/r/relaxastar/new.relaxa.ru/public_html/inc/mainpageND.php:525
+#13: require_once(string)
+	/home/r/relaxastar/new.relaxa.ru/public_html/index.php:9
+----------
