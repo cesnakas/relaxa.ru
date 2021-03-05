@@ -1,0 +1,32 @@
+<svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: url(#Безымянный_градиент);
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+    </style>
+    <linearGradient id="Безымянный_градиент" data-name="Безымянный градиент" x1="-0.09" y1="820" x2="40.09" y2="820" gradientTransform="translate(0 -800)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff8100"/>
+      <stop offset="0.19" stop-color="#ff7209"/>
+      <stop offset="0.32" stop-color="#f55e16"/>
+      <stop offset="0.48" stop-color="#d92938"/>
+      <stop offset="1" stop-color="#9100ff"/>
+    </linearGradient>
+  </defs>
+  <title>instagram</title>
+  <rect id="Artboard10" class="cls-1" x="8" y="8" width="24" height="24"/>
+  <g>
+    <circle class="cls-2" cx="20" cy="20" r="20"/>
+    <path class="cls-3" d="M25.5,7.17a7.81,7.81,0,0,1,7.5,7.5v11a7.93,7.93,0,0,1-7.5,7.5h-11A7.81,7.81,0,0,1,7,25.67v-11a7.81,7.81,0,0,1,7.5-7.5Zm-11,1.67A6,6,0,0,0,8.83,14.5v11a5.84,5.84,0,0,0,5.67,5.67h11a5.84,5.84,0,0,0,5.67-5.67v-11A5.84,5.84,0,0,0,25.5,8.83Z"/>
+    <path class="cls-3" d="M20,13.5a6.73,6.73,0,0,1,6.33,5.33,6.76,6.76,0,0,1-1.83,5.83A6.52,6.52,0,0,1,17.83,26a6.92,6.92,0,0,1-4.33-6.33A6.56,6.56,0,0,1,20,13.5Zm0,1.67A5.12,5.12,0,0,0,15.33,19,4.92,4.92,0,0,0,18,24.33a5,5,0,0,0,6-2.17,5.06,5.06,0,0,0-2.17-6.33A2.51,2.51,0,0,0,20,15.17Z"/>
+    <path class="cls-3" d="M28.17,13a2.37,2.37,0,0,0-.33-1,1.41,1.41,0,0,0-1-.33h0a2.37,2.37,0,0,0-1,.33,1.41,1.41,0,0,0-.33,1h0a2.37,2.37,0,0,0,.33,1,1.22,1.22,0,0,0,1,.33h0c.83.17,1.33-.5,1.33-1.33Z"/>
+  </g>
+</svg>

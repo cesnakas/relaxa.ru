@@ -141,13 +141,13 @@
 
 <script src="/verstka/scripts/jquery.maskedinput.js"></script>
 <?if(!CSite::InDir('/index.php')) {?>
-    <link rel="stylesheet" href="/assets/js/fancybox/jquery.fancybox.min.css">
-    <script src="/assets/js/fancybox/jquery.fancybox.min.js"></script>
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <script src="/assets/js/script.js"></script>
+    <link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/assets/js/fancybox/jquery.fancybox.min.css">
+    <script src="<?=SITE_TEMPLATE_PATH?>/assets/js/fancybox/jquery.fancybox.min.js"></script>
+    <link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/assets/css/style.css">
+    <script src="<?=SITE_TEMPLATE_PATH?>/assets/js/script.js"></script>
 <?} else {?>
-    <link rel="stylesheet" href="/assets/css/in-main.css">
-    <script src="/assets/js/script.js"></script>
+    <link rel="stylesheet" href="<?=SITE_TEMPLATE_PATH?>/assets/css/in-main.css">
+    <script src="<?=SITE_TEMPLATE_PATH?>/assets/js/script.js"></script>
 <?}?>
 
 <script>
