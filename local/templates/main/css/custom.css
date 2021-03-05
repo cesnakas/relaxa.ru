@@ -1,0 +1,21 @@
+.bold {
+    font-size: bold;
+}
+#detailText.ppppp1 .container {
+    width: 100% !important;
+}
+.ppppp1 {
+    overflow: hidden;
+}
+.popular__categories h1.heading {
+    margin-top: 80px;
+}
+h1.heading {
+    line-height: 56px;
+    font-size: 36px;
+    text-align: center;
+    color: #0A5A77;
+    margin: 0;
+    padding: 0;
+    font-weight: 900;
+}

@@ -21,20 +21,18 @@ IncludeTemplateLangFile(__FILE__);
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/fonts/roboto/roboto.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/fonts/myriadpro/style.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/fonts/ice/ice_kingdom.css');
+    Asset::getInstance()->addCss('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/stylesND.css');
-    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/template_styles.css');
-    Asset::getInstance()->addCss('https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css');
-    // Asset::getInstance()->addCss('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
-
-    // Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/adaptive.css');
-    // Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/custom.css');
-    // Asset::getInstance()->addCss('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
-    // Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/custom-styles/styles.css');
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/adaptive.css');
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/custom.css');
+    Asset::getInstance()->addCss('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/custom-styles.css');
     // Asset::getInstance()->addCss(SITE_TEMPLATE_PATH."/css/media.css");
     // Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/prefix-new/old_styles.css');
-    // Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/jquery-ui.min.css');
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/jquery-ui.min.css');
     // Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/themes/'.$TEMPLATE_THEME_NAME.'/style.css');
-    // Asset::getInstance()->addCss('');
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/template_styles.css');
+    Asset::getInstance()->addCss('https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/main.css');
 
     // JS
@@ -299,7 +297,6 @@ IncludeTemplateLangFile(__FILE__);
             <div class="header__block__h_001">
                 <div class="geo__position">
                     <ul class="geo_wrapper">
-
                         <?$APPLICATION->IncludeComponent(
                             "dresscode:sale.geo.positiion",
                             "",
@@ -309,7 +306,6 @@ IncludeTemplateLangFile(__FILE__);
                                 "ACTIVE_COMPONENT" => "Y"
                             )
                         );?>
-
                     </ul>
                 </div>
                 <div class="top__menu">
@@ -335,7 +331,6 @@ IncludeTemplateLangFile(__FILE__);
                 <div class="consult__header">
                     <a href="/installment/"  class="take__consult" data-id="6">Беспроцентная рассрочка</a>
                 </div>
-
                 <div class="header__personal">
                     <a href="/personal/" class="personal__link">Мой кабинет</a>
                 </div>
@@ -344,23 +339,34 @@ IncludeTemplateLangFile(__FILE__);
             <div class="header__block__h_002">
                 <div class="logo__header">
                     <? if ($APPLICATION->GetCurPage(true) == '/index.php'): ?>
-                        <img src="<?=SITE_TEMPLATE_PATH;?>/img/logo.svg" alt="Эксклюзивный дистрибьютор мировых производителей массажного оборудования"/>
+                    <img src="<?=SITE_TEMPLATE_PATH;?>/img/logo.svg" alt="Эксклюзивный дистрибьютор мировых производителей массажного оборудования"/>
                     <? else: ?>
-                        <a href="<?=SITE_DIR;?>" title="Эксклюзивный дистрибьютор мировых производителей массажного оборудования">
-                            <img src="<?=SITE_TEMPLATE_PATH;?>/img/logo.svg" alt=""/>
-                        </a>
+                    <a href="<?=SITE_DIR;?>" title="Эксклюзивный дистрибьютор мировых производителей массажного оборудования">
+                        <img src="<?=SITE_TEMPLATE_PATH;?>/img/logo.svg" alt=""/>
+                    </a>
                     <? endif; ?>
                 </div>
                 <div class="txt__header__001"><a href="https://www.relaxa.ru/about/">Эксклюзивный дистрибьютор<br> мировых производителей<br> массажного оборудования</a></div>
                 <div class="phones__header">
                     <div class="s__phone__header">
-                        <span class="phone__icon__header"><img src="/bitrix/templates/dresscodeV2_new/images/ND/phone__header__icon.svg"></span><a href="tel:88003330051" class="phone__link__header">8 (800) 333 00 51</a></div>
-                    <div class="s__phone__header"><span class="phone__icon__header"><img src="/bitrix/templates/dresscodeV2_new/images/ND/phone__header__icon.svg"></span><a href="tel:84957899174" class="phone__link__header">8 (495) 789 91 74</a></div>
+                        <span class="phone__icon__header">
+                            <img src="<?=SITE_TEMPLATE_PATH?>/images/ND/phone__header__icon.svg">
+                        </span>
+                        <a href="tel:88003330051" class="phone__link__header">8 (800) 333 00 51</a>
+                    </div>
+                    <div class="s__phone__header"><span class="phone__icon__header">
+                        <img src="<?=SITE_TEMPLATE_PATH?>/images/ND/phone__header__icon.svg"></span>
+                        <a href="tel:84957899174" class="phone__link__header">8 (495) 789 91 74</a>
+                    </div>
                     <div class="txt__phone__header">Бесплатный звонок по России</div>
                 </div>
                 <div class="favs__header">
-                    <a class="compare white-listing" href="/compare/"><img src="/bitrix/templates/dresscodeV2/img/scales.svg" /></a>
-                    <a href="/wishlist/"><img src="/bitrix/templates/dresscodeV2_new/images/ND/favs__header__icon.svg"></a>
+                    <a class="compare white-listing" href="/compare/">
+                        <img src="/bitrix/templates/dresscodeV2/img/scales.svg" />
+                    </a>
+                    <a href="/wishlist/">
+                        <img src="<?=SITE_TEMPLATE_PATH?>/images/ND/favs__header__icon.svg">
+                    </a>
                 </div>
                 <div class="basket__header">
                     <div id="flushTopCart">
@@ -396,10 +402,7 @@ IncludeTemplateLangFile(__FILE__);
             </div>
         </div>
 
-
-
-
-        <?php
+        <?
         if (CModule::IncludeModule("sale")) {
             $arBasketItems = array();
             $dbBasketItems = CSaleBasket::GetList(
@@ -423,6 +426,7 @@ IncludeTemplateLangFile(__FILE__);
             <?
         }
         ?>
+
         <div class="adaptive__header">
             <div class="wrapper">
                 <div class="adaptive__menu">
@@ -457,13 +461,13 @@ IncludeTemplateLangFile(__FILE__);
                 <div class="logo__adaptive">
                     <? if ($APPLICATION->GetCurPage(true) == '/index.php'): ?>
                         <img
-                            src="<?=SITE_TEMPLATE_PATH;?>/images/logo.png"
+                            src="<?=SITE_TEMPLATE_PATH;?>/img/logo.png"
                             alt="Интернет-магазин массажных кресел и массажеров в Москве - Relaxa"
                         />
                     <? else: ?>
                         <a href="<?=SITE_DIR;?>" title="Интернет-магазин массажных кресел и массажеров в Москве - Relaxa">
                             <img
-                                src="<?=SITE_TEMPLATE_PATH;?>/images/logo.png"
+                                src="<?=SITE_TEMPLATE_PATH;?>/img/logo.png"
                                 alt="Интернет-магазин массажных кресел и массажеров в Москве - Relaxa"
                             />
                         </a>
