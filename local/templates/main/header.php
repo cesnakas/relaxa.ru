@@ -21,8 +21,11 @@ IncludeTemplateLangFile(__FILE__);
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/fonts/roboto/roboto.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/fonts/myriadpro/style.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/fonts/ice/ice_kingdom.css');
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/stylesND.css');
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/template_styles.css');
+    Asset::getInstance()->addCss('https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css');
     // Asset::getInstance()->addCss('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
-    // Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/stylesND.css');
+
     // Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/adaptive.css');
     // Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/custom.css');
     // Asset::getInstance()->addCss('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
@@ -35,6 +38,8 @@ IncludeTemplateLangFile(__FILE__);
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/main.css');
 
     // JS
+    Asset::getInstance()->addJs('https://code.jquery.com/jquery-3.5.1.min.js');
+    Asset::getInstance()->addJs('https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js');
     // Asset::getInstance()->addJs('https://unpkg.com/imask');
     // Asset::getInstance()->addJs('https://cdnjs.cloudflare.com/ajax/libs/jquery/1.2.3/jquery.min.js');
     // Asset::getInstance()->addJs('https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit');
@@ -196,7 +201,7 @@ IncludeTemplateLangFile(__FILE__);
         })(window,document,'script','dataLayer','GTM-N958G54');</script>
     <!-- End Google Tag Manager -->
 
-    <script type="text/javascript">
+    <!--<script type="text/javascript">
         function sendYandex(name, name2 = null) {
             try {
                 yaCounter13260706.reachGoal(name);
@@ -221,9 +226,9 @@ IncludeTemplateLangFile(__FILE__);
                 console.error('Gtag not found');
             }
         }
-    </script>
+    </script>-->
 
-    <script data-skip-moving="true">
+    <!--<script data-skip-moving="true">
         var isMobile = {
             Android: function() {
                 return navigator.userAgent.match(/Android/i);
@@ -244,17 +249,14 @@ IncludeTemplateLangFile(__FILE__);
                 return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
             }
         };
-    </script>
-
-</head>
-<?$APPLICATION->ShowPanel();?>
-<body>
+    </script>-->
 
     <!-- Google Tag Manager (noscript) -->
     <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N958G54" height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
+
     <!-- Rating Mail.ru counter -->
     <script type="text/javascript">
         var _tmr = window._tmr || (window._tmr = []);
@@ -268,11 +270,12 @@ IncludeTemplateLangFile(__FILE__);
         })(document, window, "topmailru-code");
     </script>
     <noscript>
-    <div>
-        <img src="https://top-fwz1.mail.ru/counter?id=3141754;js=na" style="border:0;position:absolute;left:-9999px;" alt="Top.Mail.Ru" />
-    </div>
+        <div>
+            <img src="https://top-fwz1.mail.ru/counter?id=3141754;js=na" style="border:0;position:absolute;left:-9999px;" alt="Top.Mail.Ru" />
+        </div>
     </noscript>
     <!-- //Rating Mail.ru counter -->
+
     <!-- Rating@Mail.ru counter dynamic remarketing appendix -->
     <script type="text/javascript">
         var _tmr = _tmr || [];
@@ -286,19 +289,26 @@ IncludeTemplateLangFile(__FILE__);
     </script>
     <!-- // Rating@Mail.ru counter dynamic remarketing appendix -->
 
+</head>
+<?$APPLICATION->ShowPanel();?>
+<body>
+
     <header>
-        <div class="wrapper">
+        <div class="container">
 
             <div class="header__block__h_001">
                 <div class="geo__position">
                     <ul class="geo_wrapper">
 
-                        <?/*$APPLICATION->IncludeComponent("dresscode:sale.geo.positiion", "", array(),
+                        <?$APPLICATION->IncludeComponent(
+                            "dresscode:sale.geo.positiion",
+                            "",
+                            array(),
                             false,
                             array(
                                 "ACTIVE_COMPONENT" => "Y"
                             )
-                        );*/?>
+                        );?>
 
                     </ul>
                 </div>
