@@ -202,9 +202,11 @@
     "bitrix:main.include",
     ".default",
     array(
-        "AREA_FILE_SHOW" => "sect",
-        "AREA_FILE_SUFFIX" => "cart",
-        "AREA_FILE_RECURSIVE" => "Y",
+        "AREA_FILE_SHOW" => "file",
+        'PATH' => '/include/footer/sect_cart.php',
+        // "AREA_FILE_SHOW" => "sect",
+        // "AREA_FILE_SUFFIX" => "cart",
+        // "AREA_FILE_RECURSIVE" => "Y",
         "EDIT_TEMPLATE" => ""
     ),
     false
