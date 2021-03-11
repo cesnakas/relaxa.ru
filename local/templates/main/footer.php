@@ -198,8 +198,6 @@
     });
 </script>
 
-
-
 <?$APPLICATION->IncludeComponent(
     "bitrix:main.include",
     ".default",
@@ -248,26 +246,26 @@ if(preg_match("#PAGEN_\d=(\d*)#", $_SERVER['REQUEST_URI'], $matches)){
 </div>
 
 
-<?$APPLICATION->IncludeComponent(
-    "bitrix:form.result.new",
-    "personal-discount",
-    //"modal",
-    Array(
-        "CACHE_TIME" => "3600",
-        "CACHE_TYPE" => "A",
-        "CHAIN_ITEM_LINK" => "",
-        "CHAIN_ITEM_TEXT" => "",
-        "COMPONENT_TEMPLATE" => ".default",
-        "EDIT_URL" => "",
-        "IGNORE_CUSTOM_TEMPLATE" => "N",
-        "LIST_URL" => "",
-        "SEF_MODE" => "N",
-        "SUCCESS_URL" => "",
-        "USE_EXTENDED_ERRORS" => "Y",
-        "VARIABLE_ALIASES" => array("WEB_FORM_ID"=>"WEB_FORM_ID","RESULT_ID"=>"RESULT_ID",),
-        "WEB_FORM_ID" => "4"
-    )
-);?>
+    <?$APPLICATION->IncludeComponent(
+        "bitrix:form.result.new",
+        "personal-discount",
+        //"modal",
+        Array(
+            "CACHE_TIME" => "3600",
+            "CACHE_TYPE" => "A",
+            "CHAIN_ITEM_LINK" => "",
+            "CHAIN_ITEM_TEXT" => "",
+            "COMPONENT_TEMPLATE" => ".default",
+            "EDIT_URL" => "",
+            "IGNORE_CUSTOM_TEMPLATE" => "N",
+            "LIST_URL" => "",
+            "SEF_MODE" => "N",
+            "SUCCESS_URL" => "",
+            "USE_EXTENDED_ERRORS" => "Y",
+            "VARIABLE_ALIASES" => array("WEB_FORM_ID"=>"WEB_FORM_ID","RESULT_ID"=>"RESULT_ID",),
+            "WEB_FORM_ID" => "4"
+        )
+    );?>
 
 <?$APPLICATION->IncludeComponent(
     "bitrix:form.result.new",

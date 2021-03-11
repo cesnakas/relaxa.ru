@@ -1,0 +1,77 @@
+.podrobnee_landing {
+    text-align: center;
+    margin-bottom: 18px;
+}
+.podrobnee_landing a{
+    display: inline-block;
+    font-family: "RobotoBold";
+    font-size: 18px;
+    line-height: 140%;
+    color: #79AABF;
+    text-decoration: none;
+}
+select {
+    font-size: 18px;
+    line-height: 22px;
+    color: #000;
+    background: #FFFFFF;
+    border: 1px solid #C4C4C4;
+    box-sizing: border-box;
+    border-radius: 2px;
+    height: 55px;
+    padding: 15px;
+}
+div#discount-fix, div#ny-mk, div#ny-mn {
+    display: none;
+}
+form#discount-fix__wrap, form#ny-mk__wrap, form#ny-mn__wrap {
+    max-width: 600px;
+}
+.fancybox-slide .fancybox-button svg {
+    display: none !important;
+}
+button.discount-fix__submite, button.ny-mk__submite, button.ny-mn__submite {
+    margin: 0 auto;
+    margin-top: 45px;
+    border: 0;
+    width: 228px;
+    height: 55.85px;
+    display: block;
+    background: #0A5A77;
+    border-radius: 2px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    text-align: center;
+    justify-content: center;
+    transition: 0.3s all;
+    cursor: pointer;
+}
+
+.s__why_a {
+    text-decoration: none;
+}
+.p-card__preim > .wrapper {
+    width: 100%;
+    margin: 0;
+    transform: none;
+    -webkit-transform: none;
+}
+@media(max-width: 1199px) {
+    body .p-card__preim > .wrapper {
+        width: 100% !important;
+    }
+}
+@media(max-width: 767px) {
+    body .p-card__preim {
+        display: block !important;
+    }
+    body .p-preim__item {
+        width: 100% !important;
+    }
+}
