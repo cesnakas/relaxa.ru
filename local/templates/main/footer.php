@@ -267,54 +267,54 @@ if(preg_match("#PAGEN_\d=(\d*)#", $_SERVER['REQUEST_URI'], $matches)){
         )
     );?>
 
-<?$APPLICATION->IncludeComponent(
-    "bitrix:form.result.new",
-    "chair",
-    //"modal",
-    Array(
-        "CACHE_TIME" => "3600",
-        "CACHE_TYPE" => "A",
-        "CHAIN_ITEM_LINK" => "",
-        "CHAIN_ITEM_TEXT" => "",
-        "COMPONENT_TEMPLATE" => ".default",
-        "EDIT_URL" => "",
-        "IGNORE_CUSTOM_TEMPLATE" => "N",
-        "LIST_URL" => "",
-        "SEF_MODE" => "N",
-        "SUCCESS_URL" => "",
-        "USE_EXTENDED_ERRORS" => "Y",
-        "VARIABLE_ALIASES" => array("WEB_FORM_ID"=>"WEB_FORM_ID","RESULT_ID"=>"RESULT_ID",),
-        "WEB_FORM_ID" => "5"
-    )
-);?>
+    <?$APPLICATION->IncludeComponent(
+        "bitrix:form.result.new",
+        "chair",
+        //"modal",
+        Array(
+            "CACHE_TIME" => "3600",
+            "CACHE_TYPE" => "A",
+            "CHAIN_ITEM_LINK" => "",
+            "CHAIN_ITEM_TEXT" => "",
+            "COMPONENT_TEMPLATE" => ".default",
+            "EDIT_URL" => "",
+            "IGNORE_CUSTOM_TEMPLATE" => "N",
+            "LIST_URL" => "",
+            "SEF_MODE" => "N",
+            "SUCCESS_URL" => "",
+            "USE_EXTENDED_ERRORS" => "Y",
+            "VARIABLE_ALIASES" => array("WEB_FORM_ID"=>"WEB_FORM_ID","RESULT_ID"=>"RESULT_ID",),
+            "WEB_FORM_ID" => "5"
+        )
+    );?>
 
 
-<?$APPLICATION->IncludeComponent(
-    "bitrix:form.result.new",
-    "consult",
-    array(
-        "CACHE_TIME" => "3600",
-        "CACHE_TYPE" => "A",
-        "CHAIN_ITEM_LINK" => "",
-        "CHAIN_ITEM_TEXT" => "",
-        "COMPONENT_TEMPLATE" => ".default",
-        "EDIT_URL" => "",
-        "IGNORE_CUSTOM_TEMPLATE" => "N",
-        "LIST_URL" => "",
-        "SEF_MODE" => "N",
-        "SUCCESS_URL" => "",
-        "USE_EXTENDED_ERRORS" => "Y",
-        "VARIABLE_ALIASES" => array(
-            "WEB_FORM_ID" => "WEB_FORM_ID",
-            "RESULT_ID" => "RESULT_ID",
+    <?$APPLICATION->IncludeComponent(
+        "bitrix:form.result.new",
+        "consult",
+        array(
+            "CACHE_TIME" => "3600",
+            "CACHE_TYPE" => "A",
+            "CHAIN_ITEM_LINK" => "",
+            "CHAIN_ITEM_TEXT" => "",
+            "COMPONENT_TEMPLATE" => ".default",
+            "EDIT_URL" => "",
+            "IGNORE_CUSTOM_TEMPLATE" => "N",
+            "LIST_URL" => "",
+            "SEF_MODE" => "N",
+            "SUCCESS_URL" => "",
+            "USE_EXTENDED_ERRORS" => "Y",
+            "VARIABLE_ALIASES" => array(
+                "WEB_FORM_ID" => "WEB_FORM_ID",
+                "RESULT_ID" => "RESULT_ID",
+            ),
+            "WEB_FORM_ID" => "6"
         ),
-        "WEB_FORM_ID" => "6"
-    ),
-    false,
-    array(
-        "ACTIVE_COMPONENT" => "N"
-    )
-);?>
+        false,
+        array(
+            "ACTIVE_COMPONENT" => "N"
+        )
+    );?>
 <!-- WebIt.Activity -->
 <script type="text/javascript" src="https://relaxa.ru/bitrix/templates/dresscodeV2/js/jquery-site.activity.js"></script>
 <script type="text/javascript">
@@ -496,6 +496,7 @@ if(preg_match("#PAGEN_\d=(\d*)#", $_SERVER['REQUEST_URI'], $matches)){
             </div>
         </div>
     </div>
+</div>
     <script type="text/javascript">
         var text = ["СЫГРАЙ В ИГРУ", "ВЫИГРАЙ СКИДКУ", "ИСПЫТАЙ УДАЧУ", "ВЫИГРАЙ БОНУС"];
         var counter = 0;
