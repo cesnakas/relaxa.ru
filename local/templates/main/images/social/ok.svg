@@ -1,0 +1,25 @@
+<svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24" height="24" viewBox="0 0 24 24">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: url(#Безымянный_градиент_17);
+      }
+
+      .cls-3 {
+        fill: #fff;
+      }
+    </style>
+    <linearGradient id="Безымянный_градиент_17" data-name="Безымянный градиент 17" x1="12.01" x2="12.01" y2="24" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffb22a"/>
+      <stop offset="1" stop-color="#ff7800"/>
+    </linearGradient>
+  </defs>
+  <title>ok</title>
+  <rect id="Artboard10" class="cls-1" width="24" height="24"/>
+  <ellipse class="cls-2" cx="12.01" cy="12" rx="12.01" ry="12"/>
+  <path class="cls-3" d="M13.55,15.31a7.08,7.08,0,0,0,2.19-.91,1.11,1.11,0,0,0-1.18-1.87,4.8,4.8,0,0,1-5.08,0A1.11,1.11,0,0,0,8.3,14.41a7.08,7.08,0,0,0,2.19.91L8.39,17.42A1.1,1.1,0,1,0,10,19L12,16.91,14.1,19a1.1,1.1,0,1,0,1.56-1.56l-2.11-2.11M12,6.9a1.56,1.56,0,1,1-1.56,1.56A1.56,1.56,0,0,1,12,6.9Zm0,5.33A3.77,3.77,0,1,0,8.25,8.46,3.78,3.78,0,0,0,12,12.24Z"/>
+</svg>

@@ -33,6 +33,7 @@ IncludeTemplateLangFile(__FILE__);
     // Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/themes/'.$TEMPLATE_THEME_NAME.'/style.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/template_styles.css');
     Asset::getInstance()->addCss('https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css');
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/template_styles.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/main.css');
 
     // JS
@@ -362,7 +363,7 @@ IncludeTemplateLangFile(__FILE__);
                 </div>
                 <div class="favs__header">
                     <a class="compare white-listing" href="/compare/">
-                        <img src="/bitrix/templates/dresscodeV2/img/scales.svg" />
+                        <img src="<?=SITE_TEMPLATE_PATH?>/img/scales.svg" />
                     </a>
                     <a href="/wishlist/">
                         <img src="<?=SITE_TEMPLATE_PATH?>/images/ND/favs__header__icon.svg">
@@ -475,7 +476,7 @@ IncludeTemplateLangFile(__FILE__);
                 </div>
 
                 <div class="favs__adaptive">
-                    <a href="/index.php/"><img src="/bitrix/templates/dresscodeV2_new/images/ND/home.svg"></a>
+                    <a href="/index.php/"><img src="<?=SITE_TEMPLATE_PATH;?>/images/ND/home.svg"></a>
                 </div>
 
                 <div class="basket__adaptive">
@@ -511,14 +512,14 @@ IncludeTemplateLangFile(__FILE__);
                 </div>
 
                 <div class="search-adaptive-button">
-                    <img src="/bitrix/templates/dresscodeV2_new/images/ND/search.svg" alt="">
+                    <img src="<?=SITE_TEMPLATE_PATH;?>/images/ND/search.svg" alt="">
                 </div>
 
                 <div class="search-container">
                     <form id="search-form-mobile" action="/search/" method="GET">
                         <input type="text" name="q" class="search-input" placeholder="Поиск по каталогу">
                         <div class="search-button-mobile">
-                            <img src="/bitrix/templates/dresscodeV2_new/images/ND/search.svg" alt="">
+                            <img src="<?=SITE_TEMPLATE_PATH;?>/images/ND/search.svg" alt="">
                         </div>
                     </form>
                 </div>
@@ -536,7 +537,7 @@ IncludeTemplateLangFile(__FILE__);
 
 
                 <div class="login__adaptive">
-                    <a href="/personal/"><img src="/bitrix/templates/dresscodeV2_new/images/ND/login.svg" alt=""></a>
+                    <a href="/personal/"><img src="<?=SITE_TEMPLATE_PATH;?>/images/ND/login.svg" alt=""></a>
                 </div>
 
             </div>
@@ -615,7 +616,7 @@ IncludeTemplateLangFile(__FILE__);
                 <form id="search-form-mobile" action="/search/" method="GET">
                     <input type="text" name="q" class="search-input" placeholder="Поиск по каталогу">
                     <div class="search-button-mobile">
-                        <img src="/bitrix/templates/dresscodeV2/images/new/search.svg" alt="">
+                        <img src="<?=SITE_TEMPLATE_PATH;?>/images/new/search.svg" alt="">
                     </div>
                 </form>
             </div>
