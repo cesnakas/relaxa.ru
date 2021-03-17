@@ -146,7 +146,7 @@ IncludeTemplateLangFile(__FILE__);
 
     <meta name="title" content="<?$APPLICATION->ShowTitle();?>"/>
 
-    <link rel="icon" href="/bitrix/templates/dresscodeV2_new/images/favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon"/>
 
     <? $APPLICATION->ShowProperty("linkPrev"); ?>
     <? $APPLICATION->ShowProperty("linkNext"); ?>
@@ -363,7 +363,7 @@ IncludeTemplateLangFile(__FILE__);
                 </div>
                 <div class="favs__header">
                     <a class="compare white-listing" href="/compare/">
-                        <img src="<?=SITE_TEMPLATE_PATH?>/img/scales.svg" />
+                        <img src="<?=SITE_TEMPLATE_PATH?>/images/scales.svg" />
                     </a>
                     <a href="/wishlist/">
                         <img src="<?=SITE_TEMPLATE_PATH?>/images/ND/favs__header__icon.svg">

@@ -110,7 +110,7 @@ a.personal__link {
 a.user-geo-position-value-link {
     display: block;
     width: 100%;
-    background: url('/bitrix/templates/dresscodeV2_new/images/ND/geo__header__icon.svg') no-repeat center left;
+    background: url('../images/ND/geo__header__icon.svg') no-repeat center left;
     padding-left: 20px;
 }
 
@@ -285,7 +285,7 @@ span.phone__icon__header {
 .new__search {
     min-width: 40px;
     min-height: 40px;
-    background: url(https://www.relaxa.ru/bitrix/templates/dresscodeV2_new/images/ND/search__header__icon.svg) no-repeat 13px 13px #fff;
+    background: url(../images/ND/search__header__icon.svg) no-repeat 13px 13px #fff;
     border-radius: 40px;
     top: 10px;
     cursor: pointer;
@@ -1134,7 +1134,7 @@ a.topBtnRight-3 {
     width: 676px;
     height: 420px;
     vertical-align: top;
-    background: url(/bitrix/templates/dresscodeV2_new/images/ND/economyBG.jpg) no-repeat center left;
+    background: url../images/ND/economyBG.jpg) no-repeat center left;
 }
 
 .right__economy {
@@ -1347,7 +1347,7 @@ a.footer__phone {
 }
 
 a.footer__phone.phone__icon {
-    background: url(/bitrix/templates/dresscodeV2_new/images/ND/footer__phone__icon.svg) no-repeat 0px 1px;
+    background: url(../images/ND/footer__phone__icon.svg) no-repeat 0px 1px;
 }
 
 a.footer__mail {
@@ -1358,7 +1358,7 @@ a.footer__mail {
 }
 
 a.footer__mail.mail__icon {
-    background: url(/bitrix/templates/dresscodeV2_new/images/ND/footer__mail__icon.svg) no-repeat;
+    background: url(../images/ND/footer__mail__icon.svg) no-repeat;
 }
 
 .footer__payments {
@@ -1573,7 +1573,7 @@ span.discount_big {
     position: absolute;
     width: 33px;
     height: 33px;
-    background: url(/bitrix/templates/dresscodeV2_new/images/ND/slide2_dot1.png) no-repeat center;
+    background: url(../images/ND/slide2_dot1.png) no-repeat center;
     left: -41px;
     top: 3px;
 }
@@ -1584,7 +1584,7 @@ span.discount_big {
     position: absolute;
     width: 33px;
     height: 33px;
-    background: url(/bitrix/templates/dresscodeV2_new/images/ND/slide2_dot2.png) no-repeat center;
+    background: url(../images/ND/slide2_dot2.png) no-repeat center;
     left: -41px;
     top: 3px;
 }
@@ -1595,7 +1595,7 @@ span.discount_big {
     position: absolute;
     width: 33px;
     height: 33px;
-    background: url(/bitrix/templates/dresscodeV2_new/images/ND/slide2_dot3.png) no-repeat center;
+    background: url(../images/ND/slide2_dot3.png) no-repeat center;
     left: -41px;
     top: 3px;
 }

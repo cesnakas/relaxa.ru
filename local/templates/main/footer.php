@@ -97,22 +97,22 @@
                     </div>
                     <div class="footer__socials">
                         <a href="https://vk.com/relaxamoscow" class="footer__socials__vk">
-                            <img src="/bitrix/templates/dresscodeV2_new/images/social/vk.svg" alt="VK">
+                            <img src="<?=SITE_TEMPLATE_PATH;?>/images/social/vk.svg" alt="VK">
                         </a>
                         <a href="https://www.instagram.com/relaxastarmoscow/" class="footer__socials__youtube">
-                            <img src="/bitrix/templates/dresscodeV2_new/images/social/instagram.svg" alt="instagram">
+                            <img src="<?=SITE_TEMPLATE_PATH;?>/images/social/instagram.svg" alt="instagram">
                         </a>
                         <a href="https://www.facebook.com/RelaxaStar" class="footer__socials__facebook">
-                            <img src="/bitrix/templates/dresscodeV2_new/images/social/facebook.svg" alt="Facebook">
+                            <img src="<?=SITE_TEMPLATE_PATH;?>/images/social/facebook.svg" alt="Facebook">
                         </a>
                         <a href="https://www.youtube.com/relaxastar" class="footer__socials__youtube">
-                            <img src="/bitrix/templates/dresscodeV2_new/images/social/youtube.svg" alt="Youtube">
+                            <img src="<?=SITE_TEMPLATE_PATH;?>/images/social/youtube.svg" alt="Youtube">
                         </a>
                         <a href="https://t.me/relaxaru" class="footer__socials__vk">
-                            <img src="/bitrix/templates/dresscodeV2_new/images/social/telegram.svg" alt="Telegram">
+                            <img src="<?=SITE_TEMPLATE_PATH;?>/images/social/telegram.svg" alt="Telegram">
                         </a>
                         <a href="https://ok.ru/group/56028015558860" class="footer__socials__vk">
-                            <img src="/bitrix/templates/dresscodeV2_new/images/social/ok.svg" alt="Одноклассники">
+                            <img src="<?=SITE_TEMPLATE_PATH;?>/images/social/ok.svg" alt="Одноклассники">
                         </a>
                     </div>
                     <div class="footer__mails">
