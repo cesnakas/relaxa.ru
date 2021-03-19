@@ -122,7 +122,7 @@ Asset::getInstance()->addJs('https://www.google.com/recaptcha/api.js');
 
                     <div class="s__section__001">
                         <a href="/massazhnoe-oborudovanie/massazhery/massazhnye_nakidki/">
-                            <span class="s__section__bg"><img src="/bitrix/templates/dresscodeV2_new/images/ND/cat001.png"></span>
+                            <span class="s__section__bg"><img src="<?=SITE_TEMPLATE_PATH;?>/images/ND/cat001.png"></span>
                             <span class="s__section__supbg"></span>
                             <span class="s__section__name">Массажеры <br>для спины</span>
                             <span class="s__section__price">от <span class="big__price">3 980</span> руб.</span>
@@ -133,7 +133,7 @@ Asset::getInstance()->addJs('https://www.google.com/recaptcha/api.js');
 
                     <div class="s__section__002">
                         <a href="/massazhnoe-oborudovanie/massazhery/massazhnye_podushki/">
-                            <span class="s__section__bg"><img src="/bitrix/templates/dresscodeV2_new/images/ND/cat002.png"></span>
+                            <span class="s__section__bg"><img src="<?=SITE_TEMPLATE_PATH;?>/images/ND/cat002.png"></span>
                             <span class="s__section__supbg"></span>
                             <span class="s__section__name">Массажные <br>подушки</span>
                             <span class="s__section__price">от <span class="big__price">1 890</span> руб.</span>
@@ -147,7 +147,7 @@ Asset::getInstance()->addJs('https://www.google.com/recaptcha/api.js');
                 <div class="center__section__popular">
                     <div class="s__section__003">
                         <a href="/massazhnoe-oborudovanie/massazhnye_kresla/">
-                            <span class="s__section__bg"><img src="/bitrix/templates/dresscodeV2_new/images/ND/cat003.png"></span>
+                            <span class="s__section__bg"><img src="<?=SITE_TEMPLATE_PATH;?>/images/ND/cat003.png"></span>
                             <span class="s__section__supbg"></span>
                             <span class="s__section__name">Массажные<br>кресла</span>
                             <span class="s__section__price">от <span class="big__price">18 990</span> руб.</span>
@@ -159,7 +159,7 @@ Asset::getInstance()->addJs('https://www.google.com/recaptcha/api.js');
 
                     <div class="s__section__004">
                         <a href="/massazhnoe-oborudovanie/massazhery/massazhery_golovy_i_glaz/">
-                            <span class="s__section__bg"><img src="/bitrix/templates/dresscodeV2_new/images/ND/cat004.png"></span>
+                            <span class="s__section__bg"><img src="<?=SITE_TEMPLATE_PATH;?>/images/ND/cat004.png"></span>
                             <span class="s__section__supbg"></span>
                             <span class="s__section__name">Массажеры<br>для головы</span>
                             <span class="s__section__price">от <span class="big__price">2 490</span> руб.</span>
@@ -169,7 +169,7 @@ Asset::getInstance()->addJs('https://www.google.com/recaptcha/api.js');
 
                     <div class="s__section__005">
                         <a href="/massazhnoe-oborudovanie/massazhery/massazhery_nog/">
-                            <span class="s__section__bg"><img src="/bitrix/templates/dresscodeV2_new/images/ND/cat005.png"></span>
+                            <span class="s__section__bg"><img src="<?=SITE_TEMPLATE_PATH;?>/images/ND/cat005.png"></span>
                             <span class="s__section__supbg"></span>
                             <span class="s__section__name">Массажеры<br>для ног</span>
                             <span class="s__section__price">от <span class="big__price">4 890</span> руб.</span>

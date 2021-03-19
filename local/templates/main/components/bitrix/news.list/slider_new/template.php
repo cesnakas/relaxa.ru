@@ -21,7 +21,10 @@ $this->setFrameMode(true);
 	?>
 	<div class="slide__main__top slide__main__top-<?=$arItem['ID']?>">
 		<div class="wrapper">
-			<div class="slider__main__content"><a href="<?=$arItem['PROPERTIES']['LINK_MOBILE']['VALUE']?>" class="slideMobileLink <? if ($arItem['PROPERTIES']['LINK_MOBILE']['VALUE'] == "#"):?>openWebFormModal<? endif; ?>" data-id="5" style="background: url(<?=CFile::GetPath($arItem['PROPERTIES']['PHOTO_MOBILE']['VALUE'])?>) center center no-repeat; background-size: cover; width: 100%;"></a><div class="slideContent"><?=$arItem['PREVIEW_TEXT']?></div></div>
+			<div class="slider__main__content">
+                <a href="<?=$arItem['PROPERTIES']['LINK_MOBILE']['VALUE']?>" class="slideMobileLink <? if ($arItem['PROPERTIES']['LINK_MOBILE']['VALUE'] == "#"):?>openWebFormModal<? endif; ?>" data-id="5" style="background: url(<?=CFile::GetPath($arItem['PROPERTIES']['PHOTO_MOBILE']['VALUE'])?>) center center no-repeat; background-size: cover; width: 100%;"></a>
+                <div class="slideContent"><?=$arItem['PREVIEW_TEXT']?></div>
+            </div>
 		</div>
 	</div>
 
