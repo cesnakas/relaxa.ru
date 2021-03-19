@@ -9,7 +9,6 @@ $arDirProperties = Array(
    "description" => "Все производители",
    "keywords" => "Все производители"
 );
-
 ?>
 
 <?$APPLICATION->IncludeComponent(

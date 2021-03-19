@@ -1,0 +1,2373 @@
+.brandsHeading{
+	border-top: 1px solid #e7e8ea;
+	padding-top: 24px;
+}
+
+.brandsDescription{
+	margin-bottom: 24px;
+	color: #000;
+	font-size: 16px;
+}
+
+.brandsBigPicture{
+	margin-top: 24px;
+	margin-bottom: 24px;
+	text-align: center;
+}
+
+.backToList{
+	/*-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;*/
+	margin-top: 24px;
+	display: block;
+	color: #fff;
+}
+
+.backToList:active{
+	position: relative;
+	top: 1px;
+}
+
+a.backToList:hover {
+    color: #fff;
+}
+
+.backToList_button {
+    display: block;
+    height: 42px;
+    background: #0A5A77;
+    border-radius: 5px;
+    width: 303px;
+    text-decoration: none;
+    line-height: 39px;
+    color: #ffffff;
+    font-size: 17px;
+    font-family: "Myriad Pro Bold";
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+.backToList_button:hover {
+	box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3) !important;
+}
+
+.brand_goods_button {
+    display: block;
+    height: 36px;
+    background: #fff;
+    color: #0a5a77;
+    border-radius: 5px;
+    width: 300px;
+    text-decoration: none;
+    line-height: 33px;
+    font-size: 17px;
+    font-family: "Myriad Pro Bold";
+    text-align: center;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    border: 3px solid #0A5A77;
+    margin-top: 20px;
+}
+.brand_goods_button:hover {
+	box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3) !important;
+}
+
+.brand_goods{
+	position: relative;
+    display: inline-block;
+    right: 50%;	
+    color: #0A5A77;
+    transform: translate(50%, 0);
+}
+
+.brand_goods:active{
+	position: relative;
+	top: 1px;
+}
+
+a.brand_goods:hover {
+    color: #0A5A77;
+}
+
+a.brand_goods svg {
+    width: 6%;
+    position: relative;
+    right: 30px;
+    margin: 0 -3%;
+}
+
+#left .heading .arrow{
+	background-position: -27px 50%;
+	-webkit-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+#left .heading.opened .arrow{
+	-moz-transform:    rotate(90deg);
+	-o-transform:      rotate(90deg);
+	-webkit-transform: rotate(90deg);
+	transform:         rotate(90deg);
+}
+
+#nextSection{
+	border-right: 1px solid #e7e8ea;
+	border-left: 1px solid #e7e8ea;
+	border-top: 1px solid #e7e8ea;
+	margin-bottom: 24px;
+	border-radius: 4px;
+	margin-top: 24px;
+}
+
+#nextSection .title{
+	background-color: #f3f3f3;
+	text-transform: uppercase;
+	text-align: center;
+	padding-bottom: 12px;
+	padding-top: 12px;
+	cursor: pointer;
+	font-size: 14px;
+	display: block;
+}
+
+#nextSection ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+#nextSection li,
+#nextSection .title{
+	border-bottom: 1px solid #e7e8ea;
+}
+
+/*#nextSection li{
+	padding: 12px 24px;
+}*/
+
+#nextSection li a{
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	text-decoration: none;
+	display: inline-block;
+    padding: 12px 24px;
+	font-size: 13px;
+	color: #000000;
+}
+
+#nextSection li a:hover,
+#nextSection li .selected{
+	color: #ffa800;
+}
+
+#nextSection li .cnt{
+	color: #888888;
+	float: right;
+}
+
+/*----------------------- НАЧАЛО БЛОКА БРЕНДА FUJIMO (FULL) ------------------------------ */
+
+.head_brand {
+	width: 100%;
+	height: auto;
+	background-color: #ffebcf;
+
+}
+
+.img_brand_head {
+	width: 100%;
+	height: auto;
+}
+
+.first_block_brand {
+	width: 100%;
+	display: flex;
+  	flex-direction: row;
+  	justify-content: center;
+	position: relative;
+	background-color: #ffebcf;
+}
+
+.first_block_brand_child {
+	width: 40%;
+	overflow: hidden;
+	margin-bottom: 5%;
+	margin-left: 2%;
+	margin-top: 5%;
+	margin-right: 2%;
+	display: inline-block;
+	text-align: center;
+}
+
+.first_block_brand_child img {
+	width: 100%;
+	height: auto;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    box-sizing: content-box;
+    transition: all ease 0.2s;
+}
+
+.first_block_brand_child_2 {
+	width: 40%;
+	overflow: hidden;
+	margin-bottom: 5%;
+	margin-left: 2%;
+	margin-top: 5%;
+	margin-right: 2%;
+	display: inline-block;
+	padding-top: 1%;
+	padding-left: 2%;
+	padding-bottom: 1%;
+	padding-right: 2%;
+	font-size: 20px;
+	background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    box-sizing: content-box;
+    transition: all ease 0.2s;
+}
+
+.second_block_brand {
+	width: 100%;
+	background-color: #F7F5EF;
+	display: flex;
+  	flex-direction: row;
+  	justify-content: center;
+	position: relative;
+}
+
+.fird_block_brand {
+	width: 100%;
+	min-height: 600px;
+	background-image: url(/uploads/fujimoki-brand/ki_meditation.jpg);
+	background-repeat: no-repeat;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+	display: flex;
+  	flex-direction: row;
+	position: relative;
+	color: white;
+}
+
+.fird_block_brand h2 {
+	color: #cdf6f6;
+}
+
+.fird_block_brand_child {
+	width: 40%;
+	max-height: 100%;
+	height: 100%;
+	overflow: hidden;
+	margin-bottom: 2%;
+	margin-left: 2%;
+	margin-top: 2%;
+	margin-right: 2%;
+	display: inline-block;
+	padding-top: 1%;
+	padding-left: 2%;
+	padding-bottom: 1%;
+	padding-right: 2%;
+	font-size: 20px;
+}
+
+/*----------------------- КОНЕЦ БЛОКА БРЕНДА FUJIMO (FULL) ------------------------------ */
+
+
+
+/*----------------------- НАЧАЛО БЛОКА БРЕНДА UNO (FULL) ------------------------------ */
+
+.uno_block_1 {
+position: relative;
+width: 1180px;	
+height: 600px;
+
+background: url(/upload/medialibrary/e8d/bg_1.jpg);
+mix-blend-mode: normal;
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+}
+
+.uno_block_1_abr {
+	position: absolute;
+	top: 59px;
+	left: 105px;
+width: 360px;
+height: 180px;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 48px;
+line-height: 64px;
+
+color: #08306D;
+}
+
+.uno_block_1_logo {
+	position: absolute;
+	top: 59px;
+	right: 111px;
+width: 406px;
+height: 125px;
+
+background: url(/upload/medialibrary/445/UNO_logo.png);
+}
+
+.uno_block_1_text {
+	position: absolute;
+	top: 370px;
+	left: 43px;
+	max-width: 1094px;
+	min-height: 85px;
+	overflow: hidden;	
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 26px;
+line-height: 37px;
+text-align: center;
+
+color: #293679;
+}
+
+
+.uno_block_2 {
+position: relative;
+width: 1180px;	
+height: 600px;
+background: url(/upload/medialibrary/599/bg_2.jpg);
+mix-blend-mode: normal;
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+}
+
+.uno_block_2_malaysia-logo {
+	position: absolute;
+	top: 5px;
+	left: 170px;
+width: 320px;
+height: 240px;
+	
+background: url(/upload/medialibrary/548/malaysia_flag_icon.png);
+}
+
+.uno_block_2_text {
+	position: absolute;
+	top: 5px;
+	left: 600px;
+max-width: 532px;
+max-height: 279px;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 32px;
+
+color: #293679;
+}
+
+.uno_block_3 {
+position: relative;
+width: 1180px;	
+height: 600px;
+background: url(/upload/medialibrary/805/bg_3.jpg);
+mix-blend-mode: normal;
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: content; /* Современные браузеры */
+}
+
+.uno_block_3_text {
+	position: absolute;
+	top: 60px;
+	left: 65px;
+max-width: 925px;
+max-height: 144px;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 32px;
+text-align: center;
+color: #293679;
+}
+
+.uno_block_4 {
+position: relative;
+width: 1180px;	
+height: 600px;
+background: url(/upload/medialibrary/f50/bg_4.jpg);
+mix-blend-mode: normal;
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: content; /* Современные браузеры */
+}
+
+.uno_block_4_text {
+	position: inherit;
+	max-width: 922px;
+	max-height: 222px;
+	padding-right: 10px;
+	padding-top: 25px;
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 48px;
+text-align: center;
+color: #293679;
+}
+
+.uno_block_4_text_bg {
+	position: absolute;
+	top: 65px;
+	left: 129px;
+	width: 922px;
+	height: 222px;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+color: #293679;
+	background: rgba(255, 255, 255, 0.5);
+	border-radius: 36px;	
+}
+
+.uno_block_5 {
+position: relative;
+width: 1180px;	
+height: 600px;
+background: url(/upload/medialibrary/21d/bg_5.jpg);
+mix-blend-mode: normal;
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: content; /* Современные браузеры */
+}
+
+.uno_block_5_text {
+	position: absolute;
+	top: 20px;
+	left: 38px;
+	max-width: 641px;
+	max-height: 120px;
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 31px;
+line-height: 41px;
+
+color: #0E2F42;
+
+mix-blend-mode: normal;
+}
+
+.uno_block_5_text_2 {
+	position: absolute;
+	bottom: 30px;
+	left: 147px;
+	max-width: 885px;
+	max-height: 64px;
+	padding: 7px;
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 22px;
+line-height: 28px;
+color: #0E2F42;
+text-align: center;
+	
+mix-blend-mode: normal;
+}
+
+.uno_block_5_photo_1 {
+	position: absolute;
+	top: 169px;
+	left: 245px;
+width: 229px;
+height: 243px;
+
+background: url(/upload/medialibrary/bb8/UNO_GRANDE.png);
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: content; /* Современные браузеры */
+}
+
+.uno_block_5_photo_2 {
+	position: absolute;
+	top: 169px;
+	left: 474px;	
+width: 225px;
+height: 243px;
+
+background: url(/upload/medialibrary/c0b/UNO_ONE.png);
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: content; /* Современные браузеры */
+}
+
+.uno_block_5_photo_3 {
+	position: absolute;
+	top: 169px;
+	right: 245px;	
+width: 236px;
+height: 243px;
+
+background: url(/upload/medialibrary/b68/UNO_ONE_LIGHT.png);
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: content; /* Современные браузеры */
+}
+
+.uno_block_5_photo_1_description {
+	position: absolute;
+	top: 412px;
+	left: 274px;
+width: 171px;
+height: 74px;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 32px;
+text-align: center;
+
+color: #272330;
+}
+
+.uno_block_5_photo_2_description {
+	position: absolute;
+	top: 412px;
+	left: 528px;
+width: 116px;
+height: 74px;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 32px;
+text-align: center;
+
+color: #272330;
+
+}
+
+.uno_block_5_photo_3_description {
+	position: absolute;
+	top: 412px;
+	right: 245px;
+width: 216px;
+height: 74px;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 32px;
+text-align: center;
+
+color: #272330;
+
+}
+
+.uno_block_6 {
+position: relative;
+width: 1180px;	
+height: 600px;
+background: linear-gradient(180deg, #7ACDE3 24.48%, rgba(255, 255, 255, 0) 89.06%);
+mix-blend-mode: normal;	
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: content; /* Современные браузеры */
+}
+
+.uno_block_6_text {
+	position: absolute;
+	top: 56px;
+	left: 116px;
+width: 954px;
+height: 103px;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 26px;
+line-height: 41px;
+text-align: center;
+
+color: #011D66;
+
+mix-blend-mode: normal;
+}
+
+.uno_block_6_text_2 {
+	position: absolute;
+	top: 354px;
+	left: 116px;
+width: 948px;
+height: 132px;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 32px;
+text-align: center;
+
+color: #1D5858;
+}
+
+.uno_block_6_photo_1 {
+	position: absolute;
+	top: 169px;
+	left: 140px;	
+width: 150px;
+height: 150px;
+
+background: url(/upload/medialibrary/500/iso9001.png);
+		background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+}
+
+.uno_block_6_photo_2 {
+	position: absolute;
+	top: 169px;
+	left: 290px;	
+width: 150px;
+height: 150px;
+
+background: url(/upload/medialibrary/1ef/iso14001.png);
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+}
+
+.uno_block_6_photo_3 {
+	position: absolute;
+	top: 169px;
+	right: 590px;	
+width: 150px;
+height: 150px;
+
+background: url(/upload/medialibrary/bd9/iso13485.png);
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+}
+
+.uno_block_6_photo_4 {
+	position: absolute;
+	top: 169px;
+	left: 590px;	
+width: 150px;
+height: 150px;
+
+background: url(/upload/medialibrary/342/uno_UL.png);
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+}
+
+.uno_block_6_photo_5 {
+	position: absolute;
+	top: 169px;
+	right: 290px;	
+width: 150px;
+height: 150px;
+
+background: url(/upload/medialibrary/d6d/uno_FC.png);
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+}
+
+.uno_block_6_photo_6 {
+	position: absolute;
+	top: 169px;
+	right: 140px;	
+width: 150px;
+height: 150px;
+
+background: url(/upload/medialibrary/7e9/uno_ETL.png);
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+}
+
+/*----------------------- КОНЕЦ БЛОКА БРЕНДА UNO (FULL) ------------------------------ */
+
+
+
+
+@media (max-width: 900px) {
+	
+/*----------------------- НАЧАЛО БЛОКА БРЕНДА FUJIMO (900px) ------------------------------ */
+	
+	.first_block_brand {
+	width: 100%;
+  	flex-direction: column;
+  	justify-content: center;
+	position: relative;
+	overflow: hidden;
+}
+
+	
+.first_block_brand_child {
+	width: auto;
+	max-width: 100%;
+	height: auto;
+	overflow: hidden;
+	margin-bottom: 5%;
+	margin-left: 2%;
+	margin-top: 5%;
+	margin-right: 2%;
+	display: block;
+	text-align: center;
+	background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    box-sizing: content-box;
+    transition: all ease 0.2s;
+
+}
+
+.first_block_brand_child img {
+	width: 100%;
+	height: 100%;
+	box-shadow: none;
+}
+
+.first_block_brand_child_2 {
+	width: auto;
+	max-width: 100%;
+	overflow: hidden;
+	margin-bottom: 5%;
+	margin-left: 2%;
+	margin-top: 5%;
+	margin-right: 2%;
+	display: block;
+	background-color: azure;
+	padding-top: 1%;
+	padding-left: 2%;
+	padding-bottom: 1%;
+	padding-right: 2%;
+	font-size: 14px;
+	background: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    box-sizing: content-box;
+    transition: all ease 0.2s;
+}
+
+.second_block_brand {
+	width: 100%;
+  	flex-direction: column;
+  	justify-content: center;
+	position: relative;
+	overflow: hidden;
+}
+	
+.fird_block_brand_child {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	float: right;
+	margin-bottom: 2%;
+	margin-left: 2%;
+	margin-top: 2%;
+	margin-right: 2%;
+	display: inline-block;
+	color: white;
+	padding-top: 1%;
+	padding-left: 2%;
+	padding-bottom: 1%;
+	padding-right: 2%;
+	font-size: 20px;
+	font-weight: 600;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    box-sizing: content-box;
+    transition: all ease 0.2s;
+}
+	
+	.fird_block_brand {
+	width: 100%;
+	height: auto;
+	background-image: url(/uploads/fujimoki-brand/ki_960.jpg);
+	background-size: cover;
+	display: flex;
+  	flex-direction: row;
+	position: relative;
+	color: white;
+}
+
+/*----------------------- КОНЕЦ БЛОКА БРЕНДА FUJIMO (900px) ------------------------------ */
+
+
+
+/*----------------------- НАЧАЛО БЛОКА БРЕНДА UNO (900px) ------------------------------ */
+
+.uno_block_1 {
+position: relative;
+width: 100%;
+max-height: 700px;
+
+background: url(/upload/medialibrary/e8d/bg_1.jpg);
+	background-size: cover;
+}
+
+.uno_block_1_abr {
+	position: absolute;
+max-width: 100%;
+left: 10%;
+top: 68.83px;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 36px;
+line-height: 48px;
+
+color: #08306D;
+
+}
+
+.uno_block_1_logo {
+	position: absolute;
+max-width: 500px;
+width: auto;
+left: 60%;
+right: 10%;
+top: 105px;
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+}
+
+.uno_block_1_text {
+	position: absolute;
+left: 2%;
+right: 2%;
+top: 350px;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 30px;
+line-height: 39px;
+text-align: center;
+
+color: #293679;
+}
+
+
+.uno_block_2 {
+position: relative;
+width: 100%;
+max-height: 700px;
+background: url(/upload/medialibrary/599/bg_2.jpg);
+}
+
+.uno_block_2_malaysia-logo {
+position: absolute;
+width: 244.07px;
+height: 280px;
+left: 10%;
+top: 49.83px;
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+}
+
+.uno_block_2_text {
+position: absolute;
+max-width: 100%;
+left: 50%;
+right: 2%;
+top: 40px;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 32px;
+
+color: #293679;
+}
+
+.uno_block_3 {
+position: relative;
+width: 100%;
+height: 600px;
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: content; /* Современные браузеры */
+}
+
+.uno_block_3_text {
+position: absolute;
+width: 100%;
+height: 117.77px;
+left: 0%;
+right: 1%;
+top: 45px;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 27px;
+text-align: center;
+
+color: #293679;
+}
+
+.uno_block_4 {
+position: relative;
+width: 100%;
+height: 600px;
+	background-repeat: no-repeat;
+    background-size: content;
+}
+
+.uno_block_4_text {
+	position: inherit;
+	width: 90%;
+	max-height: 222px;
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 32px;
+line-height: 43px;
+text-align: center;
+
+color: #293679;
+
+mix-blend-mode: normal;
+}
+
+.uno_block_4_text_bg {
+	position: absolute;
+	top: 54px;
+	left: 1%;
+	right: auto;
+	width: 92%;
+	height: 50%;
+	max-height: 82%;
+	padding-right: 10px;
+	padding-left: 5%;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+color: #293679;
+	background: rgba(255, 255, 255, 0.5);
+	border-radius: 36px;	
+}
+
+.uno_block_5 {
+position: relative;
+width: 100%;
+height: 1300px;
+background: url(/upload/medialibrary/21d/bg_5.jpg);
+	background-size: cover;
+background-repeat: no-repeat;
+}
+
+.uno_block_5_text {
+position: absolute;
+max-width: 100%;
+max-height: 15%;
+left: 15%;
+right: 15%;
+top: 32px;
+overflow: hidden;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 31px;
+line-height: 41px;
+text-align: center;
+
+color: #0E2F42;
+
+mix-blend-mode: normal;
+}
+
+.uno_block_5_text_2 {
+position: absolute;
+max-width: 100%;
+max-height: 20%;
+left: 15%;
+right: 15%;
+top: 960px;
+overflow: hidden;
+	
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 28px;
+line-height: 32px;
+text-align: center;
+
+color: #0E2F42;
+
+mix-blend-mode: normal;
+}
+
+.uno_block_5_photo_1 {
+position: absolute;
+max-width: 150%;
+max-height: 150%;
+left: 15%;
+right: 15%;
+top: 18%;
+
+background: url(/upload/medialibrary/bb8/UNO_GRANDE.png);
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: content; /* Современные браузеры */
+}
+
+.uno_block_5_photo_2 {
+position: absolute;
+max-width: 150%;
+max-height: 150%;
+left: 55%;
+top: 18.6%;
+
+background: url(/upload/medialibrary/c0b/UNO_ONE.png);
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: content; /* Современные браузеры */
+}
+
+.uno_block_5_photo_3 {
+position: absolute;
+max-width: 150%;
+max-height: 150%;
+left: 30%;
+top: 45%;
+
+background: url(/upload/medialibrary/b68/UNO_ONE_LIGHT.png);
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: content; /* Современные браузеры */
+}
+
+.uno_block_5_photo_1_description {
+	position: absolute;
+	top: 37%;
+	left: 15%;
+max-width: 169px;
+max-height: 70px;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 32px;
+text-align: center;
+
+color: #272330;
+}
+
+.uno_block_5_photo_2_description {
+	position: absolute;
+	top: 37%;
+	left: 62%;
+max-width: 116px;
+max-height: 74px;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 32px;
+text-align: center;
+
+color: #272330;
+
+}
+
+.uno_block_5_photo_3_description {
+	position: absolute;
+	top: 64%;
+	left: 30%;
+min-width: 216px;
+min-height: 74px;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 32px;
+text-align: center;
+
+color: #272330;
+
+}
+
+.uno_block_6 {
+position: relative;
+width: 100%;	
+height: content;
+background: linear-gradient(180deg, #7ACDE3 24.48%, rgba(255, 255, 255, 0) 89.06%);
+mix-blend-mode: normal;	
+	background-repeat: no-repeat;
+    background-size: content; 
+}
+
+.uno_block_6_text {
+position: absolute;
+max-width: 100% !important;
+max-height: 45%;
+left: 0% !important;
+right: 2%!important;
+top: 32px;
+overflow: hidden;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 26px;
+line-height: 35px;
+text-align: center;
+
+color: #011D66;
+
+mix-blend-mode: normal;
+}
+
+.uno_block_6_text_2 {
+position: absolute;
+max-width: 90% !important;
+max-height: 45%;
+left: 4% !important;
+right: 2%!important;
+bottom: 32px;
+overflow: hidden;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 32px;
+text-align: center;
+
+color: #1D5858;
+}
+
+.uno_block_6_photo_1 {
+	position: absolute;
+	top: 216px;
+	left: 1%;	
+max-width: 120px;
+max-height: 120px;
+
+background: url(/upload/medialibrary/500/iso9001.png);
+		background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+}
+
+.uno_block_6_photo_2 {
+	position: absolute;
+	top: 216px;
+	left: 17%;	
+max-width: 120px;
+max-height: 120px;
+
+background: url(/upload/medialibrary/1ef/iso14001.png);
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+}
+
+.uno_block_6_photo_3 {
+	position: absolute;
+	top: 216px;
+	left: 33%;	
+width: 120px;
+height: 120px;
+
+background: url(/upload/medialibrary/bd9/iso13485.png);
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+}
+
+.uno_block_6_photo_4 {
+	position: absolute;
+	top: 216px;
+	left: 49%;	
+width: 120px;
+height: 120px;
+
+background: url(/upload/medialibrary/342/uno_UL.png);
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+}
+
+.uno_block_6_photo_5 {
+	position: absolute;
+	top: 216px;
+	left: 65%;	
+max-width: 120px;
+max-height: 120px;
+
+background: url(/upload/medialibrary/d6d/uno_FC.png);
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+}
+
+.uno_block_6_photo_6 {
+	position: absolute;
+	top: 216px;
+	right: 2%;	
+width: 120px;
+height: 120px;
+
+background: url(/upload/medialibrary/7e9/uno_ETL.png);
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+}	
+}
+
+/*----------------------- КОНЕЦ БЛОКА БРЕНДА UNO (900px) ------------------------------ */
+
+
+
+@media (max-width: 750px) {
+	
+/*----------------------- НАЧАЛО БЛОКА БРЕНДА UNO (750px) ------------------------------ */
+	
+.uno_block_1 {
+position: relative;
+max-width: 100%;
+max-height: 400px;
+
+background: url(/upload/medialibrary/e8d/bg_1.jpg);
+	background-size: cover;
+}
+
+.uno_block_1_abr {
+	position: absolute;
+width: 176px;
+height: 123px;
+left: 5%;
+top: 44px;
+	
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 27px;
+
+color: #08306D;
+
+}
+
+.uno_block_1_logo {
+	position: absolute;
+max-width: 200px;
+max-height: 70px;
+	width: auto;
+left: 60%;
+right: 10%;
+top: 55px;
+
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+}
+
+.uno_block_1_text {
+	position: absolute;
+max-width: 90%;
+height: 150.67px;
+left: 5%;
+top: 209.33px;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 21px;
+text-align: center;
+
+color: #293679;
+}
+
+
+.uno_block_2 {
+position: relative !important;
+max-width: 100% !important;
+max-height: 400px;
+background: url(/upload/medialibrary/e8d/bg_1.jpg) !important;
+	background-size: cover !important;
+	transform: matrix(1, 0, 0, -1, 0, 0) !important;
+display: inline-flex !important;
+  justify-content: center !important;
+}
+
+.uno_block_2_malaysia-logo {
+	position: absolute !important;
+	display: flex !important;
+max-width: 300px !important;
+	width: auto !important;
+top: 50%;
+left: 30% !important;
+right: 30% !important;
+
+	background-repeat: no-repeat !important;
+	-moz-background-size: 100% !important; /* Firefox 3.6+ */
+    -webkit-background-size: 100% !important; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100% !important; /* Opera 9.6+ */
+    background-size: 100% !important; /* Современные браузеры */
+	transform: matrix(1, 0, 0, -1, 0, 0) !important;
+}
+
+.uno_block_2_text {
+	position: absolute !important;
+max-width: 80% !important;
+max-height: content !important;
+left: 10% !important;
+top: 12%;
+
+font-family: Segoe UI !important;
+font-style: normal !important;
+font-weight: 600 !important;
+font-size: 20px;
+line-height: 24px;
+
+color: #293679 !important;
+	transform: matrix(1, 0, 0, -1, 0, 0) !important;
+}
+
+.uno_block_3 {
+position: relative;
+max-width: 100%;
+max-height: 400px;
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: content; /* Современные браузеры */
+}
+
+.uno_block_3_text {
+position: absolute;
+max-width: 540px;
+max-height: 137px;
+	width: auto;
+	left: 16px;
+	top: 16px;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 22px;
+text-align: left;
+
+color: #293679;
+}
+
+.uno_block_4 {
+position: relative;
+max-width: 100%;
+max-height: 400px;
+	background-repeat: no-repeat;
+    background-size: content;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.uno_block_4_text {
+	position: relative;
+max-width: 610px;
+height: content;
+left: 15px;
+padding-top: 15px;
+padding-bottom: 15px;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 27px;
+text-align: center;
+
+color: #293679;
+
+mix-blend-mode: normal;
+}
+
+.uno_block_4_text_bg {
+position: relative;
+max-width: 500px;
+height: auto;
+min-height: 100px; 
+max-height: 250px;
+left: auto;
+top: -80px;
+	
+	
+background: rgba(255, 255, 255, 0.75);
+border-radius: 36px;
+}
+
+.uno_block_5 {
+	position: relative;
+max-width: 100%;
+max-height: auto;
+	height: content;
+
+	background: url(/upload/medialibrary/21d/bg_5.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	justify-content: center;
+}
+
+.uno_block_5_text {
+position: absolute;
+display: block;
+left: 10%;
+right: 10%;
+	
+min-width: 80%;
+max-width: 500px;
+max-height: 150px;
+	height: auto;
+top: 2%;
+
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 27px;
+text-align: center;
+
+color: #0E2F42;
+
+mix-blend-mode: normal;
+}
+
+.uno_block_5_text_2 {
+position: absolute;
+
+left: 3%;
+right: 3%;
+top: 89.5%;
+bottom: 0px;
+	
+min-width: 95%;
+max-width: 90%;
+max-height: 150px;
+min-height: content;
+	height: content;
+	padding: 0;
+	
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+text-align: center;
+
+color: #0E2F42;
+
+mix-blend-mode: normal;
+}
+
+.uno_block_5_photo_1 {
+	position: absolute;
+	display: block;
+	width: auto;
+	max-width: 300px;
+	min-height: auto;
+	max-height: auto;
+left: 12%;
+right: 12%;
+top: 10%;
+	margin: auto;
+	
+background: url(/upload/medialibrary/bb8/UNO_GRANDE.png);
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: content; /* Современные браузеры */
+}
+
+.uno_block_5_photo_2 {
+	position: absolute;
+	display: block;
+	width: auto;
+	max-width: 300px;
+	min-height: auto;
+	max-height: auto;
+left: 12%;
+right: 12%;
+top: 38%;
+	margin: auto;
+
+background: url(/upload/medialibrary/c0b/UNO_ONE.png);
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: content; /* Современные браузеры */
+}
+
+.uno_block_5_photo_3 {
+	position: absolute;
+	display: block;
+	width: auto;
+	max-width: 300px;
+	min-height: auto;
+	max-height: auto;
+left: 12%;
+right: 12%;
+top: 64%;
+	margin: auto;
+
+
+background: url(/upload/medialibrary/b68/UNO_ONE_LIGHT.png);
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: content; /* Современные браузеры */
+}
+
+.uno_block_5_photo_1_description {
+position: absolute;
+max-width: 500px;
+width: auto;
+height: auto;
+min-height: 70px; 
+top: 29%;
+left: 32%;
+right: 32%;
+
+	
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 32px;
+text-align: center;
+
+color: #272330;
+}
+
+.uno_block_5_photo_2_description {
+position: absolute;
+max-width: 500px;
+width: auto;
+height: auto;
+min-height: 70px; 
+top: 57%;
+left: 32%;
+right: 32%;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 32px;
+text-align: center;
+
+color: #272330;
+
+}
+
+.uno_block_5_photo_3_description {
+position: absolute;
+max-width: 500px;
+width: auto;
+height: auto;
+min-height: 70px; 
+top: 83%;
+left: 20%;
+right: 20%;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 32px;
+text-align: center;
+
+color: #272330;
+
+}
+
+.uno_block_6 {
+position: relative;
+max-width: 100%;
+max-height: auto;
+	height: content;
+	display: flex;
+	justify-content: center;
+	
+background: linear-gradient(180deg, #7ACDE3 24.48%, rgba(255, 255, 255, 0) 89.06%);
+mix-blend-mode: normal;	
+	background-repeat: no-repeat;
+    background-size: content; 
+}
+
+.uno_block_6_text {
+position: absolute;
+max-width: 303px;
+min-width: 100%;
+max-height: 188px;
+min-height: 110px;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 22px;
+
+color: #011D66;
+
+mix-blend-mode: normal;
+}
+
+.uno_block_6_text_2 {
+position: absolute;
+max-width: 299px;
+max-height: 220px;
+left: 38px;
+top: 50%;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 590;
+font-size: 16px;
+line-height: 21px;
+text-align: center;
+
+color: #1D5858;
+}
+
+.uno_block_6_photo_1 {
+	position: relative;
+	display: flex;
+	top: 25%;
+	left: 7%;
+	right: 5%;
+	margin-right: 2%;
+	margin-left: 2%;
+max-height: 100px;
+max-width: 14%;
+height: 100%;
+	padding: 0;
+
+background: url(/upload/medialibrary/500/iso9001.png);
+		background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: contain; /* Современные браузеры */
+}
+
+.uno_block_6_photo_2 {
+	position: relative;
+	display: flex;
+	top: 25%;
+	left: 3%;
+	right: 5%;
+	margin-right: 2%;
+	margin-left: 2%;
+max-height: 100px;
+max-width: 14%;
+height: 100%;
+	padding: 0;
+
+background: url(/upload/medialibrary/1ef/iso14001.png);
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: contain; /* Современные браузеры */
+}
+
+.uno_block_6_photo_3 {
+	position: relative;
+	display: flex;
+	top: 25%;
+	left: 0%;
+	right: 5%;
+	margin-right: 2%;
+
+max-height: 100px;
+max-width: 14%;
+height: 100%;
+	padding: 0;
+
+background: url(/upload/medialibrary/bd9/iso13485.png);
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: contain; /* Современные браузеры */
+}
+
+.uno_block_6_photo_4 {
+	position: relative;
+	display: flex;
+	top: 25%;
+	left: -2%;
+	right: 1%;
+	margin-right: 2%;
+max-height: 100px;
+max-width: 14%;
+height: 100%;
+	padding: 0;
+
+background: url(/upload/medialibrary/342/uno_UL.png);
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: contain; /* Современные браузеры */
+}
+
+.uno_block_6_photo_5 {
+	position: relative;
+	display: flex;
+	top: 25%;
+	left: -3%;
+	margin-right: 2%;
+max-height: 100px;
+max-width: 14%;
+height: 100%;
+
+	padding: 0;
+
+background: url(/upload/medialibrary/d6d/uno_FC.png);
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: contain; /* Современные браузеры */
+}
+
+.uno_block_6_photo_6 {
+	position: relative;
+	display: flex;
+	top: 25%;
+	left: -5%;
+	right: 5%;
+	margin-right: 2%;
+max-height: 100px;
+max-width: 14%;
+height: 100%;
+	padding: 0;
+
+background: url(/upload/medialibrary/7e9/uno_ETL.png);
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+}
+
+/*----------------------- КОНЕЦ БЛОКА БРЕНДА UNO (750px) ------------------------------ */
+
+}
+
+
+
+
+
+
+@media (max-width: 475px) {
+	
+/*----------------------- НАЧАЛО БЛОКА БРЕНДА UNO (475px) ------------------------------ */	
+		
+.uno_block_1 {
+position: relative;
+max-width: 100%;
+max-height: 400px;
+
+background: url(/upload/medialibrary/e8d/bg_1.jpg);
+	background-size: cover;
+}
+
+.uno_block_1_abr {
+	position: absolute;
+width: 176px;
+height: 123px;
+left: 13px;
+top: 44px;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 27px;
+
+color: #08306D;
+
+}
+
+.uno_block_1_logo {
+
+	position: absolute;
+max-width: 200px;
+max-height: 70px;
+	width: auto;
+left: 65%;
+right: 5%;
+top: 55px;
+
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+
+}
+
+.uno_block_1_text {
+	position: absolute;
+width: 347px;
+height: 150.67px;
+left: 14px;
+top: 209.33px;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 21px;
+text-align: center;
+
+color: #293679;
+}
+
+
+.uno_block_2 {
+position: relative;
+max-width: 100%;
+max-height: 600px;
+background: url(/upload/medialibrary/e8d/bg_1.jpg);
+	background-size: cover;
+	transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+.uno_block_2_malaysia-logo {
+	position: absolute;
+	display: flex;
+max-width: 300px;
+	width: auto;
+top: 55%;
+left: 30%;
+right: 30%;
+
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+	transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+.uno_block_2_text {
+	position: absolute;
+max-width: 80%;
+max-height: content;
+left: 10%;
+top: 30%;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 28px;
+text-align: justify;
+
+color: #293679;
+	transform: matrix(1, 0, 0, -1, 0, 0);
+}
+
+.uno_block_3 {
+position: relative;
+width: 100%;
+height: 400px;
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: content; /* Современные браузеры */
+}
+
+.uno_block_3_text {
+left: 0.5%;
+right: 2%;
+margin-right: 2%;
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 14px;
+line-height: 19px;
+text-align: center;
+
+color: #293679;
+}
+
+.uno_block_4 {
+position: relative;
+max-width: 100%;
+max-height: 400px;
+	background-repeat: no-repeat;
+    background-size: content;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.uno_block_4_text {
+	position: relative;
+max-width: 610px;
+height: content;
+left: 15px;
+padding-top: 15px;
+padding-bottom: 15px;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 27px;
+text-align: center;
+
+color: #293679;
+
+mix-blend-mode: normal;
+}
+
+.uno_block_4_text_bg {
+position: relative;
+max-width: 500px;
+height: auto;
+min-height: 100px; 
+max-height: 250px;
+left: auto;
+top: -80px;
+	
+	
+background: rgba(255, 255, 255, 0.75);
+border-radius: 36px;
+}
+
+
+.uno_block_5 {
+position: relative;
+width: 100%;
+height: 1350px;
+background: url(/upload/medialibrary/21d/bg_5.jpg);
+	background-size: cover;
+background-repeat: no-repeat;
+}
+
+.uno_block_5_text {
+position: absolute;
+width: auto;
+height: 120px;
+left: 3%;
+right: 3%;
+top: 19px;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 27px;
+text-align: center;
+
+color: #0E2F42;
+
+mix-blend-mode: normal;
+}
+
+.uno_block_5_text_2 {
+position: absolute;
+max-width: 100%;
+top: 1150px;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 18px;
+line-height: 22px;
+text-align: center;
+
+color: #0E2F42;
+
+mix-blend-mode: normal;
+}
+
+.uno_block_5_photo_1 {
+position: absolute;
+width: 223px;
+height: 220px;
+left: 25%;
+right: 20%;
+top: 150px;
+
+background: url(/upload/medialibrary/bb8/UNO_GRANDE.png);
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: content; /* Современные браузеры */
+}
+
+.uno_block_5_photo_2 {
+position: absolute;
+width: 223px;
+height: 220px;
+left: 20%;
+right: 12%;
+top: 470px;
+
+background: url(/upload/medialibrary/c0b/UNO_ONE.png);
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: content; /* Современные браузеры */
+}
+
+.uno_block_5_photo_3 {
+position: absolute;
+width: 223px;
+height: 220px;
+left: 20%;
+right: 12%;
+top: 790px;
+
+background: url(/upload/medialibrary/b68/UNO_ONE_LIGHT.png);
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: content; /* Современные браузеры */
+}
+
+.uno_block_5_photo_1_description {
+	position: absolute;
+	width: 223px;
+	height: 70px;
+top: 380px;
+left: 30%;
+right: 18%;
+	
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 32px;
+text-align: center;
+
+color: #272330;
+}
+
+.uno_block_5_photo_2_description {
+	position: absolute;
+	width: 150px;
+	height: 70px;
+top: 690px;
+left: 35%;
+right: 30%;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 32px;
+text-align: center;
+
+color: #272330;
+
+}
+
+.uno_block_5_photo_3_description {
+	position: absolute;
+	width: 223px;
+	height: 70px;
+left: 18%;
+right: 18%;
+top: 1010px;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 24px;
+line-height: 32px;
+text-align: center;
+
+color: #272330;
+
+}
+
+.uno_block_6 {
+position: relative;
+width: 100%;
+height: 700px;
+background: linear-gradient(180deg, #7ACDE3 24.48%, rgba(255, 255, 255, 0) 89.06%);
+mix-blend-mode: normal;	
+	background-repeat: no-repeat;
+    background-size: content; 
+}
+
+.uno_block_6_text {
+position: absolute;
+max-width: 303px;
+max-height: 200px;
+left: 36px;
+top: 28px;
+overflow: visible;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 600;
+font-size: 20px;
+line-height: 22px;
+text-align: center;
+
+color: #011D66;
+
+mix-blend-mode: normal;
+}
+
+.uno_block_6_text_2 {
+position: absolute;
+max-width: 299px;
+min-height: 220px;
+left: 38px;
+top: 400px;
+
+font-family: Segoe UI;
+font-style: normal;
+font-weight: 590;
+font-size: 16px;
+line-height: 21px;
+text-align: center;
+
+color: #1D5858;
+}
+
+.uno_block_6_photo_1 {
+	position: absolute;
+    top: 155px;
+    left: 10%;	
+min-width: 100px;
+height: 100px;
+
+background: url(/upload/medialibrary/500/iso9001.png);
+		background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+}
+
+.uno_block_6_photo_2 {
+	position: absolute;
+    top: 155px;
+	left: 38%;	
+min-width: 100px;
+height: 100px;
+
+background: url(/upload/medialibrary/1ef/iso14001.png);
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+}
+
+.uno_block_6_photo_3 {
+	position: absolute;
+    top: 160px;
+    left: 67%;
+    min-width: 90px;
+height: 100px;
+
+background: url(/upload/medialibrary/bd9/iso13485.png);
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+}
+
+.uno_block_6_photo_4 {
+	position: absolute;
+top: 265px;
+left: 13%;	
+min-width: 90px;
+height: 100px;
+
+background: url(/upload/medialibrary/342/uno_UL.png);
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+}
+
+.uno_block_6_photo_5 {
+	position: absolute;
+    top: 260px;
+    left: 39.5%;
+    min-width: 100px;
+height: 100px;
+
+background: url(/upload/medialibrary/d6d/uno_FC.png);
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+}
+
+.uno_block_6_photo_6 {
+	position: absolute;
+    top: 264px;
+    left: 66.5%;
+    min-width: 90px;
+height: 100px;
+
+background: url(/upload/medialibrary/7e9/uno_ETL.png);
+	background-repeat: no-repeat;
+	-moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%; /* Современные браузеры */
+}
+
+/*----------------------- КОНЕЦ БЛОКА БРЕНДА UNO (475px) ------------------------------ */
+
+}
+
+
+
+
+
+@media (max-width: 360px) {
+
+/*----------------------- НАЧАЛО БЛОКА БРЕНДА UNO (360px) ------------------------------ */
+	
+.uno_block_6_photo_1 {
+width: 80px;
+height: 80px;
+}
+
+.uno_block_6_photo_2 {	
+width: 80px;
+height: 80px;
+}
+
+.uno_block_6_photo_3 {
+	width: 80px;
+height: 80px;
+}
+
+.uno_block_6_photo_4 {
+width: 80px;
+height: 80px;
+}
+
+.uno_block_6_photo_5 {
+width: 80px;
+height: 80px;
+}
+
+.uno_block_6_photo_6 {
+width: 80px;
+height: 80px;
+}
+
+/*----------------------- КОНЕЦ БЛОКА БРЕНДА UNO (360px) ------------------------------ */
+	
+}
+

@@ -127,8 +127,8 @@ echo  '<a href="'. $arSect['SECTION_PAGE_URL'].'"><div class="new_section_articl
 
 <?
 $APPLICATION->IncludeComponent(
-	"bitrix:search.tags.cloud", 
-	"cloud_art", 
+	"bitrix:search.tags.cloud",
+	"cloud_art",
 	array(
 		"CACHE_TIME" => "3600",
 		"CACHE_TYPE" => "A",

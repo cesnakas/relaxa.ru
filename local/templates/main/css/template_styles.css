@@ -8608,3 +8608,7 @@ a.removeFromWishlist.label.like_tis img {
     margin: 12px;
     width: 360px;
 }
+
+form[name="arrTags_form"] {
+    display: none;
+}
