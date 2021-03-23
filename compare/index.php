@@ -14,6 +14,7 @@ $APPLICATION->SetPageProperty("keywords", "купить, заказать, це�
     </style>
 
 <h1>Список сравнения</h1>
+
 <?$APPLICATION->IncludeComponent(
 	"dresscode:catalog.compare", 
 	"template2", 

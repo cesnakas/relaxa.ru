@@ -1,0 +1,582 @@
+@media (max-width: 960px) {
+.catmob-header {
+    display: flex !important;
+}
+}
+
+#compare {
+	clear: both;
+	/*overflow: hidden;*/
+	margin-bottom: 32px;
+	margin: 10px;
+}
+
+#compare ul {
+	/*overflow: hidden;*/
+	clear: both;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#compare > ul > li {
+	margin-bottom: 12px;
+	font-size: 14px;
+	color: #000000;
+	float: left;
+	width: 295px;
+}
+
+#compare input[type="checkbox"] + label,
+#compare input[type="radio"] + label {
+	cursor: pointer;
+}
+
+#compare input[type="checkbox"]:not(checked),
+#compare input[type="radio"]:not(checked) {
+	position: absolute;
+    opacity: 0;
+    z-index: 999;
+    margin-top: 9px;
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+}
+
+#compare input[type="checkbox"]:not(checked) + label,
+#compare input[type="radio"]:not(checked) + label {
+	position: relative;
+	padding-left: 28px;
+}
+
+#compare input[type="checkbox"] + label:before {
+	background: url(images/checkBox.png) 0 0 no-repeat transparent;
+}
+
+#compare input[type="radio"] + label:before {
+	background: url(images/radio.png) 0 0 no-repeat transparent;
+}
+
+#compare input[type="checkbox"]:not(checked) + label:before,
+#compare input[type="radio"]:not(checked) + label:before {
+	position: absolute;
+	content: " ";
+    height: 17px;
+	width: 17px;
+	left: 0;
+	top: 1px;
+}
+
+#compare input[type="checkbox"]:not(checked) + label:hover:before,
+#compare input[type="radio"]:not(checked) + label:hover:before {
+	background-position: 0 -17px;
+}
+
+#compare input[type="checkbox"]:checked + label:before,
+#compare input[type="radio"]:checked + label:before {
+	background-position: 0 -34px;
+}
+
+#compare input[type="checkbox"]:checked + label:hover:before,
+#compare input[type="radio"]:checked + label:hover:before {
+	background-position: 0 -51px;
+}
+
+#compare input[type="checkbox"]:disabled + label,
+#compare input[type="radio"]:disabled + label {
+	cursor: default;
+}
+
+#compare input[type="checkbox"]:disabled + label:before,
+#compare input[type="radio"]:disabled + label:before {
+	background-position: 0 -68px !important;
+}
+
+#compareTools {
+	clear: both;
+	font-size: 14px;
+	text-align: center;
+}
+
+#compareTools a {
+	padding: 0px 12px;
+    margin: 5px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    height: 39px;
+    width: 272px;
+    margin-left: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6px;
+    border: 3px solid #0A5A77;
+    box-sizing: border-box;
+    border-radius: 5px;
+    line-height: 35px;
+    font-family: "Myriad Pro Bold";
+    font-size: 17px;
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+}
+
+#compareTools .show {
+	background-color: #2b2b2b;
+}
+
+#compareTools .show:hover {
+	background-color: #202020;
+}
+
+#compareTools a.hide:active,
+#compareTools a.show:active {
+	position: relative;
+	top: 1px;
+}
+
+#compareBlock {
+	margin-top: 48px;
+}
+
+#compareBlock table {
+	width: 100%;
+	table-layout: fixed;
+	border-collapse: collapse;
+}
+
+#compareBlock .left {
+	width: 300px;
+	vertical-align: top;
+	font-size: 14px;
+}
+
+#compareBlock .left .wrap {
+	/*border: 1px solid #eee;*/
+	margin-top: 7px;
+}
+
+#compareBlock .left .headingTools {
+	height: 465px;
+    position: relative;
+	min-width: 300px;
+}
+
+#compareBlock .left .headingTools .all_tools {
+    position: absolute;
+    bottom: 56px;
+	left: 50%;
+    transform: translate(-50%, 0);
+}
+
+#compareBlock .left .headingTools div {
+}
+
+#compareBlock .left span.heading {
+	margin-top: 36px;
+	display: block;
+	margin-left: 12px;
+	margin-bottom: 12px;
+}
+
+#compareBlock .left .propList {
+	border-top: 3px double #eee;
+}
+
+#compareBlock .left .propList li {
+	/*border-bottom: 1px solid #eee;*/
+	padding-left: 12px;
+	text-align: left;
+	height: 36px;
+	line-height: 36px;
+	font-size: 14px;
+	white-space: nowrap;
+}
+
+#compareBlock .left .propList li.selected {
+	background-color: #f6f6f6;
+}
+
+#compareBlock .left .propList li:last-child {
+	border-bottom: 0px;
+}
+
+#compareBlock .leftTools {
+	clear: both;
+	margin-bottom: 34px;
+}
+
+#compareBlock .leftTools a {
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    height: 39px;
+    display: block;
+    width: 272px;
+    line-height: 40px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6px;
+    border: 3px solid #0A5A77;
+    box-sizing: border-box;
+    border-radius: 5px;
+    line-height: 35px;
+    color: #0a5a77;
+    font-family: "Myriad Pro Bold";
+    font-size: 17px;
+    text-align: center;
+    position: relative;
+    text-decoration: none;
+}
+
+#compareBlock .left{
+	text-align: center;
+}
+
+.compareImage {
+	padding-top: 24px;
+	margin: auto;
+	max-width: 100%;
+}
+
+#compareBlock .leftTools .different {
+	background-color: #ffffff;
+}
+
+#compareBlock .leftTools .all {
+	background-color: #0A5A77 !important;	
+}
+
+#compareBlock .leftTools a.all {
+	color: #ffffff;
+}
+
+#compareBlock .leftTools .different:hover, #compareBlock .leftTools .all:hover, a.hide:hover, a.show:hover {
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+#compareBlock .leftTools a.all:active,
+#compareBlock .leftTools a.different:active {
+	position: relative;
+	top: 1px;
+}
+
+#compareBlockSubject {
+	width: 10px;
+	height: 10px;
+	opacity: 0;
+}
+
+#compareBlock .right {
+	width: 100%;
+	padding-left: 8px;
+	font-size: 14px;
+	vertical-align: top;
+}
+
+/*
+#topScroll {
+	margin-bottom: 10px;
+}
+
+#scrollTable, #topScroll {
+	overflow-x: auto;
+	width: 100%;
+}
+
+#fakeScroll {
+	height: 1px;
+	width: 1000px;
+}
+*/
+
+.slick-initialized .slick-slide {
+    display: block;
+    max-width: 280px;
+    padding-bottom: 55px;
+    padding-top: 3px;
+    padding-right: 12px;
+    padding-left: 12px;
+}
+
+
+#scrollTable {
+	display: table;
+}
+
+div#fullscreen_left {
+	display: table-cell;
+}
+
+
+#scrollTable > ul {
+	width: 910px;
+}
+
+#scrollTable > ul > li:first-child {
+	margin-left: 0px;
+}
+
+#scrollTable > ul > li:nth-of-type(1n+5) {
+	display: none;
+}
+
+#scrollTable > ul > li {
+	width: 260px;
+	display: block;
+	float: left;
+	border: 1px solid #eee;
+	margin-left: 8px;
+	margin-bottom: 12px;
+}
+
+#scrollTable .imgBlock {
+	-webkit-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+	height: 190px;
+	line-height: 190px;
+	text-align: center;
+}
+
+#scrollTable .imgBlock:hover{
+	opacity: 0.7;
+}
+
+#scrollTable li img {
+	max-width: 90%;
+	max-height: 90%;
+	vertical-align: middle;
+}
+
+#scrollTable .scrollElement {
+	height: 356px;
+	position: relative;
+}
+
+#scrollTable .scrollElement ins {
+	background: url(images/delete.png) 0 0 no-repeat transparent;
+	display: block !important;
+	text-decoration: none;
+	position: absolute;
+	cursor: pointer;
+	z-index: 12;
+	height: 18px;
+	width: 18px;
+	right: 12px;
+	top: 12px;
+}
+
+#scrollTable .scrollElement ins:hover {
+	background-position: -18px 0;
+}
+
+#scrollTable .scrollElement ins:active {
+	background-position: -36px 0;
+}
+
+
+#scrollTable .scrollElement .delete {
+	background: url(images/deleteLoader.gif) 0 0 no-repeat !important;
+}
+
+#scrollTable .scrollElement .delete + .imgBlock{
+	opacity: 0.5;
+}
+
+#scrollTable .propList li:first-child {
+	border-top: 1px solid #eee;
+}
+
+#scrollTable .propList li {
+	border-top: 1px solid #eee;
+	font-size: 14px;
+	height: 36px;
+	line-height: 36px;
+	overflow: hidden;
+	padding-left: 12px;
+}
+
+#scrollTable .propList .selected {
+	background-color: #f6f6f6;
+}
+
+div#p-prods__itemwp__compare {
+	width: auto;
+	position: relative;
+	min-height: 433px !important;
+}
+
+.headingTools_comprare_img {
+    background: url(https://relaxa.ru/bitrix/templates/dresscodeV2/components/dresscode/catalog.compare/template2/images/profits.svg) 0 0 no-repeat transparent;
+    display: block !important;
+    position: absolute;
+    z-index: 99;
+    height: 100px;
+    width: 100px;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+
+ins {
+    background: url(images/x-close.svg) 0 0 no-repeat transparent;
+    display: block !important;
+    text-decoration: none;
+    position: absolute;
+    cursor: pointer;
+    z-index: 999;
+    height: 20px;
+    width: 20px;
+    right: 12px;
+    top: 12px;
+}
+
+
+button#btn-on, button#btn-off {
+	text-transform: none;
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    border-radius: 5px;
+    color: #0A5A77;
+    font-weight: 600;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 9;
+    position: relative;
+    padding: 0px 20px;
+    margin-bottom: 15px;
+    display: inline;
+    letter-spacing: 0px;
+    font-size: 11pt;
+    float: left;
+}
+
+.checks_prop {
+    border: 1px solid #eee;
+}
+
+.checks_prop_all {
+    float: left;
+	padding: 10px 12px;
+	color: #0A5A77;
+    font-weight: 600;
+    font-size: 11pt;
+}
+
+input#allcheckbox {
+    margin-top: 1px !important;
+}
+
+a.hide {
+    background-color: #81B5D1 !important;
+    color: #fff !important;
+    border-color: #81B5D1 !important;
+}
+
+a.show {
+    background-color: #ffffff !important;
+    color: #0A5A77 !important;
+    border-color: #0A5A77 !important;
+}
+
+#scrollTable .p-prods__item {
+    padding-top: 0px;
+	padding-bottom: 52px;
+	padding-left:0px;
+	padding-right:0px;
+}
+
+@media (min-width: 767px) {
+/*
+#compareBlock .responsive .left {
+	display: none;
+}*/
+.slick-prev {
+	display: none;
+}
+.slick-next {
+	right: -20px !important;
+}
+}
+
+@media (max-width: 767px) {
+
+.slick-initialized .slick-slide {
+    max-width: 100%!important;
+}	
+	
+
+#scrollTable {
+	display: block;
+}
+	
+div#fullscreen_left {
+	display: none;
+}
+
+#scrollTable .p-prods__item {
+    padding-top: 5px;
+	padding-bottom: 46px !important;
+	padding-left:0px;
+	padding-right:0px;
+}
+#scrollTable > ul {
+	width: 100%;
+}
+.slick-prev {
+    width: 12px;
+    height: 22px;
+    background-image: url(images/bigslider-mob.svg);
+    margin-top: -11px;
+}
+}
+
+.propList li a {
+	color: #0A5A77;
+}
+
+.slick-arrow {
+    font-size: 0;
+    background-color: transparent;
+    border: none;
+    width: 12px;
+    height: 22px;
+}
+.slick-prev, .slick-next {
+    background-image: url(images/bigslider.svg);
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    position: absolute;
+    top: 12%;
+    margin-top: -25px;
+	z-index: 99;
+}
+.slick-prev {
+	left: 5px;
+}
+.slick-next {
+	right: 5px;
+	-moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+}
+
+ul.propList.check {
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+	border-bottom: 1px solid #eee;
+}

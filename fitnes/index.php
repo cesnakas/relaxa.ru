@@ -7,36 +7,32 @@ $APPLICATION->SetPageProperty("title", "Купить тренажеры и то�
 $APPLICATION->SetTitle("Тренажеры и товары для фитнеса");
 ?>
 
-<?if($APPLICATION->GetCurPage(true)==SITE_DIR."fitnes/index.php"):?> <style>
-        #catalogSection .sectionItems {
-            display: none;
-        }
-	}
+<?
+if($APPLICATION->GetCurPage(true)==SITE_DIR."fitnes/index.php"): ?>
+<style>
+#catalogSection .sectionItems {
+    display: none;
+}
 /*.container h1:first-of-type{
-	display: none;
+    display: none;
  margin: 0px;
 }*/
-
-	#catalog{
-display: none;
-	}
-
-
-</style> <?endif?> 
-
-
-
-
-
+#catalog {
+    display: none;
+}
+</style>
+<? endif; ?>
 <style>
-#smartFilter{
+#smartFilter {
     width: 300px;
     float: left;
 }
 #modef {
     display: none;
 }
-</style> <?$APPLICATION->IncludeComponent(
+</style>
+
+<?$APPLICATION->IncludeComponent(
 	"bitrix:catalog", 
 	"catalog-tov", 
 	array(

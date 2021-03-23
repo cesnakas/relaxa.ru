@@ -1,6 +1,10 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 $this->setFrameMode(true);
-?><h1><?=$APPLICATION->showTitle(false);?></h1><?$APPLICATION->IncludeComponent(
+?>
+
+<h1><?=$APPLICATION->showTitle(false);?></h1>
+
+<?/*$APPLICATION->IncludeComponent(
 	"bitrix:menu", 
 	"personal", 
 	array(
@@ -18,7 +22,8 @@ $this->setFrameMode(true);
 		"ALLOW_MULTI_SELECT" => "N"
 	),
 	false
-);?>
+);*/?>
+
 <?$APPLICATION->IncludeComponent(
 	"bitrix:news.list",
 	"",

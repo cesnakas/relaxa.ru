@@ -1,4 +1,7 @@
-<? if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die(); ?>
+<?
+if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
+use Bitrix\Main\Page\Asset;
+?>
 <?/*
 require_once($_SERVER["DOCUMENT_ROOT"]."/settings.php"); // site settings
 */?>
@@ -11,8 +14,6 @@ IncludeTemplateLangFile(__FILE__);
 
 <?
     $APPLICATION->ShowHead();
-    // Bitrix
-    use Bitrix\Main\Page\Asset;
     // Meta
     Asset::getInstance()->addString('<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover, user-scalable=0">');
 

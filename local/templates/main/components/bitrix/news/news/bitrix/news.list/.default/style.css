@@ -22,7 +22,7 @@ div.news-list {
 	justify-content: center;
 	-webkit-flex-wrap: wrap;
 	flex-wrap: wrap;
-	padding: 1.5%;	
+	/*padding: 1.5%;*/
 }
 div.news-list .news-item img.preview_picture
 {

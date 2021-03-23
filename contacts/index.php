@@ -5,6 +5,8 @@ $APPLICATION->SetPageProperty("keywords", "Массажеры, массажны�
 $APPLICATION->SetTitle("Контакты | Интернет-магазин «RELAXA STAR»");
 $APPLICATION->SetPageProperty("description", "Адрес интернет-магазина «RELAXA STAR». Карта как проехать до демозала и в пункт самовывоза. ☎ Телефон: 8 (800) 333 00 51 ← Звоните прямо сейчас!");
 
+use Bitrix\Main\Page\Asset;
+Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/styles-v2.css');
 ?>
 
     <h1 class="title_big"><span style="display: none;"><?=$APPLICATION->ShowTitle(false)?></span></h1>
