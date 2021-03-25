@@ -1,5 +1,4 @@
-<?
-if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 $this->setFrameMode(true);
 $propertyCounter = 0;
 $morePhotoCounter = 0;
@@ -183,23 +182,20 @@ foreach($arPthFilter as $act) {
                         </svg>
                     </a>
                     <div class="menu__adaptive__menu">
-                        <? $APPLICATION->IncludeComponent(
-                            "bitrix:menu",
-                            "relaxa-middle",
-                            array(
-                                "ALLOW_MULTI_SELECT" => "N",
-                                "CHILD_MENU_TYPE" => "left",
-                                "COMPONENT_TEMPLATE" => "relaxa-middle",
-                                "DELAY" => "N",
-                                "MAX_LEVEL" => "2",
-                                "MENU_CACHE_GET_VARS" => array(),
-                                "MENU_CACHE_TIME" => "3600",
-                                "MENU_CACHE_TYPE" => "A",
-                                "MENU_CACHE_USE_GROUPS" => "Y",
-                                "ROOT_MENU_TYPE" => "middle_new",
-                                "USE_EXT" => "Y",
-                                "MENU_THEME" => "site"
-                            ),
+                        <? $APPLICATION->IncludeComponent("bitrix:menu", "relaxa-middle", array(
+                            "ALLOW_MULTI_SELECT" => "N",
+                            "CHILD_MENU_TYPE" => "left",
+                            "COMPONENT_TEMPLATE" => "relaxa-middle",
+                            "DELAY" => "N",
+                            "MAX_LEVEL" => "2",
+                            "MENU_CACHE_GET_VARS" => array(),
+                            "MENU_CACHE_TIME" => "3600",
+                            "MENU_CACHE_TYPE" => "A",
+                            "MENU_CACHE_USE_GROUPS" => "Y",
+                            "ROOT_MENU_TYPE" => "middle_new",
+                            "USE_EXT" => "Y",
+                            "MENU_THEME" => "site"
+                        ),
                             false
                         ); ?>
                     </div>
@@ -590,6 +586,7 @@ foreach($arPthFilter as $act) {
                 <div class="p-card__wrapper">
                     <div class="p-card__p-cardslider">
                         <div class="p-cardslider">
+                            <? if (!empty($arResult["PROPERTIES"]["OFFERS"]["VALUE"])): ?>
                                 <div class="p-cardslider__tag">
                                     <?if(is_array($arResult["PROPERTIES"]["OFFERS"]["VALUE"])) {?>
                                         <? foreach ($arResult["PROPERTIES"]["OFFERS"]["VALUE"] as $ifv => $marker): ?>
@@ -677,9 +674,9 @@ foreach($arPthFilter as $act) {
                                                     <span class="p-cardslider__new" style="background-color: #F36525;"><?=  "PRESALE"  ?></span>
                                         <?}?>
 <?}?>										
-                                </div>
 
-							
+                                </div>
+                            <? endif; ?>
                             <div class="p-cardslider__bigwrapper" id="cardSliderForZoom">
                                 <div class="p-cardslider__big" >
                                     <? if (!empty($arResult["IMAGES"])): ?>

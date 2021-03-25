@@ -33,21 +33,21 @@ $url = (!$arResult['CATALOG_QUANTITY'] and $arResult['PROPERTIES']['URL_NEW']['V
             Закажи своё кресло
         </div>
     <?} else {?>
-        <?if($arResult['CATALOG_QUANTITY'] && $arResult['CATALOG_QUANTITY'] > 0 && empty($arResult['PROPERTIES']['STATUS_OUT']['VALUE'])) {
+        <?if($arResult['CATALOG_QUANTITY'] && $arResult['CATALOG_QUANTITY'] > 0 && empty($arResult['PROPERTIES']['BE_AVAILABLE_DATE']['VALUE'])) {
             ?>
             <span class="p-carddes__nal">Есть в наличии</span>
             <?
-        } elseif($arResult['CATALOG_QUANTITY'] == 0 && empty($arResult['PROPERTIES']['STATUS_OUT']['VALUE'])) {
+        } elseif($arResult['CATALOG_QUANTITY'] == 0 && empty($arResult['PROPERTIES']['BE_AVAILABLE_DATE']['VALUE'])) {
             ?>
-            <span class="p-carddes__nal p-prods__nal-snyat">Нет в наличии</span>
+            <span class="p-carddes__nal p-prods__nal-snyat">Снят с продажи</span>
             <?
-        } elseif(!empty($arElement['PROPERTIES']['BE_AVAILABLE_DATE']['VALUE']) && !empty($arElement['PROPERTIES']['STATUS_OUT']['VALUE'])) {
+        } elseif(!empty($arResult['PROPERTIES']['BE_AVAILABLE_DATE']['VALUE'])) {
             ?>
             <span class="p-carddes__nal p-prods__nal-pos">Поступит: <?=$arResult['PROPERTIES']['BE_AVAILABLE_DATE']['VALUE']?></span>
             <?
         } else {
             ?>
-            <span class="p-carddes__nal p-prods__nal-no">Доступен предзаказ</span>
+            <span class="p-carddes__nal p-prods__nal-no">Нет в наличии</span>
             <?
         }?>
     <?}?>
@@ -149,7 +149,6 @@ $url = (!$arResult['CATALOG_QUANTITY'] and $arResult['PROPERTIES']['URL_NEW']['V
                 </div> 
 				<?/*<div id="recaptcha2"></div>*/?>
                 <button class="c-modal__btn">Отправить</button>
-				<input type="hidden" name="recaptcha_token" value="">
             </form>
         </div>
 		
@@ -182,7 +181,7 @@ $url = (!$arResult['CATALOG_QUANTITY'] and $arResult['PROPERTIES']['URL_NEW']['V
                     return false;
                 });
             });	
-        </script>  
+        </script>   
 </div>
 
 
@@ -248,7 +247,7 @@ $ar_resTov = CCatalogProduct::GetByID($arResult["ID"]);
         Сделать заказ
     </a>
 <?} else {?>
-    <?if($arResult['CATALOG_QUANTITY'] && $arResult['CATALOG_QUANTITY'] > 0 && empty($arResult['PROPERTIES']['STATUS_OUT']['VALUE'])) {
+    <?if($arResult['CATALOG_QUANTITY'] && $arResult['CATALOG_QUANTITY'] > 0 && empty($arResult['PROPERTIES']['BE_AVAILABLE_DATE']['VALUE'])) {
         ?>
 
         <?if($url):?>
@@ -300,7 +299,7 @@ $ar_resTov = CCatalogProduct::GetByID($arResult["ID"]);
 
         <? endif; ?>
         <?
-    } elseif($arResult['CATALOG_QUANTITY'] == 0 && empty($arResult['PROPERTIES']['STATUS_OUT']['VALUE'])) {
+    } elseif($arResult['CATALOG_QUANTITY'] == 0 && empty($arResult['PROPERTIES']['BE_AVAILABLE_DATE']['VALUE'])) {
         ?>
         <a href="" style="cursor: unset; background: #DEDEDE; color: #0A5A77;" class="p-carddes__addbasket p-carddes__addbasket-sn">Снят с продажи</a>
         <?
@@ -318,7 +317,7 @@ $ar_resTov = CCatalogProduct::GetByID($arResult["ID"]);
         }
         ?>
         <?
-    } elseif(!empty($arResult['PROPERTIES']['STATUS_OUT']['VALUE'])) {
+    } elseif(!empty($arResult['PROPERTIES']['BE_AVAILABLE_DATE']['VALUE'])) {
         ?>
 
         <a style="background: #EB7100; line-height: 42px;" href="#" class=" p-carddes__addbasket p-carddes__addbasket-pred fullbtn fastBack label changeID"

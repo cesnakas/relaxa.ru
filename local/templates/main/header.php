@@ -29,7 +29,7 @@ IncludeTemplateLangFile(__FILE__);
     Asset::getInstance()->addCss('https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/custom-styles.css');
     // Asset::getInstance()->addCss(SITE_TEMPLATE_PATH."/css/media.css");
-    // Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/prefix-new/old_styles.css');
+    // Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/old_styles.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/jquery-ui.min.css');
     // Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/themes/'.$TEMPLATE_THEME_NAME.'/style.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/template_styles.css');

@@ -35,13 +35,10 @@ $this->setFrameMode(true);?>
     : $APPLICATION->ShowTitle(true)?>
 </span>
 <?$arParams["ADD_SECTIONS_CHAIN"] = "Y";?>
-</div></div></div></div></div></div><?if($_SESSION["SESS_INCLUDE_AREAS"]):?></div>
-
-<?endif;?>
-
+</div></div></div></div></div></div><?if($_SESSION["SESS_INCLUDE_AREAS"]):?></div><?endif;?>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:catalog.element",
-	"element_with_tabs_new",
+	"",
 	array(
 		"IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
 		"IBLOCK_ID" => $arParams["IBLOCK_ID"],

@@ -33,21 +33,21 @@ $url = (!$arResult['CATALOG_QUANTITY'] and $arResult['PROPERTIES']['URL_NEW']['V
             Закажи своё кресло
         </div>
     <?} else {?>
-        <?if($arResult['CATALOG_QUANTITY'] && $arResult['CATALOG_QUANTITY'] > 0 && empty($arResult['PROPERTIES']['STATUS_OUT']['VALUE'])) {
+        <?if($arResult['CATALOG_QUANTITY'] && $arResult['CATALOG_QUANTITY'] > 0 && empty($arResult['PROPERTIES']['BE_AVAILABLE_DATE']['VALUE'])) {
             ?>
             <span class="p-carddes__nal">Есть в наличии</span>
             <?
-        } elseif($arResult['CATALOG_QUANTITY'] == 0 && empty($arResult['PROPERTIES']['STATUS_OUT']['VALUE'])) {
+        } elseif($arResult['CATALOG_QUANTITY'] == 0 && empty($arResult['PROPERTIES']['BE_AVAILABLE_DATE']['VALUE'])) {
             ?>
-            <span class="p-carddes__nal p-prods__nal-snyat">Нет в наличии</span>
+            <span class="p-carddes__nal p-prods__nal-snyat">Снят с продажи</span>
             <?
-        } elseif(!empty($arElement['PROPERTIES']['BE_AVAILABLE_DATE']['VALUE']) && !empty($arElement['PROPERTIES']['STATUS_OUT']['VALUE'])) {
+        } elseif(!empty($arResult['PROPERTIES']['BE_AVAILABLE_DATE']['VALUE'])) {
             ?>
             <span class="p-carddes__nal p-prods__nal-pos">Поступит: <?=$arResult['PROPERTIES']['BE_AVAILABLE_DATE']['VALUE']?></span>
             <?
         } else {
             ?>
-            <span class="p-carddes__nal p-prods__nal-no">Доступен предзаказ</span>
+            <span class="p-carddes__nal p-prods__nal-no">Нет в наличии</span>
             <?
         }?>
     <?}?>
@@ -106,13 +106,13 @@ $url = (!$arResult['CATALOG_QUANTITY'] and $arResult['PROPERTIES']['URL_NEW']['V
   <? endif; ?>
 </div>
 
-
+<?/*
 <div class="p-carddes__deswp">
   <a href="#nasl-desh" class="p-carddes__des fb-modal">
       Нашли дешевле? Снизим цену
   </a>
             <div class="c-modal" id="nasl-desh" style="display: none;">
-            <form class="c-modal__wrapper" method="post" action="/ajax/nashli_deshevle.php">
+            <form class="c-modal__wrapper">
                 <input type="hidden" name="ID" value="<?=$arResult['ID']?>">
                 <input type="hidden" name="IBLOCK_ID" value="<?=$arResult['IBLOCK_ID']?>">
 				
@@ -147,22 +147,25 @@ $url = (!$arResult['CATALOG_QUANTITY'] and $arResult['PROPERTIES']['URL_NEW']['V
                     <input type="checkbox" name="SOGL" id="form-check2" checked required>
                     <label for="form-check">Согласие на обработку персональных данных</label>
                 </div> 
-				<?/*<div id="recaptcha2"></div>*/?>
+				<div id="recaptcha2"></div>
                 <button class="c-modal__btn">Отправить</button>
-				<input type="hidden" name="recaptcha_token" value="">
             </form>
         </div>
 		
         <script>
             $(document).ready(function() {
                 $('.c-modal__wrapper').submit(function() {
-                        var form2 = $(this).serialize();
+                    let key2 = grecaptcha.getResponse();
+                    if(key2 == '') {
+                        alert('Вы не прошли проверку "Я не робот"');
+                    } else {
+                        let form2 = $(this).serialize();
                         $.ajax({
                             type: 'POST', // метод
                             url: '/ajax/nashli_deshevle.php', // ссылка на обработчик
                             data: form2, // нашы переменные из name
-                            success: function(data){
-                                console.log(data);
+                            success: function(data2){
+                                console.log(data2);
                                 $.fancybox.close();
                                 setTimeout(function() {
                                     $.fancybox.open("<div class='modal-ok' id='modalloll-ok' style='display: none;'><a href='#' class='p-izgotov__close'></a><div class='p-izgotov__title'>Спасибо за заявку!</div><div class='p-izgotov__subtitle'>Наши менеджеры свяжутся с Вами в ближайшее время.</div></div>");
@@ -178,13 +181,13 @@ $url = (!$arResult['CATALOG_QUANTITY'] and $arResult['PROPERTIES']['URL_NEW']['V
                                 }, 500);
                             }
                         });
-                    
+                    }
                     return false;
                 });
-            });	
-        </script>  
+            });			
+        </script>        
 </div>
-
+*/?>
 
 
 <?if(!empty($arResult['PROPERTIES']['CASHBACK']['VALUE'])) {?>
@@ -248,7 +251,7 @@ $ar_resTov = CCatalogProduct::GetByID($arResult["ID"]);
         Сделать заказ
     </a>
 <?} else {?>
-    <?if($arResult['CATALOG_QUANTITY'] && $arResult['CATALOG_QUANTITY'] > 0 && empty($arResult['PROPERTIES']['STATUS_OUT']['VALUE'])) {
+    <?if($arResult['CATALOG_QUANTITY'] && $arResult['CATALOG_QUANTITY'] > 0 && empty($arResult['PROPERTIES']['BE_AVAILABLE_DATE']['VALUE'])) {
         ?>
 
         <?if($url):?>
@@ -300,7 +303,7 @@ $ar_resTov = CCatalogProduct::GetByID($arResult["ID"]);
 
         <? endif; ?>
         <?
-    } elseif($arResult['CATALOG_QUANTITY'] == 0 && empty($arResult['PROPERTIES']['STATUS_OUT']['VALUE'])) {
+    } elseif($arResult['CATALOG_QUANTITY'] == 0 && empty($arResult['PROPERTIES']['BE_AVAILABLE_DATE']['VALUE'])) {
         ?>
         <a href="" style="cursor: unset; background: #DEDEDE; color: #0A5A77;" class="p-carddes__addbasket p-carddes__addbasket-sn">Снят с продажи</a>
         <?
@@ -318,7 +321,7 @@ $ar_resTov = CCatalogProduct::GetByID($arResult["ID"]);
         }
         ?>
         <?
-    } elseif(!empty($arResult['PROPERTIES']['STATUS_OUT']['VALUE'])) {
+    } elseif(!empty($arResult['PROPERTIES']['BE_AVAILABLE_DATE']['VALUE'])) {
         ?>
 
         <a style="background: #EB7100; line-height: 42px;" href="#" class=" p-carddes__addbasket p-carddes__addbasket-pred fullbtn fastBack label changeID"

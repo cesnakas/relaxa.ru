@@ -1,5 +1,4 @@
-<?
-if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 $this->setFrameMode(true);
 $propertyCounter = 0;
 $morePhotoCounter = 0;
@@ -183,23 +182,20 @@ foreach($arPthFilter as $act) {
                         </svg>
                     </a>
                     <div class="menu__adaptive__menu">
-                        <? $APPLICATION->IncludeComponent(
-                            "bitrix:menu",
-                            "relaxa-middle",
-                            array(
-                                "ALLOW_MULTI_SELECT" => "N",
-                                "CHILD_MENU_TYPE" => "left",
-                                "COMPONENT_TEMPLATE" => "relaxa-middle",
-                                "DELAY" => "N",
-                                "MAX_LEVEL" => "2",
-                                "MENU_CACHE_GET_VARS" => array(),
-                                "MENU_CACHE_TIME" => "3600",
-                                "MENU_CACHE_TYPE" => "A",
-                                "MENU_CACHE_USE_GROUPS" => "Y",
-                                "ROOT_MENU_TYPE" => "middle_new",
-                                "USE_EXT" => "Y",
-                                "MENU_THEME" => "site"
-                            ),
+                        <? $APPLICATION->IncludeComponent("bitrix:menu", "relaxa-middle", array(
+                            "ALLOW_MULTI_SELECT" => "N",
+                            "CHILD_MENU_TYPE" => "left",
+                            "COMPONENT_TEMPLATE" => "relaxa-middle",
+                            "DELAY" => "N",
+                            "MAX_LEVEL" => "2",
+                            "MENU_CACHE_GET_VARS" => array(),
+                            "MENU_CACHE_TIME" => "3600",
+                            "MENU_CACHE_TYPE" => "A",
+                            "MENU_CACHE_USE_GROUPS" => "Y",
+                            "ROOT_MENU_TYPE" => "middle_new",
+                            "USE_EXT" => "Y",
+                            "MENU_THEME" => "site"
+                        ),
                             false
                         ); ?>
                     </div>
@@ -590,14 +586,17 @@ foreach($arPthFilter as $act) {
                 <div class="p-card__wrapper">
                     <div class="p-card__p-cardslider">
                         <div class="p-cardslider">
+                            <? if (!empty($arResult["PROPERTIES"]["OFFERS"]["VALUE"])): ?>
                                 <div class="p-cardslider__tag">
                                     <?if(is_array($arResult["PROPERTIES"]["OFFERS"]["VALUE"])) {?>
                                         <? foreach ($arResult["PROPERTIES"]["OFFERS"]["VALUE"] as $ifv => $marker): ?>
-                                            <?if(empty($arResult["PROPERTIES"]["STATUS_OUT"]["VALUE"])) {?>
+                                            <?if($marker != "ОБНОВЛЕН") {?>
                                                 <?if($marker == "NEW") {?>
                                                     <span class="p-cardslider__new" style="background-color: #37ac09;"><?= $marker ?></span>
                                                 <?} elseif($marker == "HIT") {?>
                                                     <span class="p-cardslider__new" style="background-color: #3254AD;"><?= $marker ?></span>
+                                                <?} elseif($marker == "PRESALE") {?>
+                                                    <span class="p-cardslider__new" style="background-color: #F36525;"><?= $marker ?></span>
                                                 <?} elseif($marker == "LOVE") {?>
                                                     <span class="p-cardslider__new" style="background-color: #B710A0;"><?= $marker ?></span>
                                                 <?} elseif($marker == "АКЦИЯ") {?>
@@ -627,21 +626,24 @@ foreach($arPthFilter as $act) {
 												<?} elseif($marker == "NY GIFT") {?>
                                                     <span class="p-cardslider__new" id="label-flag-ny_gift" style="background-color: transparent; color: transparent; background-image: url(https://relaxa.ru//img/svg/ny_gift.svg); background-size: 70%; background-repeat: no-repeat; margin-left: 100px; margin-top: 100px; height: 200px !important; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg);"><?= $marker ?></span>
 												<?} elseif($marker == "FROZEN") {?>
-                                                    <span class="p-cardslider__new" id="label-flag-frozen" style="background-color: transparent; color: transparent; background-image: url(https://relaxa.ru//img/svg/frozen.svg); background-size: 70%; background-repeat: no-repeat; margin-left: 100px; margin-top: 100px; height: 200px !important; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg);"><?= $marker ?></span>	
+                                                    <span class="p-cardslider__new" id="label-flag-frozen" style="background-color: transparent; color: transparent; background-image: url(https://relaxa.ru//img/svg/frozen.svg); background-size: 70%; background-repeat: no-repeat; margin-left: 100px; margin-top: 100px; height: 200px !important; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg);"><?= $marker ?></span>		
+                                                <?} else {?>
+
+                                                    <span class="p-cardslider__new marker-<?= strstr($arResult["PROPERTIES"]["OFFERS"]["VALUE_XML_ID"][$ifv], "#") ? substr($arResult["PROPERTIES"]["OFFERS"]["VALUE_XML_ID"][$ifv], 1) : "424242" ?>"
+                                                          style="background-color: #<?=strstr($arResult["PROPERTIES"]["OFFERS"]["VALUE_XML_ID"][$ifv], "#") ? substr($arResult["PROPERTIES"]["OFFERS"]["VALUE_XML_ID"][$ifv], 1) : "424242" ?>;"><?= $marker ?></span>
+
                                                 <?}?>
-												
-                                            <?} elseif(!empty($arResult["PROPERTIES"]["STATUS_OUT"]["VALUE"])){?>
-                                                    <span class="p-cardslider__new" style="background-color: #F36525;"><?=  "PRESALE"  ?></span>
+                                            <?} else {?>
+                                                <span class="p-cardslider__new" style="background-color: #29bc48;"><?= $marker ?></span>
                                             <?}?>
                                         <? endforeach; ?>
                                     <?} else {?>
-									<?if(empty($arResult["PROPERTIES"]["STATUS_OUT"]["VALUE"])) {?>
                                         <?if($arResult["PROPERTIES"]["OFFERS"]["VALUE"] == "NEW") {?>
                                             <span class="p-cardslider__new" style="background-color: #37ac09;"><?= $arResult["PROPERTIES"]["OFFERS"]["VALUE"] ?></span>
                                         <?} elseif($arResult["PROPERTIES"]["OFFERS"]["VALUE"] == "HIT") {?>
                                             <span class="p-cardslider__new" style="background-color: #3254AD;"><?= $arResult["PROPERTIES"]["OFFERS"]["VALUE"] ?></span>
-                                        <?} elseif(!empty($arResult["PROPERTIES"]["STATUS_OUT"]["VALUE"])){?>
-                                            <span class="p-cardslider__new" style="background-color: #F36525;"><?= $arResult["PROPERTIES"]["OFFERS"]["VALUE"] = "PRESALE" ?></span>
+                                        <?} elseif(($arResult["PROPERTIES"]["OFFERS"]["VALUE"] == "PRESALE") && !empty($arResult['PROPERTIES']['STATUS_OUT']['VALUE'])){?>
+                                            <span class="p-cardslider__new" style="background-color: #F36525;"><?= $arResult["PROPERTIES"]["OFFERS"]["VALUE"] ?></span>
                                         <?} elseif($arResult["PROPERTIES"]["OFFERS"]["VALUE"] == "LOVE") {?>
                                             <span class="p-cardslider__new" style="background-color: #B710A0;"><?= $arResult["PROPERTIES"]["OFFERS"]["VALUE"] ?></span>
                                         <?} elseif($arResult["PROPERTIES"]["OFFERS"]["VALUE"] == "АКЦИЯ") {?>
@@ -672,14 +674,16 @@ foreach($arPthFilter as $act) {
                                             <span class="p-cardslider__new" id="label-flag-ny_gift" style="background-color: transparent; color: transparent; background-image: url(https://relaxa.ru//img/svg/ny_gift.svg); background-size: 70%; background-repeat: no-repeat; margin-left: 100px; margin-top: 100px; height: 200px !important; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg);"><?= $arResult["PROPERTIES"]["OFFERS"]["VALUE"] ?></span>	
 										<?} elseif($arResult["PROPERTIES"]["OFFERS"]["VALUE"] == "FROZEN") {?>
                                             <span class="p-cardslider__new" id="label-flag-frozen" style="background-color: transparent; color: transparent; background-image: url(https://relaxa.ru//img/svg/frozen.svg); background-size: 70%; background-repeat: no-repeat; margin-left: 100px; margin-top: 100px; height: 200px !important; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -ms-transform: rotate(45deg); -o-transform: rotate(45deg); transform: rotate(45deg);"><?= $arResult["PROPERTIES"]["OFFERS"]["VALUE"] ?></span>	
-                                        <?}?>
-										<?} elseif(!empty($arResult["PROPERTIES"]["STATUS_OUT"]["VALUE"])){?>
-                                                    <span class="p-cardslider__new" style="background-color: #F36525;"><?=  "PRESALE"  ?></span>
-                                        <?}?>
-<?}?>										
-                                </div>
+                                        <?} else {?>
 
-							
+                                            <span class="p-cardslider__new marker-<?= strstr($arResult["PROPERTIES"]["OFFERS"]["VALUE_XML_ID"][$ifv], "#") ? substr($arResult["PROPERTIES"]["OFFERS"]["VALUE_XML_ID"][$ifv], 1) : "424242" ?>"
+                                                  style="background-color: #<?=strstr($arResult["PROPERTIES"]["OFFERS"]["VALUE_XML_ID"][$ifv], "#") ? substr($arResult["PROPERTIES"]["OFFERS"]["VALUE_XML_ID"][$ifv], 1) : "424242" ?>;"><?= $arResult["PROPERTIES"]["OFFERS"]["VALUE"] ?></span>
+
+                                        <?}?>
+                                    <?}?>
+
+                                </div>
+                            <? endif; ?>
                             <div class="p-cardslider__bigwrapper" id="cardSliderForZoom">
                                 <div class="p-cardslider__big" >
                                     <? if (!empty($arResult["IMAGES"])): ?>
