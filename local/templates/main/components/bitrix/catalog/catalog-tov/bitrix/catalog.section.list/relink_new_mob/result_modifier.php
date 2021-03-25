@@ -1,4 +1,4 @@
-<? 
+<?
 // var_dump($arResult["SECTIONS"]);
 if(empty($arResult["SECTIONS"][0])){ 
 		$arFilter = Array(
@@ -59,3 +59,4 @@ if(empty($arResult["SECTIONS"][0])){
 		$arResult["LEFT_MENU"]["BRAND"] = $arBrands;
 		$arResult["LEFT_MENU"]["BRAND"]["ANCHOR"] = 'Απενδ';
 	}
+?>
