@@ -7,27 +7,20 @@ $APPLICATION->SetPageProperty("title", "Купить по распродаже �
 $APPLICATION->SetTitle("Распродажа товаров");
 ?>
 
-<?if($APPLICATION->GetCurPage(true)==SITE_DIR."sale/index.php"):?> <style>
-        #catalogSection .sectionItems {
-            display: none;
-        }
-	}
-/*.container h1:first-of-type{
-	display: none;
- margin: 0px;
-}*/
-
-	#catalog{
-display: none;
-	}
-
-
-</style> <?endif?> 
-
-
-
-
-
+<?if($APPLICATION->GetCurPage(true)==SITE_DIR."sale/index.php"):?>
+<style>
+    /*#catalogSection .sectionItems {
+        display: none;
+    }*/
+    /*.container h1:first-of-type {
+        display: none;
+     margin: 0px;
+    }*/
+	/*#catalog {
+        display: none;
+	}*/
+</style>
+<?endif?>
 <style>
 #smartFilter{
     width: 300px;
@@ -36,7 +29,9 @@ display: none;
 #modef {
     display: none;
 }
-</style> <?$APPLICATION->IncludeComponent(
+</style>
+
+<?$APPLICATION->IncludeComponent(
 	"bitrix:catalog", 
 	"catalog-tov", 
 	array(
@@ -360,4 +355,8 @@ display: none;
 	array(
 		"ACTIVE_COMPONENT" => "Y"
 	)
-);?> <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?>
+
+<?
+require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
+?>

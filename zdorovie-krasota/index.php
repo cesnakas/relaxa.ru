@@ -8,21 +8,17 @@ $APPLICATION->SetTitle("Товары для здоровья и красоты")
 ?>
 
 <?if($APPLICATION->GetCurPage(true)==SITE_DIR."zdorovie-krasota/index.php"):?>
-    <style>
-        #catalogSection .sectionItems {
-            display: none;
-        }
-
-
-#catalogSection {
+<style>
+/*#catalogSection .sectionItems {
+    display: none;
+}*/
+/*#catalogSection {
     display: none;
 margin-top: 0px;
-}
-
-.container.page {
+}*/
+/*.container.page {
     padding-top: 0px;
-}
-
+}*/
 </style>
 <?endif?>
 
@@ -31,14 +27,12 @@ margin-top: 0px;
     width: 300px;
     float: left;
 }
-
-
 </style> 
 
 <?$APPLICATION->IncludeComponent(
 	"bitrix:catalog", 
-	// "catalog-tov",
-    '',
+	"catalog-tov",
+    // '',
 	array(
 		"ACTION_VARIABLE" => "action",
 		"ADD_ELEMENT_CHAIN" => "Y",

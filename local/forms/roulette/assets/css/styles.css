@@ -1,0 +1,196 @@
+.roulette-modal {
+    visibility: hidden;
+}
+
+.roulette-modal_active {
+    visibility: visible;
+}
+
+.roulette-modal__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.roulette-modal__container {
+    background: url('../images/background.png');
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 676px;
+    height: 646px;
+    z-index: 99999;
+}
+
+.roulette-modal__close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    color: #0A5A77;
+    transform: rotate(-45deg);
+    cursor: pointer;
+}
+
+.roulette-modal__container_result {
+    height: 250px;
+}
+
+.roulette-modal__results {
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.roulette-header {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.roulette-header__title {
+    color: #902728;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.roulette-header__description {
+    color: #333333;
+    font-size: 24px;
+}
+
+
+.roulette-form {
+    display: flex;
+    margin-top: 100px;
+    margin-left: auto;
+    position: relative;
+    width: 50%;
+}
+
+.roulette-form__label {
+    color: #333333;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.roulette-form__field {
+    border: 1px solid #C4C4C4;
+    border-radius: 2px;
+    color: #999999;
+    font-size: 17px;
+    line-height: 52px;
+    margin: 15px 0;
+    padding: 0 12px;
+    width: 297px;
+    height: 52px;
+}
+
+.roulette-form__submit {
+    background: #902728;
+    border: #902728;
+    border-radius: 2px;
+    color: #FFFFFF;
+    font-size: 18px;
+    font-weight: bold;
+    min-width: 228px;
+    height: 52px;
+    margin: 25px auto;
+}
+
+.roulette-form__footer {
+    text-align: center;
+}
+
+.roulette {
+    position: absolute;
+    left: -250px;
+    bottom: -50px;
+}
+
+.roulette__wheel {
+    background: url('../images/wheel.png') no-repeat;
+    width: 489px;
+    height: 490px;
+}
+
+.roulette__pizza {
+    background: url('../images/pizza.png') no-repeat;
+    position: absolute;
+    width: 82px;
+    height: 78px;
+    top: calc(50% - 38px);
+    left: 455px;
+    z-index: 10;
+}
+
+.roulette__snow {
+    background: url('../images/snow.png') no-repeat;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 200px;
+    left: 198px;
+}
+
+.roulette__error {
+    color: red;
+}
+
+/* new styles */
+.roulette {
+    left: -92px;
+    bottom: 16px;
+    width: 421px;
+    height: 392px;
+}
+.roulette .roulette__wheel {
+    background-size: 100%;
+    width: 381px;
+    height: 386px;
+}
+.roulette  .roulette__pizza {
+    background: url(../images/love/pizza.png) no-repeat;
+    top: calc(52% - 44px);
+    background-size: 84%;
+    left: 352px;
+}
+.roulette  .roulette__snow {
+    top: 159px;
+    left: 155px;
+    background-size: 74%;
+}
+
+@media all and (max-width: 999px) {
+    .roulette-modal__close {
+        top: 25px;
+        right: 10px
+    }
+
+    .roulette-modal__container {
+        width: 98%;
+    }
+
+    .roulette-header__title {
+        font-size: 24px;
+    }
+
+    .roulette-header__description {
+        font-size: 18px;
+    }
+
+    .roulette-form {
+        text-align: center;
+        margin-top: 0;
+        width: 100%;
+    }
+
+    .roulette__wheel, .roulette__pizza, .roulette__snow {
+        visibility: hidden;
+        display: none;
+    }
+}
