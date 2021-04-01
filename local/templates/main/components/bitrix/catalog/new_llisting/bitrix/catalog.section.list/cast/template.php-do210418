@@ -1,0 +1,327 @@
+<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+
+$this->setFrameMode(true);
+
+$i = 0;
+$b = 0;
+
+foreach ($arResult["SECTIONS"] as $arElement) {
+    if ($arElement["DEPTH_LEVEL"] == 1) {
+        $i++;
+        $result[$i] = array(
+            "NAME" => $arElement["NAME"],
+            "SECTION_PAGE_URL" => $arElement["SECTION_PAGE_URL"],
+            "DETAIL_PICTURE" => CFile::ResizeImageGet($arElement['DETAIL_PICTURE'], array("width" => 360, "height" => 300), BX_RESIZE_IMAGE_PROPORTIONAL, false)
+        );
+
+        $rsSect = CIBlockSection::GetList(false, array("ID" => $arElement["ID"], "IBLOCK_ID" => $arElement["IBLOCK_ID"]), false, array("ID", "IBLOCK_ID", "UF_DESC", "UF_MARKER"));
+        if ($arSect = $rsSect->GetNext()) {
+
+            if (!empty($arSect["~UF_DESC"])) {
+                $result[$i]["UF_DESC"] = $arSect["~UF_DESC"];
+            }
+
+            if (!empty($arSect["UF_MARKER"])) {
+                $result[$i]["UF_MARKER"] = $arSect["UF_MARKER"];
+            }
+
+        }
+
+    } elseif ($arElement["DEPTH_LEVEL"] == 2) {
+        $result[$i]["ELEMENTS"][] = array(
+            "NAME" => $arElement["NAME"],
+            "SECTION_PAGE_URL" => $arElement["SECTION_PAGE_URL"],
+            "PICTURE" => CFile::ResizeImageGet($arElement["PICTURE"], array("width" => 25, "height" => 20), BX_RESIZE_IMAGE_PROPORTIONAL, false)
+        );
+    } elseif ($arElement["DEPTH_LEVEL"] == 3) {
+        $result[$i]["ELEMENTS"][$b]["ELEMENTS"][] = array(
+            "NAME" => $arElement["NAME"],
+            "SECTION_PAGE_URL" => $arElement["SECTION_PAGE_URL"]
+        );
+    }
+}
+
+?>
+
+<?
+$curPage = $_SERVER['REQUEST_URI'];
+?>
+
+<? if (count($result) > 0): ?>
+
+    <style>
+        .m_equ_cat {
+            margin-left: -14px;
+        }
+
+        .m_equ_cat {
+            overflow: auto;
+            margin-left: -21px;
+        }
+
+        .m_equ_cat div, .m_feet_cat div {
+            margin-left: 14px;
+            min-height: 230px;
+            margin-bottom: 14px;
+        }
+
+        .m_equ_cat div {
+            float: left;
+            margin-left: 21px;
+            margin-bottom: 19px;
+            box-shadow: 0px 0px 11px #ccc;
+        }
+
+        .m_equ_cat div img {
+            margin-bottom: -6px;
+        }
+
+        .m_equ_cat a {
+            float: left;
+        }
+
+        @media (min-width: 1024px) {
+            .hide-if-big-1024 {
+                display: none;
+            }
+        }
+    </style>
+
+
+<? if (strpos($curPage, '/massazhnoe-oborudovanie/') !== false or strpos($curPage, '/massazhnoe-oborudovanie/') !== false) { ?>
+        <div class="container page top_menu_cat_page " style="width: 1222px;">
+            <div class="m_equ_cat">
+
+                <div class="item_one"><a href="/massazhnoe-oborudovanie/17/">
+                        <img src="/bitrix/templates/dresscodeV2/img/cat_5_1.png" alt="">
+                    </a></div>
+
+
+                <div class="item_to"><a href="/massazhnoe-oborudovanie/14/">
+                        <img src="/bitrix/templates/dresscodeV2/img/cat_5_2.png" alt="">
+                    </a></div>
+
+
+                <div class="item_tr"><a href="/massazhnoe-oborudovanie/15/">
+                        <img src="/bitrix/templates/dresscodeV2/img/cat_5_3.png" alt="">
+                    </a></div>
+
+
+                <div class="item_qt"><a href="/massazhnoe-oborudovanie/21/">
+                        <img src="/bitrix/templates/dresscodeV2/img/cat_5_4.png" alt="">
+                    </a></div>
+
+
+                <div class="item_st"><a href="/massazhnoe-oborudovanie/16/">
+                        <img src="/bitrix/templates/dresscodeV2/img/cat_5_5.png" alt="">
+                    </a></div>
+
+
+                <div class="item_se"><a href="/massazhnoe-oborudovanie/18/">
+                        <img src="/bitrix/templates/dresscodeV2/img/cat_5_6.png" alt="">
+                    </a></div>
+
+
+                <div class="item_tt"><a href="/massazhnoe-oborudovanie/23/">
+                        <img src="/bitrix/templates/dresscodeV2/img/cat_5_7.png" alt="">
+                    </a></div>
+
+                <div class="text_cat_mobile_m">
+                    <ul>
+                        <li><a href="">Масажные кресла для офиса</a></li>
+                        <li><a href="">Масажные кресла для дома</a></li>
+                        <li><a href="">Японскые Масажные кресла</a></li>
+                        <li><a href="">Вендинговые Масажные кресла</a></li>
+                        <li><a href="">Сингапурские Масажные кресла</a></li>
+                        <li><a href="">Масажные кресла-качалки</a></li>
+                        <li><a href="">Аксесуары Масажных кресел</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+    <? } else if (strpos($curPage, '/fitnes/') !== false) { ?>
+        <style>
+            .m_feet_cat {
+                max-width: 910px;
+                margin: 0 auto;
+            }
+        </style>
+        <div class="m_feet_cat overflov hide-if-big-1024">
+            <a href="/fitnes/steppery/">
+                <div class="item_one f_l">
+                    <img src="/bitrix/templates/dresscodeV2/img/cat_10_1.png" alt="">
+                </div>
+            </a>
+            <a href="/fitnes/kresla-dlya-fitnesa/">
+                <div class="item_to f_l">
+                    <img src="/bitrix/templates/dresscodeV2/img/cat_10_2.png" alt="">
+                </div>
+            </a>
+            <a href="/fitnes/vibroplatformy/">
+                <div class="item_tr f_r">
+                    <img src="/bitrix/templates/dresscodeV2/img/cat_10_3.png" alt="">
+                </div>
+            </a>
+            <a href="/fitnes/silovye-trenazhery/">
+                <div class="item_qt f_l">
+                    <img src="/bitrix/templates/dresscodeV2/img/cat_10_4.png" alt="">
+                </div>
+            </a>
+            <a href="/fitnes/imitatory-verkhovoy-ezdy/">
+                <div class="item_st f_l">
+                    <img src="/bitrix/templates/dresscodeV2/img/cat_10_5.png" alt="">
+                </div>
+            </a>
+        </div>
+
+
+    <? } else if (strpos($curPage, '/zdorovie-krasota/') !== false) { ?>
+        <style>
+            .m_feet_cat {
+                max-width: 910px;
+                margin: 0 auto;
+            }
+        </style>
+        <div class="m_feet_cat overflov hide-if-big-1024">
+            <a href="/zdorovie-krasota/ultrazvukovye-apparaty/">
+                <div class="item_one f_l">
+                    <img src="/bitrix/templates/dresscodeV2/img/cat_11_1.png" alt="">
+                </div>
+            </a>
+            <a href="/zdorovie-krasota/kosmetologicheskie-apparaty/">
+                <div class="item_to f_l">
+                    <img src="/bitrix/templates/dresscodeV2/img/cat_11_2.png" alt="">
+                </div>
+            </a>
+            <a href="/zdorovie-krasota/darsonval/">
+                <div class="item_tr f_r">
+                    <img src="/bitrix/templates/dresscodeV2/img/cat_11_3.png" alt="">
+                </div>
+            </a>
+            <a href="/zdorovie-krasota/spa-protsedury/">
+                <div class="item_qt f_l">
+                    <img src="/bitrix/templates/dresscodeV2/img/cat_11_4.png" alt="">
+                </div>
+            </a>
+        </div>
+
+
+    <? } else if (strpos($curPage, '/terapiya/') !== false) { ?>
+        <style>
+            .m_equ_cat {
+                max-width: 910px;
+                margin: 0 auto;
+            }
+        </style>
+        <div class="m_equ_cat hide-if-big-1024">
+            <a href="/terapiya/elektroterapiya/">
+                <div class="item_one">
+                    <img src="/bitrix/templates/dresscodeV2/img/cat_8_1.png" alt="">
+                </div>
+            </a>
+            <a href="/terapiya/sving-mashiny/">
+                <div class="item_to">
+                    <img src="/bitrix/templates/dresscodeV2/img/cat_8_2.png" alt="">
+                </div>
+            </a>
+            <a href="/terapiya/teplovaya-terapiya/">
+                <div class="item_tr">
+                    <img src="/bitrix/templates/dresscodeV2/img/cat_8_3.png" alt="">
+                </div>
+            </a>
+            <a href="/terapiya/pressoterpiya/">
+                <div class="item_qt">
+                    <img src="/bitrix/templates/dresscodeV2/img/cat_8_4.png" alt="">
+                </div>
+            </a>
+            <a href="/terapiya/aksessuary-dlya-terapii-/">
+                <div class="item_st">
+                    <img src="/bitrix/templates/dresscodeV2/img/cat_8_5.png" alt="">
+                </div>
+            </a>
+        </div>
+
+
+    <? } else if (strpos($curPage, '/dom-dacha/') !== false) { ?>
+        <style>
+            .m_feet_cat {
+                max-width: 930px;
+                margin: 0 auto;
+            }
+        </style>
+        <div class="m_feet_cat overflov hide-if-big-1024">
+            <div class="item_one f_l">
+                <a href="/dom-dacha/aktivnyy-otdykh/">
+                    <img src="/bitrix/templates/dresscodeV2/img/cat_9_1.png" alt="">
+            </div>
+            </a>
+            <a href="/dom-dacha/kresla-kachalki/">
+                <div class="item_to f_l">
+                    <img src="/bitrix/templates/dresscodeV2/img/cat_9_2.png" alt="">
+                </div>
+            </a>
+            <a href="/dom-dacha/batuty/">
+                <div class="item_tr f_r m_non">
+                    <img src="/bitrix/templates/dresscodeV2/img/cat_9_3.png" alt="">
+                </div>
+            </a>
+            <a href="/dom-dacha/kresla-dlya-otdykha/">
+                <div class="item_qt f_l">
+                    <img src="/bitrix/templates/dresscodeV2/img/cat_9_4.png" alt="">
+                </div>
+            </a>
+            <a href="/dom-dacha/gamaki/">
+                <div class="item_st f_l">
+                    <img src="/bitrix/templates/dresscodeV2/img/cat_9_5.png" alt="">
+                </div>
+            </a>
+        </div>
+
+
+    <? } ?>
+<? endif; ?>
+
+<div id="catalogSection">
+    <? if (count($result) > 0): ?>
+        <div class="sectionItems">
+            <? foreach ($result as $nextElement): ?>
+                <div class="item">
+                    <div class="itemContainer">
+                        <? if (!empty($nextElement["DETAIL_PICTURE"]["src"])): ?>
+                            <div class="column bigPicture">
+                                <? if (!empty($nextElement["UF_MARKER"])): ?>
+                                    <div class="markerContainer">
+                                        <div class="marker"><?= $nextElement["UF_MARKER"] ?></div>
+                                    </div>
+                                <? endif; ?>
+                                <a href="<?= $nextElement["SECTION_PAGE_URL"] ?>"><img
+                                            src="<?= $nextElement["DETAIL_PICTURE"]["src"] ?>"
+                                            alt="<?= $nextElement["NAME"] ?>"></a>
+                            </div>
+                        <? endif; ?>
+                        <div class="column">
+                            <a href="<?= $nextElement["SECTION_PAGE_URL"] ?>"
+                               class="bigTitle"><?= $nextElement["NAME"] ?></a>
+                            <? if (!empty($nextElement["UF_DESC"])): ?>
+                                <div class="description"><?= $nextElement["UF_DESC"] ?></div>
+                            <? endif; ?>
+                            <? if (count($nextElement["ELEMENTS"])): ?>
+                                <div class="sectionList">
+                                    <? foreach ($nextElement["ELEMENTS"] as $next2Elements): ?>
+                                        <div class="section"><a
+                                                    href="<?= $next2Elements["SECTION_PAGE_URL"] ?>"><? if (!empty($next2Elements["PICTURE"]["src"])): ?>
+                                                    <img src="<?= $next2Elements["PICTURE"]["src"] ?>"
+                                                         alt="<?= $next2Elements["NAME"] ?>"><? endif; ?><?= $next2Elements["NAME"] ?>
+                                            </a></div>
+                                    <? endforeach; ?>
+                                </div>
+                            <? endif; ?>
+                        </div>
+                    </div>
+                </div>
+            <? endforeach; ?>
+        </div>
+    <? endif; ?>
+</div>
