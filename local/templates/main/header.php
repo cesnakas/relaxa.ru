@@ -2,12 +2,12 @@
 if (!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();
 use Bitrix\Main\Page\Asset;
 ?>
-<?/*
+<?
 require_once($_SERVER["DOCUMENT_ROOT"]."/settings.php"); // site settings
-*/?>
-<?/*
+?>
+<?
 IncludeTemplateLangFile(__FILE__);
-*/?>
+?>
 <!DOCTYPE html>
 <html lang="<?=LANGUAGE_ID;?>">
 <head>
@@ -33,7 +33,7 @@ IncludeTemplateLangFile(__FILE__);
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/jquery-ui.min.css');
     // Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/themes/'.$TEMPLATE_THEME_NAME.'/style.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/template_styles.css');
-    Asset::getInstance()->addCss('https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css');
+    // Asset::getInstance()->addCss('https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/template_styles.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/main.css');
 
@@ -294,7 +294,7 @@ IncludeTemplateLangFile(__FILE__);
 <body>
 
     <header>
-        <div class="container">
+        <div class="wrapper">
 
             <div class="header__block__h_001">
                 <div class="geo__position">
