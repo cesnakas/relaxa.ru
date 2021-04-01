@@ -7,23 +7,23 @@ $APPLICATION->SetPageProperty("title", "Купить товары для здо�
 $APPLICATION->SetTitle("Товары для здоровья и красоты");
 ?>
 
-<?if($APPLICATION->GetCurPage(true)==SITE_DIR."zdorovie-krasota/index.php"):?>
+<? if($APPLICATION->GetCurPage(true) == SITE_DIR."zdorovie-krasota/index.php"): ?>
 <style>
-/*#catalogSection .sectionItems {
+#catalogSection .sectionItems {
     display: none;
-}*/
-/*#catalogSection {
+}
+#catalogSection {
     display: none;
 margin-top: 0px;
-}*/
-/*.container.page {
+}
+.container.page {
     padding-top: 0px;
-}*/
+}
 </style>
-<?endif?>
+<? endif; ?>
 
 <style>
-#smartFilter{
+#smartFilter {
     width: 300px;
     float: left;
 }
@@ -357,6 +357,8 @@ margin-top: 0px;
 	),
 	false
 );?>
+
+    <pre><?print_r($arParams);?></pre>
 
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
