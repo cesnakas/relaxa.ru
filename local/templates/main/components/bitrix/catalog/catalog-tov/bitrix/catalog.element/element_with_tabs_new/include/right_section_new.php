@@ -386,10 +386,11 @@ $ar_resTov = CCatalogProduct::GetByID($arResult["ID"]);
             </i>
             <a href="#form-pokaza" style="color: #1EA427;" class="fancy-form">Онлайн показ</a> по видеосвязи
         </li>
-        <div class="form-pokaza" id="form-pokaza">
+
+        <!--<div class="form-pokaza" id="form-pokaza">
             <form class="form-pokaza__wrap">
-                <input type="hidden" name="ID" value="<?=$arResult['ID']?>">
-                <input type="hidden" name="IBLOCK_ID" value="<?=$arResult['IBLOCK_ID']?>">
+                <input type="hidden" name="ID" value="<?/*=$arResult['ID']*/?>">
+                <input type="hidden" name="IBLOCK_ID" value="<?/*=$arResult['IBLOCK_ID']*/?>">
                 <div class="form-pokaza__close " data-fancybox-close>
                     <span></span>
                     <span></span>
@@ -416,7 +417,7 @@ $ar_resTov = CCatalogProduct::GetByID($arResult["ID"]);
                 <div id="recaptcha3"></div>
                 <button class="form-pokaza__submite">Отправить</button>
             </form>
-        </div>
+        </div>-->
 		
         <script>
             $(document).ready(function() {

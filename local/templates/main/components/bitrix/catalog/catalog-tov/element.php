@@ -1,4 +1,5 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
+<?
+if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 $this->setFrameMode(true);?>
 <?
 	$this->SetViewTarget("menuRollClass");?> menuRolled<?$this->EndViewTarget();
@@ -129,4 +130,6 @@ $this->setFrameMode(true);?>
 		"SET_VIEWED_IN_COMPONENT" => "Y"
 	),
 	$component
-);?><div><div><div><div><?if($_SESSION["SESS_INCLUDE_AREAS"]):?><div><?endif;?>
+);?>
+
+    <div><div><div><div><?if($_SESSION["SESS_INCLUDE_AREAS"]):?><div><?endif;?>

@@ -14,12 +14,14 @@ $this->AddEditAction($arResult["ID"], $arResult["EDIT_LINK"], CIBlock::GetArrayB
 $this->AddDeleteAction($arResult["ID"], $arResult["DELETE_LINK"], CIBlock::GetArrayByID($arResult["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
 ?>
 
+<?/*
 <script type="text/javascript" src="/bitrix/templates/dresscodeV2_new/js/jquery.js"></script>
 <script type="text/javascript" src="/bitrix/templates/dresscodeV2_new/js/slick.min.js"></script>
 <link rel="stylesheet" href="/bitrix/templates/dresscodeV2_new/js/fancybox/jquery.fancybox.min.css">
 <script type="text/javascript" src="/bitrix/templates/dresscodeV2_new/js/fancybox/jquery.fancybox.min.js"></script>
 <script src="/bitrix/templates/dresscodeV2/components/bitrix/catalog/.default/bitrix/catalog.element/element_with_tabs_new/js/maskinput.js"></script>
 <script src="/bitrix/templates/dresscodeV2/components/bitrix/catalog/.default/bitrix/catalog.element/element_with_tabs_new/js/ajax.js"></script>
+*/?>
 
 <script>
     /* Новые скрипты для карточки */
@@ -160,6 +162,7 @@ $this->AddDeleteAction($arResult["ID"], $arResult["DELETE_LINK"], CIBlock::GetAr
         });
     });
 </script>
+
 <?
 global $actualLink;
 $actualLink = "/";
@@ -170,6 +173,7 @@ foreach($arPthFilter as $act) {
     $actualLink.= $act . "/";
 }
 ?>
+
 <div class="page__p-card" id="<?= $this->GetEditAreaId($arResult["ID"]); ?>">
     <div class="page__p-cardheader">
         <div class="p-cardheader new-template-prefix">
@@ -749,7 +753,9 @@ foreach($arPthFilter as $act) {
                     </div>
                     <div class="p-card__p-carddes">
                         <div class="p-carddes">
-                            <? include($_SERVER["DOCUMENT_ROOT"] . "/" . $templateFolder . "/include/right_section_new.php"); ?>
+                            <?
+                            include($_SERVER["DOCUMENT_ROOT"] . "/" . $templateFolder . "/include/right_section_new.php");
+                            ?>
                         </div>
                     </div>
                 </div>
