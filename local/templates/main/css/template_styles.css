@@ -384,11 +384,11 @@ strong{
 }
 
 #topMenu .bar > a{
-    background: url(images/menuMore.png) 0 50% no-repeat transparent;
+    background: url(../images/menuMore.png) 0 50% no-repeat transparent;
 }
 
 #topHeader.color_default #topMenu .bar > a{
-    background-image: url(images/menuMore2.png)
+    background-image: url(../images/menuMore2.png)
 }
 
 #changeYouCity{
@@ -954,57 +954,57 @@ strong{
 }
 
 #footer.variant_2 #footerBottom .sn .vk{
-    background: url(images/snC.png) 0 0 no-repeat transparent;
+    background: url(../images/snC.png) 0 0 no-repeat transparent;
 }
 
 #footer.variant_4 #footerBottom .sn .vk,
 #footer.variant_5 #footerBottom .sn .vk{
-    background: url(images/snW.png) 0 0 no-repeat transparent;
+    background: url(../images/snW.png) 0 0 no-repeat transparent;
 }
 
 #footer.variant_2 #footerBottom .sn .fb{
-    background: url(images/snC.png) -60px 0 no-repeat transparent;
+    background: url(../images/snC.png) -60px 0 no-repeat transparent;
 }
 
 #footer.variant_4 #footerBottom .sn .fb,
 #footer.variant_5 #footerBottom .sn .fb{
-    background: url(images/snW.png) -60px 0 no-repeat transparent;
+    background: url(../images/snW.png) -60px 0 no-repeat transparent;
 }
 
 #footer.variant_2 #footerBottom .sn .od{
-    background: url(images/snC.png) -120px 0 no-repeat transparent;
+    background: url(../images/snC.png) -120px 0 no-repeat transparent;
 }
 
 #footer.variant_4 #footerBottom .sn .od,
 #footer.variant_5 #footerBottom .sn .od{
-    background: url(images/snW.png) -120px 0 no-repeat transparent;
+    background: url(../images/snW.png) -120px 0 no-repeat transparent;
 }
 
 #footer.variant_2 #footerBottom .sn .tw{
-    background: url(images/snC.png) -180px 0 no-repeat transparent;
+    background: url(../images/snC.png) -180px 0 no-repeat transparent;
 }
 
 #footer.variant_4 #footerBottom .sn .tw,
 #footer.variant_5 #footerBottom .sn .tw{
-    background: url(images/snW.png) -180px 0 no-repeat transparent;
+    background: url(../images/snW.png) -180px 0 no-repeat transparent;
 }
 
 #footer.variant_2 #footerBottom .sn .go{
-    background: url(images/snC.png) -240px 0 no-repeat transparent;
+    background: url(../images/snC.png) -240px 0 no-repeat transparent;
 }
 
 #footer.variant_4 #footerBottom .sn .go,
 #footer.variant_5 #footerBottom .sn .go{
-    background: url(images/snW.png) -240px 0 no-repeat transparent;
+    background: url(../images/snW.png) -240px 0 no-repeat transparent;
 }
 
 #footer.variant_2 #footerBottom .sn .yo{
-    background: url(images/snC.png) -300px 0 no-repeat transparent;
+    background: url(../images/snC.png) -300px 0 no-repeat transparent;
 }
 
 #footer.variant_4 #footerBottom .sn .yo,
 #footer.variant_5 #footerBottom .sn .yo{
-    background: url(images/snW.png) -300px 0 no-repeat transparent;
+    background: url(../images/snW.png) -300px 0 no-repeat transparent;
 }
 
 #footer.variant_2 #footerBottom .sn .vk:hover,
@@ -1454,7 +1454,7 @@ strong{
 }
 
 #appBasket .rating i {
-    background: url(images/rating.png) repeat 0 0px transparent;
+    background: url(../images/rating.png) repeat 0 0px transparent;
     height: 15px;
     width: 79px;
     position: absolute;
@@ -1464,7 +1464,7 @@ strong{
 }
 
 #appBasket .rating i.m {
-    background: url(images/rating.png) repeat 0 -14px transparent;
+    background: url(../images/rating.png) repeat 0 -14px transparent;
     width: 0px;
     z-index: 10;
 }
@@ -1643,19 +1643,19 @@ strong{
 }
 
 #appBasket .lower .tools .addCompare .ico{
-    background: url(images/compare.png) 0 0 no-repeat transparent;
+    background: url(../images/compare.png) 0 0 no-repeat transparent;
 }
 
 #appBasket .lower .tools .addCompare.added .ico{
-    background: url(images/compareActive.png) 0 0 no-repeat transparent;
+    background: url(../images/compareActive.png) 0 0 no-repeat transparent;
 }
 
 #appBasket .lower .tools .addWishlist .ico{
-    background: url(images/wishlist.png) 0 0 no-repeat transparent;
+    background: url(../images/wishlist.png) 0 0 no-repeat transparent;
 }
 
 #appBasket .lower .tools .addWishlist.added .ico{
-    background: url(images/wishlistActive.png) 0 0 no-repeat transparent;
+    background: url(../images/wishlistActive.png) 0 0 no-repeat transparent;
 }
 
 #appBasket .lower .tools .inStock{
@@ -1663,20 +1663,20 @@ strong{
 }
 
 #appBasket .lower .tools .inStock .ico{
-    background: url(images/inStock.png) 0 0 no-repeat transparent;
+    background: url(../images/inStock.png) 0 0 no-repeat transparent;
     border: 0 !important;
 }
 
 #appBasket .lower .tools .outOfStock .ico{
-    background: url(images/outOfStock.png) 0 0 no-repeat transparent;
+    background: url(../images/outOfStock.png) 0 0 no-repeat transparent;
 }
 
 #appBasket .lower .tools .onOrder .ico{
-    background: url(images/onOrder.png) 0 0 no-repeat transparent;
+    background: url(../images/onOrder.png) 0 0 no-repeat transparent;
 }
 
 #appBasket .lower .tools .delete .ico{
-    background: url(images/delete.png) 0 0 no-repeat transparent;
+    background: url(../images/delete.png) 0 0 no-repeat transparent;
 }
 
 #appBasket .lower .tools .continue{
@@ -2065,7 +2065,7 @@ strong{
 }
 
 #appFastBuy .close{
-    background: url(images/exit.png) 0 0 no-repeat transparent;
+    background: url(../images/exit.png) 0 0 no-repeat transparent;
     position: absolute;
     display: block;
     height: 21px;
@@ -2253,7 +2253,7 @@ strong{
 
 #appFastView .appFastViewPictureCarouselLeftButton,
 #appFastView .appFastViewPictureCarouselRightButton{
-    background: url(images/carouselArrowSmall.png) 0 0 no-repeat transparent;
+    background: url(../images/carouselArrowSmall.png) 0 0 no-repeat transparent;
     position: absolute;
     margin-top: -14px;
     height: 16px;
@@ -2683,7 +2683,7 @@ strong{
 }
 
 #appFastView .rating i{
-    background: url(images/rating2.png) repeat 0 0px transparent;
+    background: url(../images/rating2.png) repeat 0 0px transparent;
     height: 15px;
     width: 79px;
     position: absolute;
@@ -2693,7 +2693,7 @@ strong{
 }
 
 #appFastView i.m{
-    background: url(images/rating2.png) repeat 0 -14px transparent;
+    background: url(../images/rating2.png) repeat 0 -14px transparent;
     width: 0px;
     z-index: 10;
 }
@@ -2894,19 +2894,19 @@ strong{
 }
 
 #footerLine.color_theme .item .compare .icon{
-    background-image: url(images/compareFooterMinC.png);
+    background-image: url(../images/compareFooterMinC.png);
 }
 
 #footerLine.color_theme .item .wishlist .icon{
-    background-image: url(images/wishlistFooterMinC.png);
+    background-image: url(../images/wishlistFooterMinC.png);
 }
 
 #footerLine.color_theme .item .cart .icon{
-    background-image: url(images/cartFooterMinC.png);
+    background-image: url(../images/cartFooterMinC.png);
 }
 
 #footerLine.color_theme .item .callback .icon{
-    background-image: url(images/callbackFooterMinC.png);
+    background-image: url(../images/callbackFooterMinC.png);
 }
 
 #footerLine.color_white .item .compare:hover,
@@ -3458,7 +3458,7 @@ strong{
 
 .mainService .btnLeft,
 .mainService .btnRight{
-    background: url(images/slideArrowSmallBlack.png) 0 0 no-repeat transparent;
+    background: url(../images/slideArrowSmallBlack.png) 0 0 no-repeat transparent;
     transform: translateY(-50%);
     position: absolute;
     height: 70px;
@@ -3585,7 +3585,7 @@ strong{
 */
 
 .product .rating i {
-    background: url(images/rating.png) repeat 0 0px transparent;
+    background: url(../images/rating.png) repeat 0 0px transparent;
     position: absolute;
     display: block;
     height: 15px;
@@ -3595,7 +3595,7 @@ strong{
 }
 
 .product .rating i.m {
-    background: url(images/rating.png) repeat 0 -14px transparent;
+    background: url(../images/rating.png) repeat 0 -14px transparent;
     z-index: 10;
     width: 0px;
 }
@@ -3724,7 +3724,7 @@ strong{
 }
 .product .getFastView
 {
-    background-image: url(/bitrix/templates/dresscodeV2/images/more-plus.png);
+    background-image: url(../images/more-plus.png);
     background-repeat: no-repeat;
     background-position-x: 50%;
     background-position-y: 50%;
@@ -4098,11 +4098,11 @@ a.inStock:hover span{
 }
 
 .bx-auth input[type="checkbox"] + label:before {
-    background: url(images/checkBox.png) 0 0 no-repeat transparent;
+    background: url(../images/checkBox.png) 0 0 no-repeat transparent;
 }
 
 .bx-auth input[type="radio"] + label:before {
-    background: url(images/radio.png) 0 0 no-repeat transparent;
+    background: url(../images/radio.png) 0 0 no-repeat transparent;
 }
 
 .bx-auth input[type="checkbox"]:not(checked) + label:before,
@@ -4319,27 +4319,27 @@ a.inStock:hover span{
 }
 
 .sn .vk{
-    background: url(images/sn.png) 0 0 no-repeat transparent;
+    background: url(../images/sn.png) 0 0 no-repeat transparent;
 }
 
 .sn .fb{
-    background: url(images/sn.png) -60px 0 no-repeat transparent;
+    background: url(../images/sn.png) -60px 0 no-repeat transparent;
 }
 
 .sn .od{
-    background: url(images/sn.png) -120px 0 no-repeat transparent;
+    background: url(../images/sn.png) -120px 0 no-repeat transparent;
 }
 
 .sn .tw{
-    background: url(images/sn.png) -180px 0 no-repeat transparent;
+    background: url(../images/sn.png) -180px 0 no-repeat transparent;
 }
 
 .sn .go{
-    background: url(images/sn.png) -240px 0 no-repeat transparent;
+    background: url(../images/sn.png) -240px 0 no-repeat transparent;
 }
 
 .sn .yo{
-    background: url(images/sn.png) -300px 0 no-repeat transparent;
+    background: url(../images/sn.png) -300px 0 no-repeat transparent;
 }
 
 .sn .vk:hover{
@@ -4367,7 +4367,7 @@ a.inStock:hover span{
 }
 
 #upButton{
-    background: url(images/arrow4.png) 0 0 no-repeat transparent;
+    background: url(../images/arrow4.png) 0 0 no-repeat transparent;
     position: fixed;
     cursor: pointer;
     display: none;
@@ -4482,7 +4482,7 @@ a.inStock:hover span{
 }
 
 #requestPrice .requestPriceHeading .close{
-    background: url(images/exit.png) 0 0 no-repeat transparent;
+    background: url(../images/exit.png) 0 0 no-repeat transparent;
     position: absolute;
     display: block;
     height: 21px;
@@ -4780,7 +4780,7 @@ a.inStock:hover span{
     margin-top: -10px;
     margin-left: -10px;
     left: 50%;
-    background: url(images/loaderMin.gif) 50% 50% no-repeat #fff;
+    background: url(../images/loaderMin.gif) 50% 50% no-repeat #fff;
 }
 
 #stores{
@@ -5335,17 +5335,17 @@ body.panels_white #brandList .item:nth-child(5n+1){
 
     .menuContainerColor.color_white #mainMenu .removedItemsLink > a,
     .menuContainerColor.color_gray #mainMenu .removedItemsLink > a{
-        background-image: url(images/menuSlicedIconW.png);
+        background-image: url(../images/menuSlicedIconW.png);
     }
 
     .menuContainerColor.color_white #menuCatalogSection .catalogButtonImage,
     .menuContainerColor.color_gray #menuCatalogSection .catalogButtonImage{
-        background-image: url(images/catalogButtonW.png);
+        background-image: url(../images/catalogButtonW.png);
     }
 
     .menuContainerColor.color_white #menuCatalogSection .sectionMenuArrow,
     .menuContainerColor.color_gray #menuCatalogSection .sectionMenuArrow{
-        background-image: url(images/sectionMenuArrowW.png);
+        background-image: url(../images/sectionMenuArrowW.png);
     }
 }
 
@@ -6342,7 +6342,7 @@ body.panels_white #brandList .item:nth-child(5n+1){
         display: block;
         width: 60px;
         height: 60px;
-        background: url(images/sn.png) -360px -0px no-repeat transparent;
+        background: url(../images/sn.png) -360px -0px no-repeat transparent;
     }
 
     .copyright:hover{
@@ -6952,7 +6952,7 @@ div.bx-debug-summary{
 }
 
 .appZoomContainerExit{
-    background: url(images/exitWindow.png) 0 0 no-repeat transparent;
+    background: url(../images/exitWindow.png) 0 0 no-repeat transparent;
     position: absolute;
     height: 38px;
     width: 38px;
@@ -6975,7 +6975,7 @@ div.bx-debug-summary{
 }
 
 #appZoomWindow .appZoomContainer.loading{
-    background: url(images/windowLoader.gif) 50% 50% no-repeat transparent;
+    background: url(../images/windowLoader.gif) 50% 50% no-repeat transparent;
     min-height: 100px;
     min-width: 100px;
 }
@@ -7010,7 +7010,7 @@ div.bx-debug-summary{
 }
 
 .getPricesWindow .priceIcon{
-    background: url(images/priceInfo.png) 0 0 no-repeat transparent;
+    background: url(../images/priceInfo.png) 0 0 no-repeat transparent;
     vertical-align: middle;
     display: inline-block;
     margin-right: 10px;
@@ -7176,7 +7176,7 @@ div.bx-debug-summary{
 }
 
 #catalog-section-banners ol li{
-    background: url(images/slideButtonSect.png) 0 0 no-repeat transparent;
+    background: url(../images/slideButtonSect.png) 0 0 no-repeat transparent;
     margin-right: 4px;
     width: 18px;
     height: 18px;
@@ -7185,28 +7185,28 @@ div.bx-debug-summary{
 }
 
 #catalog-section-banners ol li:hover{
-    background: url(images/slideButtonSect.png) -18px 0  no-repeat transparent;
+    background: url(../images/slideButtonSect.png) -18px 0  no-repeat transparent;
 }
 
 #catalog-section-banners ol li:active{
-    background: url(images/slideButtonSect.png) -36px 0  no-repeat transparent;
+    background: url(../images/slideButtonSect.png) -36px 0  no-repeat transparent;
 }
 
 #catalog-section-banners ol li.selected{
-    background: url(images/slideButtonSect.png) -54px 0  no-repeat transparent;
+    background: url(../images/slideButtonSect.png) -54px 0  no-repeat transparent;
 }
 
 #catalog-section-banners ol li.selected:hover{
-    background: url(images/slideButtonSect.png) -72px 0  no-repeat transparent;
+    background: url(../images/slideButtonSect.png) -72px 0  no-repeat transparent;
 }
 
 #catalog-section-banners ol li.selected:active{
-    background: url(images/slideButtonSect.png) -90px 0  no-repeat transparent;
+    background: url(../images/slideButtonSect.png) -90px 0  no-repeat transparent;
 }
 
 #catalog-section-banners .catalog-section-banners-btn-left,
 #catalog-section-banners .catalog-section-banners-btn-right{
-    background: url(images/slideArrowSect.png) no-repeat transparent;
+    background: url(../images/slideArrowSect.png) no-repeat transparent;
     position: absolute;
     margin-top: -30px;
     display: block;
@@ -7285,7 +7285,7 @@ div.bx-debug-summary{
 }
 
 #colorSwitcher .settingTouchPicture{
-    background: url(images/setting.png) 50% 50% no-repeat transparent;
+    background: url(../images/setting.png) 50% 50% no-repeat transparent;
     -webkit-transition: all 0.4s ease-in-out;
     -o-transition: all 0.4s ease-in-out;
     transition: all 0.4s ease-in-out;
@@ -7372,7 +7372,7 @@ div.bx-debug-summary{
 }
 
 #colorSwitcher .selected a{
-    background-image: url(images/check.png);
+    background-image: url(../images/check.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }
@@ -7613,7 +7613,7 @@ div.bx-debug-summary{
 }
 
 .templateSwitcherSettingsPicture{
-    background: url(images/setting.png) 50% 50% no-repeat transparent;
+    background: url(../images/setting.png) 50% 50% no-repeat transparent;
     -webkit-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
@@ -7752,7 +7752,7 @@ div.bx-debug-summary{
 
 .templateSwitcher .switcherThemesItem.selected a,
 .templateSwitcher .switcherBackgroundItem.selected a{
-    background-image: url(images/check.png);
+    background-image: url(../images/check.png);
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }

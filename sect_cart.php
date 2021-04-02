@@ -1,3 +1,8 @@
+<?
+use Bitrix\Main\Page\Asset;
+Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/themes/ocean/style.css');
+?>
+
 <div id="appBasket" data-load="<?=SITE_TEMPLATE_PATH?>/images/picLoad.gif">
     <div id="appBasketContainer">
         <div class="heading">Товар добавлен в корзину <a href="#" class="close closeWindow"></a></div>

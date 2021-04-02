@@ -32,7 +32,7 @@ IncludeTemplateLangFile(__FILE__);
     // Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/old_styles.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/jquery-ui.min.css');
     // Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/themes/'.$TEMPLATE_THEME_NAME.'/style.css');
-    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/template_styles.css');
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/prefix-new-main.css');
     // Asset::getInstance()->addCss('https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/template_styles.css');
     Asset::getInstance()->addCss(SITE_TEMPLATE_PATH.'/css/main.css');
@@ -66,7 +66,7 @@ IncludeTemplateLangFile(__FILE__);
     Asset::getInstance()->addJs(SITE_TEMPLATE_PATH.'/js/main.js');
 ?>
 
-    <script>
+    <!--<script>
         $('.roistat_form_call_submit').click(function () {
             var name = $('#roistat_form_call_name').val();
             var phone = $('#roistat_form_call_phone').val();
@@ -143,7 +143,7 @@ IncludeTemplateLangFile(__FILE__);
                 data: {name: name, phone: phone, message: message}
             });
         });
-    </script>
+    </script>-->
 
     <meta name="title" content="<?$APPLICATION->ShowTitle();?>"/>
 

@@ -1,4 +1,4 @@
-<? if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die(); ?>
+<?if(!defined('B_PROLOG_INCLUDED') || B_PROLOG_INCLUDED !== true) die();?>
 
 </div>
 <footer>
@@ -202,11 +202,9 @@
     "bitrix:main.include",
     ".default",
     array(
-        "AREA_FILE_SHOW" => "file",
-        'PATH' => '/include/footer/sect_cart.php',
-        // "AREA_FILE_SHOW" => "sect",
-        // "AREA_FILE_SUFFIX" => "cart",
-        // "AREA_FILE_RECURSIVE" => "Y",
+        "AREA_FILE_SHOW" => "sect",
+        "AREA_FILE_SUFFIX" => "cart",
+        "AREA_FILE_RECURSIVE" => "Y",
         "EDIT_TEMPLATE" => ""
     ),
     false
@@ -234,19 +232,19 @@
         "EDIT_TEMPLATE" => ""
     ),
     false
-);
+);?>
 
+<?
 if(preg_match("#PAGEN_\d=(\d*)#", $_SERVER['REQUEST_URI'], $matches)){
     $APPLICATION->SetPageProperty("description", $APPLICATION->GetPageProperty("description") . ". Страница " . $matches[1]);
     $APPLICATION->SetPageProperty("title", $APPLICATION->GetPageProperty("title") . ". Страница " . $matches[1]);
     $APPLICATION->SetTitle( $APPLICATION->GetTitle(false) . '. Страница ' . $matches[1]);
 }
-
 ?>
+
 <div id="upButton">
     <a href="#"></a>
 </div>
-
 
     <?$APPLICATION->IncludeComponent(
         "bitrix:form.result.new",
@@ -290,7 +288,6 @@ if(preg_match("#PAGEN_\d=(\d*)#", $_SERVER['REQUEST_URI'], $matches)){
         )
     );?>
 
-
     <?$APPLICATION->IncludeComponent(
         "bitrix:form.result.new",
         "consult",
@@ -317,6 +314,7 @@ if(preg_match("#PAGEN_\d=(\d*)#", $_SERVER['REQUEST_URI'], $matches)){
             "ACTIVE_COMPONENT" => "N"
         )
     );?>
+
 <!-- WebIt.Activity -->
 <script type="text/javascript" src="https://relaxa.ru/bitrix/templates/dresscodeV2/js/jquery-site.activity.js"></script>
 <script type="text/javascript">
@@ -333,188 +331,11 @@ if(preg_match("#PAGEN_\d=(\d*)#", $_SERVER['REQUEST_URI'], $matches)){
     });
 </script>
 <!-- /WebIt.Activity -->
+
 <!--ND-->
 <link rel="stylesheet" href="https://cdn.envybox.io/widget/cbk.css">
 <script type="text/javascript" src="https://cdn.envybox.io/widget/cbk.js?wcb_code=3a1f831bba41e1916d522cf8c2efba9c" charset="UTF-8" async></script>
 <!--/ND-->
-<?if($APPLICATION->GetCurPage(/*false*/) == "/"):?><?else:?>
-<?if($_COOKIE['roulette'] == 'Y' || $_SESSION['roulette'] == 'Y')://if(isset($_COOKIE['roulette']) || isset($_SESSION['roulette'])):?>
-<?else:?>
-<link rel="stylesheet" href="/bitrix/templates/dresscodeV2/rouletbutton.css">
-<style>
-    svg {
-        width: 75%;
-        margin: 0 12.5%;
-    }
-
-    .circ0 {
-        fill: black;
-        stroke: #655;
-        stroke-width: 5;
-        stroke-dasharray: 0;
-    }
-
-    .circ1 {
-        fill: none;
-        stroke: white;
-        stroke-width: 10;
-    }
-
-    .circ2 {
-        fill: none;
-        stroke: red;
-        stroke-width: 10;
-        stroke-dasharray: 8.5;
-    }
-
-    .circ3 {
-        fill: none;
-        stroke: white;
-        stroke-width: 60;
-        stroke-dasharray: 5 380;
-        opacity: 0.2;
-        transform: rotate(-45deg);
-        transform-origin: 50% 50%;
-    }
-
-    .circ4 {
-        fill: gray;
-        stroke: #deedee;
-        stroke-width: 2;
-    }
-
-    .circ5 {
-        fill: none;
-        stroke: #deedee;
-        stroke-width: 2;
-    }
-
-    .circ6 {
-        fill: none;
-        stroke: gold;
-        stroke-width: 2;
-        stroke-dasharray: 2 8;
-        stroke-linecap: round;
-    }
-
-    .circ7 {
-        fill: none;
-        stroke: yellow;
-        stroke-width: 1;
-    }
-
-    .circ8 {
-        fill: none;
-        stroke: red;
-        stroke-width: 30;
-        stroke-dasharray: 63 63;
-    }
-
-    .circ9 {
-        fill: none;
-        stroke: white;
-        stroke-dasharray: 1;
-        stroke-width: .5;
-    }
-
-    .circ10 {
-        fill: none;
-        stroke: white;
-        stroke-dasharray: 1 7.5;
-        stroke-width: 11;
-    }
-
-    .animateRouletteRotate {
-        animation-duration: 10s;
-        animation-iteration-count: infinite;
-        animation-timing-function: ease-out;
-        animation-name: rouletteRotate;
-    }
-
-    @keyframes rouletteRotate {
-        0% {}
-        60% {
-            stroke-dashoffset: 900;
-        }
-        100% {
-            stroke-dashoffset: 900;
-        }
-    }
-
-    @keyframes rouletteFlash {
-        0% {}
-        100% {
-            opacity: 0.2;
-        }
-    }
-    .roulette-form{
-        margin-top: 0px;
-    }
-    .ws-quiz-container {
-        position: fixed;
-    }
-
-    @media screen and (max-width: 767px) {
-        .mobilehide {
-            display: none !important;
-        }
-    }
-</style>
-
-<script>
-    $(document).ready(function() {
-        $('.ws-quiz-container').on('click', function() {
-            document.getElementsByClassName('roulette-modal')[0].classList.add('roulette-modal_active');
-            document.getElementsByClassName('roulette-modal')[0].style.display = 'block';
-        });
-    });
-</script>
-
-<div class="roulette-modal <?if(isset($_GET['newyear-roulette'])):?>roulette-modal_active<?endif?> mobilehide" style="display:<?if(isset($_GET['newyear-roulette'])):?>block<?else:?>none<?endif?>">
-    <?php $APPLICATION->includeFile('/local/forms/roulette/form.php', ['theme' => 'default']); ?>
-</div>
-
-<div class="ws-quiz-container mobilehide" id="labellabel" <?/*onclick="document.getElementsByClassName('roulette-modal')[0].classList.add('roulette-modal_active'); document.getElementsByClassName('roulette-modal')[0].style.display = 'block'"*/?>>
-    <div class="ws-quiz-btn-el-container envy-not-scalling" style="right: -92px; left: auto; top: 318.03px; bottom: auto;">
-        <div class="ws-quiz-btn-container ws-quiz-btn-mini-hover quiz-animation-iridescent quiz-corner-smooth ws-quiz-btn-rotate ws-quiz-btn-attach ws-quiz-btn-logo-yes" style="transform: rotate(-270deg); background: #0CA307;">
-            <div class="ws-btn-ico">
-                <div id="changeText" class="ws-btn-title">ИСПЫТАЙ УДАЧУ</div>
-                <div class="ws-quiz-logo">
-                    <svg viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
-						<circle class="circ0" cx="100" cy="100" r="95"/>
-                        <circle class="circ1" cx="100" cy="100" r="75"/>
-                        <circle class="circ7" cx="100" cy="100" r="59"/>
-                        <circle class="circ8 animateRouletteRotate" cx="100" cy="100" r="40"/>
-                        <circle class="circ9 animateRouletteRotate" cx="100" cy="100" r="40"/>
-                        <circle class="circ5" cx="100" cy="100" r="75"/>
-                        <circle class="circ6" cx="100" cy="100" r="75"/>
-                        <circle class="circ2 animateRouletteRotate" cx="100" cy="100" r="65"/>
-                        <circle class="circ10 animateRouletteRotate" cx="100" cy="100" r="65"/>
-                        <circle class="circ3" cx="100" cy="100" r="40"/>
-                        <circle class="circ4 " cx="100" cy="100" r="10"/>
-					</svg>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
-    <script type="text/javascript">
-        var text = ["СЫГРАЙ В ИГРУ", "ВЫИГРАЙ СКИДКУ", "ИСПЫТАЙ УДАЧУ", "ВЫИГРАЙ БОНУС"];
-        var counter = 0;
-        var elem = document.getElementById("changeText");
-        setInterval(change, 3000);
-
-        function change() {
-            elem.innerHTML = text[counter];
-            counter++;
-            if (counter >= text.length) {
-                counter = 0;
-            }
-        }
-    </script>
-    <?php endif; ?><?php endif; ?>
-
 
     <script type="text/javascript">
         var ajaxPath = "<?=SITE_DIR?>ajax.php";
@@ -540,16 +361,6 @@ if(preg_match("#PAGEN_\d=(\d*)#", $_SERVER['REQUEST_URI'], $matches)){
         };
     </script>
 
-    <!-- ROISTAT -->
-    <script>
-        (function(w, d, s, h, id) {
-            w.roistatProjectId = id; w.roistatHost = h;
-            var p = d.location.protocol == "https:" ? "https://" : "http://";
-            var u = /^.*roistat_visit=[^;]+(.*)?$/.test(d.cookie) ? "/dist/module.js" : "/api/site/1.0/"+id+"/init";
-            var js = d.createElement(s); js.charset="UTF-8"; js.async = 1; js.src = p+h+u; var js2 = d.getElementsByTagName(s)[0]; js2.parentNode.insertBefore(js, js2);
-        })(window, document, 'script', 'cloud.roistat.com', '2b69848e2e73097cae972600754d2bd5');
-    </script>
-    <!-- END ROISTAT -->
     <?if($APPLICATION->GetCurPage()=="/personal/" || $APPLICATION->GetCurPage()=="/personal/order/" || $APPLICATION->GetCurPage()=="/personal/profile/" || $APPLICATION->GetCurPage()=="/auth/"):?>
         <script src="/verstka/scripts/jquery.maskedinput.js"></script>
     <?endif?>

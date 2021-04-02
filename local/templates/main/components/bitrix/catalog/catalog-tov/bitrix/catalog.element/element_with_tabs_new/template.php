@@ -23,6 +23,9 @@ $this->AddDeleteAction($arResult["ID"], $arResult["DELETE_LINK"], CIBlock::GetAr
 <script src="/bitrix/templates/dresscodeV2/components/bitrix/catalog/.default/bitrix/catalog.element/element_with_tabs_new/js/ajax.js"></script>
 */?>
 
+<script src="/local/templates/main/components/bitrix/catalog/catalog-tov/bitrix/catalog.element/element_with_tabs_new/js/maskinput.js"></script>
+<script src="/local/templates/main/components/bitrix/catalog/catalog-tov/bitrix/catalog.element/element_with_tabs_new/js/ajax.js"></script>
+
 <script>
     /* Новые скрипты для карточки */
     $(document).ready(function() {
