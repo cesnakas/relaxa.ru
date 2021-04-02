@@ -2,18 +2,7 @@
 <project version="4">
   <component name="PublishConfigData" autoUpload="Always" serverName="new.relaxa.ru" preserveTimestamps="false" createEmptyFolders="true">
     <serverData>
-      <paths name="new.relaxa.ru">
-        <serverdata>
-          <mappings>
-            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
-          </mappings>
-          <excludedPaths>
-            <excludedPath path="/bitrix" />
-            <excludedPath path="/upload" />
-          </excludedPaths>
-        </serverdata>
-      </paths>
-      <paths name="relaxa.ru">
+      <paths name="21.relaxa.ru">
         <serverdata>
           <mappings>
             <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
@@ -22,6 +11,17 @@
             <excludedPath path="/bitrix" />
             <excludedPath path="/upload" />
             <excludedPath path="/uploads" />
+          </excludedPaths>
+        </serverdata>
+      </paths>
+      <paths name="new.relaxa.ru">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+          <excludedPaths>
+            <excludedPath path="/bitrix" />
+            <excludedPath path="/upload" />
           </excludedPaths>
         </serverdata>
       </paths>

@@ -2,14 +2,14 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="4ab4e2bd-0032-49bb-8832-06652686d775" name="relaxa.ru" url="https://21.relaxas.ru">
+      <webServer id="4ab4e2bd-0032-49bb-8832-06652686d775" name="21.relaxa.ru" url="https://21.relaxas.ru">
         <fileTransfer host="relaxastar.beget.tech" port="21">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" showHiddenFiles="true" />
           </advancedOptions>
         </fileTransfer>
       </webServer>
-      <webServer id="d99f3751-fb4d-4fd1-bb07-b8aa841df36c" name="new.relaxa.ru" url="https://relaxastar.beget.tech">
+      <webServer id="d99f3751-fb4d-4fd1-bb07-b8aa841df36c" name="new.relaxa.ru" url="https://new.relaxa.ru">
         <fileTransfer host="relaxastar.beget.tech" port="21">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" showHiddenFiles="true" />
