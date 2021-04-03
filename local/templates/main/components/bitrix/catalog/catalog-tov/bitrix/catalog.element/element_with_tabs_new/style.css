@@ -2306,7 +2306,7 @@ h1.changeName, .rg_hidden {
 .background_fith_cild {
     width: 60%;
     max-width: 60%;
-    max-height: ;
+    /*max-height: ;*/
     overflow: hidden;
     margin-bottom: 2%;
     margin-left: 2%;
