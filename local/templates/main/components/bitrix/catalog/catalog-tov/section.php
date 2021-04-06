@@ -1,5 +1,4 @@
 <?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();?>
 
 <?/*$APPLICATION->SetPageProperty("title", $arParams["LIST_BROWSER_TITLE"]);?>
 <?$rg_title = $APPLICATION->ShowMeta("title", $arParams["LIST_BROWSER_TITLE"])?>

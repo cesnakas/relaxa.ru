@@ -32,7 +32,7 @@ margin-top: 0px;
 <?$APPLICATION->IncludeComponent(
 	"bitrix:catalog", 
 	"catalog-tov",
-    // '',
+    //'',
 	array(
 		"ACTION_VARIABLE" => "action",
 		"ADD_ELEMENT_CHAIN" => "Y",
@@ -357,8 +357,6 @@ margin-top: 0px;
 	),
 	false
 );?>
-
-    <pre><?print_r($arParams);?></pre>
 
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");
