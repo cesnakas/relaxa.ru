@@ -13,9 +13,9 @@ $GLOBALS['arrTags'] = array('ACTIVE' => 'Y', "TAGS" => $tag);
 ?>
 
 <?$APPLICATION->IncludeComponent(
-	"bitrix:news",
-	"articles",
-	Array(
+	"bitrix:news", 
+	"articles", 
+	array(
 		"ADD_ELEMENT_CHAIN" => "Y",
 		"ADD_SECTIONS_CHAIN" => "Y",
 		"AJAX_MODE" => "N",
@@ -27,7 +27,7 @@ $GLOBALS['arrTags'] = array('ACTIVE' => 'Y', "TAGS" => $tag);
 		"CACHE_FILTER" => "Y",
 		"CACHE_GROUPS" => "Y",
 		"CACHE_TIME" => "36000000",
-		"CACHE_TYPE" => "N",
+		"CACHE_TYPE" => "A",
 		"CHECK_DATES" => "Y",
 		"COMPONENT_TEMPLATE" => "articles",
 		"COMPOSITE_FRAME_MODE" => "A",
@@ -35,11 +35,17 @@ $GLOBALS['arrTags'] = array('ACTIVE' => 'Y', "TAGS" => $tag);
 		"DETAIL_ACTIVE_DATE_FORMAT" => "d.m.Y",
 		"DETAIL_DISPLAY_BOTTOM_PAGER" => "Y",
 		"DETAIL_DISPLAY_TOP_PAGER" => "N",
-		"DETAIL_FIELD_CODE" => array(0=>"",1=>"",),
+		"DETAIL_FIELD_CODE" => array(
+			0 => "",
+			1 => "",
+		),
 		"DETAIL_PAGER_SHOW_ALL" => "N",
 		"DETAIL_PAGER_TEMPLATE" => "",
 		"DETAIL_PAGER_TITLE" => "",
-		"DETAIL_PROPERTY_CODE" => array(0=>"",1=>"",),
+		"DETAIL_PROPERTY_CODE" => array(
+			0 => "",
+			1 => "",
+		),
 		"DETAIL_SET_CANONICAL_URL" => "N",
 		"DISPLAY_BOTTOM_PAGER" => "Y",
 		"DISPLAY_DATE" => "Y",
@@ -47,16 +53,28 @@ $GLOBALS['arrTags'] = array('ACTIVE' => 'Y', "TAGS" => $tag);
 		"DISPLAY_PICTURE" => "Y",
 		"DISPLAY_PREVIEW_TEXT" => "Y",
 		"DISPLAY_TOP_PAGER" => "N",
-		"FILTER_FIELD_CODE" => array(0=>"TAGS",1=>"",),
+		"FILTER_FIELD_CODE" => array(
+			0 => "TAGS",
+			1 => "",
+		),
 		"FILTER_NAME" => "arrTags",
-		"FILTER_PROPERTY_CODE" => array(0=>"",1=>"",),
+		"FILTER_PROPERTY_CODE" => array(
+			0 => "",
+			1 => "",
+		),
 		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
 		"IBLOCK_ID" => "4",
 		"IBLOCK_TYPE" => "content",
 		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
 		"LIST_ACTIVE_DATE_FORMAT" => "j F Y",
-		"LIST_FIELD_CODE" => array(0=>"SHOW_COUNTER",1=>"",),
-		"LIST_PROPERTY_CODE" => array(0=>"",1=>"",),
+		"LIST_FIELD_CODE" => array(
+			0 => "SHOW_COUNTER",
+			1 => "",
+		),
+		"LIST_PROPERTY_CODE" => array(
+			0 => "",
+			1 => "",
+		),
 		"MESSAGE_404" => "",
 		"META_DESCRIPTION" => "-",
 		"META_KEYWORDS" => "-",
@@ -72,7 +90,6 @@ $GLOBALS['arrTags'] = array('ACTIVE' => 'Y', "TAGS" => $tag);
 		"PREVIEW_TRUNCATE_LEN" => "",
 		"SEF_FOLDER" => "/articles/",
 		"SEF_MODE" => "Y",
-		"SEF_URL_TEMPLATES" => array("news"=>"articles/","section"=>"#SECTION_CODE_PATH#/","detail"=>"#SECTION_CODE_PATH#/#ELEMENT_CODE#/",),
 		"SET_LAST_MODIFIED" => "Y",
 		"SET_STATUS_404" => "Y",
 		"SET_TITLE" => "N",
@@ -90,8 +107,14 @@ $GLOBALS['arrTags'] = array('ACTIVE' => 'Y', "TAGS" => $tag);
 		"USE_REVIEW" => "N",
 		"USE_RSS" => "N",
 		"USE_SEARCH" => "N",
-		"USE_SHARE" => "N"
-	)
+		"USE_SHARE" => "N",
+		"SEF_URL_TEMPLATES" => array(
+			"news" => "articles/",
+			"section" => "#SECTION_CODE_PATH#/",
+			"detail" => "#SECTION_CODE_PATH#/#ELEMENT_CODE#/",
+		)
+	),
+	false
 );?>
 
 <?

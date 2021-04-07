@@ -9,7 +9,7 @@ $APPLICATION->SetTitle("Массажеры и аппараты для терап
        
 <?$APPLICATION->IncludeComponent(
 	"bitrix:catalog", 
-	'catalog-tov',
+	"new_llisting", 
 	array(
 		"ACTION_VARIABLE" => "action",
 		"ADD_ELEMENT_CHAIN" => "Y",
@@ -288,7 +288,9 @@ $APPLICATION->SetTitle("Массажеры и аппараты для терап
 		"USE_REVIEW" => "Y",
 		"USE_SALE_BESTSELLERS" => "N",
 		"USE_STORE" => "N",
-		"COMPONENT_TEMPLATE" => ".default",
+		"COMPONENT_TEMPLATE" => "new_llisting",
+		"SHOW_SKU_DESCRIPTION" => "N",
+		"FILE_404" => "",
 		"SEF_URL_TEMPLATES" => array(
 			"sections" => "",
 			"section" => "#SECTION_CODE_PATH#/",

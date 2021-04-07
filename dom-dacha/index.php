@@ -8,8 +8,8 @@ $APPLICATION->SetTitle("Товары для дома и дачи");
 ?>
 
 <?$APPLICATION->IncludeComponent(
-	"bitrix:catalog",
-	'catalog-tov',
+	"bitrix:catalog", 
+	"new_llisting", 
 	array(
 		"ACTION_VARIABLE" => "action",
 		"ADD_ELEMENT_CHAIN" => "Y",
@@ -204,7 +204,7 @@ $APPLICATION->SetTitle("Товары для дома и дачи");
 		"USE_REVIEW" => "N",
 		"USE_SALE_BESTSELLERS" => "N",
 		"USE_STORE" => "N",
-		"COMPONENT_TEMPLATE" => ".default",
+		"COMPONENT_TEMPLATE" => "new_llisting",
 		"ADD_PICT_PROP" => "-",
 		"LABEL_PROP" => "-",
 		"DETAIL_SHOW_MAX_QUANTITY" => "N",
@@ -281,6 +281,8 @@ $APPLICATION->SetTitle("Товары для дома и дачи");
 		"OFFERS_SORT_ORDER" => "asc",
 		"OFFERS_SORT_FIELD2" => "id",
 		"OFFERS_SORT_ORDER2" => "desc",
+		"SHOW_SKU_DESCRIPTION" => "N",
+		"FILE_404" => "",
 		"SEF_URL_TEMPLATES" => array(
 			"sections" => "",
 			"section" => "#SECTION_CODE_PATH#/",

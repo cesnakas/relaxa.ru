@@ -34,7 +34,7 @@ if($APPLICATION->GetCurPage(true)==SITE_DIR."fitnes/index.php"): ?>
 
 <?$APPLICATION->IncludeComponent(
 	"bitrix:catalog", 
-	"catalog-tov", 
+	"new_llisting", 
 	array(
 		"ACTION_VARIABLE" => "action",
 		"ADD_ELEMENT_CHAIN" => "Y",
@@ -118,8 +118,6 @@ if($APPLICATION->GetCurPage(true)==SITE_DIR."fitnes/index.php"): ?>
 		"DETAIL_PROPERTY_CODE" => array(
 			0 => "",
 			1 => "",
-			2 => "",
-			3 => "",
 		),
 		"DETAIL_SET_CANONICAL_URL" => "Y",
 		"DETAIL_SET_VIEWED_IN_COMPONENT" => "Y",
@@ -337,8 +335,9 @@ if($APPLICATION->GetCurPage(true)==SITE_DIR."fitnes/index.php"): ?>
 		"USE_REVIEW" => "N",
 		"USE_SALE_BESTSELLERS" => "N",
 		"USE_STORE" => "N",
-		"COMPONENT_TEMPLATE" => "catalog-tov",
+		"COMPONENT_TEMPLATE" => "new_llisting",
 		"FILE_404" => "",
+		"SHOW_SKU_DESCRIPTION" => "N",
 		"SEF_URL_TEMPLATES" => array(
 			"sections" => "",
 			"section" => "#SECTION_CODE_PATH#/",
