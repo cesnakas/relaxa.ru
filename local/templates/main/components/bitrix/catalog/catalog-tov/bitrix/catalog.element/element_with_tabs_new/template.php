@@ -4535,7 +4535,7 @@ foreach($arPthFilter as $act) {
                             </div>
                             <? $APPLICATION->IncludeComponent(
                                 "techbox:catalog.section",
-                                "squares",
+                                "squares-new", // squares
                                 array(
                                     "IBLOCK_TYPE" => $arParams["IBLOCK_TYPE"],
                                     "IBLOCK_ID" => [1,12,13,14,15,52],
