@@ -835,7 +835,7 @@ class CBitrixCatalogSmartFilter extends CBitrixComponent
 			{
 				if($arItem["PROPERTY_TYPE"] == "N" || isset($arItem["PRICE"]))
 				{
-					//TODO
+
 				}
 				else
 				{
