@@ -2,31 +2,76 @@ Options -Indexes
 ErrorDocument 404 /404.php
 
 <IfModule mod_php5.c>
-	php_flag allow_call_time_pass_reference 1
-	php_flag session.use_trans_sid off
+  php_flag session.use_trans_sid off
+  #php_flag default_charset UTF-8
+  #php_value display_errors 1
+</IfModule>
 
-	#php_value display_errors 1
-
-	#php_value mbstring.internal_encoding UTF-8
+<IfModule mod_php7.c>
+  php_flag session.use_trans_sid off
+  #php_flag default_charset UTF-8
+  #php_value display_errors 1
+	php_value post_max_size 500M
+	php_value upload_max_filesize 400M
+	php_value max_execution_time 3000
+	php_value max_input_time 6000
 </IfModule>
 
 <IfModule mod_rewrite.c>
-	Options +FollowSymLinks
-	RewriteEngine On
-	RewriteCond %{REQUEST_FILENAME} !-f
-	RewriteCond %{REQUEST_FILENAME} !-l
-	RewriteCond %{REQUEST_FILENAME} !-d
-	RewriteCond %{REQUEST_FILENAME} !/bitrix/urlrewrite.php$
-	RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
-	RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
+  Options +FollowSymLinks
+  RewriteEngine On
+  RewriteBase /
+
+  # редирект с www на без-www
+  RewriteCond %{HTTP_HOST} ^www\.(.*) [NC]
+  RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+  
+  # редирект с http на https
+  RewriteCond %{HTTPS} off
+  RewriteCond %{HTTP:X-Forwarded-Proto} !https
+  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+  
+  #убираем /index.php в конце алиаса
+  #RewriteRule ^(.*)index\.php$ $1 [R=301,L]
+
+   RewriteCond %{REQUEST_FILENAME} !-f
+   RewriteCond %{REQUEST_FILENAME} !-l
+   RewriteCond %{REQUEST_FILENAME} !-d
+   RewriteCond %{REQUEST_URI} ^(.*/[^/\.]+)$
+   RewriteRule ^(.*)$ http://%{HTTP_HOST}/$1/ [R=301,L]
+
+   RewriteCond %{REQUEST_FILENAME} !-f
+   RewriteCond %{REQUEST_FILENAME} !-l
+   RewriteCond %{REQUEST_FILENAME} !-d
+   RewriteCond %{REQUEST_FILENAME} !/bitrix/urlrewrite.php$
+   RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
+   RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
 </IfModule>
 
 <IfModule mod_dir.c>
-	DirectoryIndex index.php index.html
+  DirectoryIndex index.php index.html
 </IfModule>
 
-<IfModule mod_expires.c>
-	ExpiresActive on
-	ExpiresByType image/jpeg "access plus 3 day"
-	ExpiresByType image/gif "access plus 3 day"
+<IfModule mod_setenvif.c>
+	SetEnv TZ Europe/Moscow
+</IfModule>
+
+<IfModule mod_deflate.c>
+  <IfModule mod_filter.c>
+      AddOutputFilterByType DEFLATE text/plain text/html
+      AddOutputFilterByType DEFLATE text/css
+      AddOutputFilterByType DEFLATE text/javascript application/javascript application/x-javascript
+      AddOutputFilterByType DEFLATE text/xml application/xml application/xhtml+xml application/rss+xml
+      AddOutputFilterByType DEFLATE application/json
+      AddOutputFilterByType DEFLATE application/vnd.ms-fontobject application/x-font-ttf font/opentype image/svg+xml image/x-icon
+  </IfModule>
+</IfModule>
+
+<Files error.log>
+  deny from all
+</Files>
+
+<IfModule headers_module>
+	Header always append X-Frame-Options SAMEORIGIN
+	Header set X-Content-Type-Options nosniff
 </IfModule>
