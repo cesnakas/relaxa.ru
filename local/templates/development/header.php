@@ -19,8 +19,11 @@ use Bitrix\Main\Page\Asset;
     Asset::getInstance()->addCss('https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;subset=cyrillic'); // TODO: переместить шрифт в css-стили
     // JQuery
     Asset::getInstance()->addJs('https://code.jquery.com/jquery-3.5.1.min.js');
-    // CSS
-    // JS
+    // Popper
+    Asset::getInstance()->addJs('https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js');
+    // Bootstrap
+    Asset::getInstance()->addCss('https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css');
+    Asset::getInstance()->addJs('https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js');
     ?>
 
     <title><?$APPLICATION->ShowTitle();?></title>
@@ -98,3 +101,24 @@ use Bitrix\Main\Page\Asset;
 <?$APPLICATION->ShowPanel();?>
 <body>
 
+    <header>
+        <div class="container">
+
+            <div class="geo__position">
+                <ul class="geo_wrapper">
+                    <?
+                    $APPLICATION->IncludeComponent(
+                        "dresscode:sale.geo.positiion",
+                        "",
+                        array(),
+                        false,
+                        array(
+                            "ACTIVE_COMPONENT" => "Y"
+                        )
+                    );
+                    ?>
+                </ul>
+            </div>
+
+        </div>
+    </header>
