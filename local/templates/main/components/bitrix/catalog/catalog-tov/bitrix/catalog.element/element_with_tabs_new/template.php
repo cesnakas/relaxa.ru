@@ -14,14 +14,14 @@ $this->AddEditAction($arResult["ID"], $arResult["EDIT_LINK"], CIBlock::GetArrayB
 $this->AddDeleteAction($arResult["ID"], $arResult["DELETE_LINK"], CIBlock::GetArrayByID($arResult["IBLOCK_ID"], "ELEMENT_DELETE"), array("CONFIRM" => GetMessage('CT_BNL_ELEMENT_DELETE_CONFIRM')));
 ?>
 
-<?/*
+
 <script type="text/javascript" src="/bitrix/templates/dresscodeV2_new/js/jquery.js"></script>
 <script type="text/javascript" src="/bitrix/templates/dresscodeV2_new/js/slick.min.js"></script>
 <link rel="stylesheet" href="/bitrix/templates/dresscodeV2_new/js/fancybox/jquery.fancybox.min.css">
 <script type="text/javascript" src="/bitrix/templates/dresscodeV2_new/js/fancybox/jquery.fancybox.min.js"></script>
 <script src="/bitrix/templates/dresscodeV2/components/bitrix/catalog/.default/bitrix/catalog.element/element_with_tabs_new/js/maskinput.js"></script>
 <script src="/bitrix/templates/dresscodeV2/components/bitrix/catalog/.default/bitrix/catalog.element/element_with_tabs_new/js/ajax.js"></script>
-*/?>
+
 
 <script src="/local/templates/main/components/bitrix/catalog/catalog-tov/bitrix/catalog.element/element_with_tabs_new/js/maskinput.js"></script>
 <script src="/local/templates/main/components/bitrix/catalog/catalog-tov/bitrix/catalog.element/element_with_tabs_new/js/ajax.js"></script>
